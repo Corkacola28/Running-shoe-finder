@@ -29,7 +29,10 @@ const SHOES=[
     "plate": "No",
     "note": "Best one-shoe super trainer for long runs, daily miles, and faster efforts.",
     "foam": "FF LEAP + FF BLAST PLUS",
-    "link": "https://www.google.com/search?q=ASICS+Superblast+3+running+shoe"
+    "link": "https://www.google.com/search?q=ASICS+Superblast+3+running+shoe",
+    "longevityMiles": "300-450 miles",
+    "longevityScore": 78,
+    "longevityNote": "Super trainers often last longer than racers, but the most energetic feel may fade before total breakdown."
   },
   {
     "id": 2,
@@ -61,7 +64,10 @@ const SHOES=[
     "plate": "No",
     "note": "Previous-gen super trainer that still works for long runs and faster training.",
     "foam": "FF TURBO PLUS + FF BLAST PLUS ECO",
-    "link": "https://www.google.com/search?q=ASICS+Superblast+2+running+shoe"
+    "link": "https://www.google.com/search?q=ASICS+Superblast+2+running+shoe",
+    "longevityMiles": "300-450 miles",
+    "longevityScore": 78,
+    "longevityNote": "Super trainers often last longer than racers, but the most energetic feel may fade before total breakdown."
   },
   {
     "id": 3,
@@ -93,7 +99,10 @@ const SHOES=[
     "plate": "No",
     "note": "Explosive non-plated super trainer for fast daily miles and workouts.",
     "foam": "FF TURBO\u00b2",
-    "link": "https://www.google.com/search?q=ASICS+Megablast+running+shoe"
+    "link": "https://www.google.com/search?q=ASICS+Megablast+running+shoe",
+    "longevityMiles": "300-450 miles",
+    "longevityScore": 78,
+    "longevityNote": "Super trainers often last longer than racers, but the most energetic feel may fade before total breakdown."
   },
   {
     "id": 4,
@@ -125,7 +134,10 @@ const SHOES=[
     "plate": "No",
     "note": "Light, versatile, high-value trainer with a fast daily feel.",
     "foam": "NitroFoam",
-    "link": "https://www.google.com/search?q=PUMA+Deviate+Pure+Nitro+running+shoe"
+    "link": "https://www.google.com/search?q=PUMA+Deviate+Pure+Nitro+running+shoe",
+    "longevityMiles": "300-450 miles",
+    "longevityScore": 78,
+    "longevityNote": "Super trainers often last longer than racers, but the most energetic feel may fade before total breakdown."
   },
   {
     "id": 5,
@@ -157,7 +169,10 @@ const SHOES=[
     "plate": "No",
     "note": "Dark-horse super trainer with limited fit/return data.",
     "foam": "PEBA/TPEE-style",
-    "link": "https://www.google.com/search?q=Dynafish+Xiaonian+running+shoe"
+    "link": "https://www.google.com/search?q=Dynafish+Xiaonian+running+shoe",
+    "longevityMiles": "300-450 miles",
+    "longevityScore": 78,
+    "longevityNote": "Super trainers often last longer than racers, but the most energetic feel may fade before total breakdown."
   },
   {
     "id": 6,
@@ -189,7 +204,10 @@ const SHOES=[
     "plate": "No",
     "note": "Comfortable trainer, but less proven for serious running volume.",
     "foam": "Training foam",
-    "link": "https://www.google.com/search?q=R.A.D.+Mallow+running+shoe"
+    "link": "https://www.google.com/search?q=R.A.D.+Mallow+running+shoe",
+    "longevityMiles": "300-500 miles",
+    "longevityScore": 82,
+    "longevityNote": "Traditional daily trainers usually offer the best mileage-per-dollar."
   },
   {
     "id": 7,
@@ -221,7 +239,10 @@ const SHOES=[
     "plate": "Yes",
     "note": "Elite marathon racing shoe with aggressive propulsion.",
     "foam": "ZoomX + carbon plate + Air Zoom",
-    "link": "https://www.google.com/search?q=Nike+Alphafly+3+running+shoe"
+    "link": "https://www.google.com/search?q=Nike+Alphafly+3+running+shoe",
+    "longevityMiles": "100-220 miles",
+    "longevityScore": 44,
+    "longevityNote": "Race-day foams and plates are built for performance first, not maximum mileage."
   },
   {
     "id": 8,
@@ -253,7 +274,10 @@ const SHOES=[
     "plate": "Yes",
     "note": "Light race-day shoe for fast efforts and racing.",
     "foam": "ZoomX + carbon plate",
-    "link": "https://www.google.com/search?q=Nike+Vaporfly+4+running+shoe"
+    "link": "https://www.google.com/search?q=Nike+Vaporfly+4+running+shoe",
+    "longevityMiles": "100-220 miles",
+    "longevityScore": 44,
+    "longevityNote": "Race-day foams and plates are built for performance first, not maximum mileage."
   },
   {
     "id": 9,
@@ -285,7 +309,10 @@ const SHOES=[
     "plate": "Yes",
     "note": "Proven carbon racer for 5K through marathon.",
     "foam": "ZoomX + carbon plate",
-    "link": "https://www.google.com/search?q=Nike+Vaporfly+3+running+shoe"
+    "link": "https://www.google.com/search?q=Nike+Vaporfly+3+running+shoe",
+    "longevityMiles": "100-220 miles",
+    "longevityScore": 44,
+    "longevityNote": "Race-day foams and plates are built for performance first, not maximum mileage."
   },
   {
     "id": 10,
@@ -317,7 +344,10 @@ const SHOES=[
     "plate": "Yes",
     "note": "Top-tier carbon racer built for aggressive race efforts.",
     "foam": "FF LEAP + carbon plate",
-    "link": "https://www.google.com/search?q=ASICS+Metaspeed+Sky+Tokyo+running+shoe"
+    "link": "https://www.google.com/search?q=ASICS+Metaspeed+Sky+Tokyo+running+shoe",
+    "longevityMiles": "100-220 miles",
+    "longevityScore": 44,
+    "longevityNote": "Race-day foams and plates are built for performance first, not maximum mileage."
   },
   {
     "id": 11,
@@ -349,7 +379,10 @@ const SHOES=[
     "plate": "Yes",
     "note": "Carbon racer for cadence-focused runners.",
     "foam": "FF LEAP + carbon plate",
-    "link": "https://www.google.com/search?q=ASICS+Metaspeed+Edge+Tokyo+running+shoe"
+    "link": "https://www.google.com/search?q=ASICS+Metaspeed+Edge+Tokyo+running+shoe",
+    "longevityMiles": "100-220 miles",
+    "longevityScore": 44,
+    "longevityNote": "Race-day foams and plates are built for performance first, not maximum mileage."
   },
   {
     "id": 12,
@@ -381,7 +414,10 @@ const SHOES=[
     "plate": "Yes",
     "note": "Extremely light and aggressive ASICS racer.",
     "foam": "FF LEAP + carbon plate",
-    "link": "https://www.google.com/search?q=ASICS+Metaspeed+Ray+running+shoe"
+    "link": "https://www.google.com/search?q=ASICS+Metaspeed+Ray+running+shoe",
+    "longevityMiles": "100-220 miles",
+    "longevityScore": 44,
+    "longevityNote": "Race-day foams and plates are built for performance first, not maximum mileage."
   },
   {
     "id": 13,
@@ -413,7 +449,10 @@ const SHOES=[
     "plate": "Yes",
     "note": "Previous generation top-tier ASICS racer.",
     "foam": "FF TURBO PLUS + carbon plate",
-    "link": "https://www.google.com/search?q=ASICS+Metaspeed+Sky+Paris+running+shoe"
+    "link": "https://www.google.com/search?q=ASICS+Metaspeed+Sky+Paris+running+shoe",
+    "longevityMiles": "100-220 miles",
+    "longevityScore": 44,
+    "longevityNote": "Race-day foams and plates are built for performance first, not maximum mileage."
   },
   {
     "id": 14,
@@ -445,7 +484,10 @@ const SHOES=[
     "plate": "Yes",
     "note": "Cadence-oriented ASICS racing shoe.",
     "foam": "FF TURBO PLUS + carbon plate",
-    "link": "https://www.google.com/search?q=ASICS+Metaspeed+Edge+Paris+running+shoe"
+    "link": "https://www.google.com/search?q=ASICS+Metaspeed+Edge+Paris+running+shoe",
+    "longevityMiles": "100-220 miles",
+    "longevityScore": 44,
+    "longevityNote": "Race-day foams and plates are built for performance first, not maximum mileage."
   },
   {
     "id": 15,
@@ -477,7 +519,10 @@ const SHOES=[
     "plate": "Rods",
     "note": "Elite carbon/rod racing shoe for road races.",
     "foam": "Lightstrike Pro + EnergyRods",
-    "link": "https://www.google.com/search?q=adidas+Adizero+Adios+Pro+5+running+shoe"
+    "link": "https://www.google.com/search?q=adidas+Adizero+Adios+Pro+5+running+shoe",
+    "longevityMiles": "120-250 miles",
+    "longevityScore": 48,
+    "longevityNote": "Race-day foams and plates are built for performance first, not maximum mileage."
   },
   {
     "id": 16,
@@ -509,7 +554,10 @@ const SHOES=[
     "plate": "Rods",
     "note": "Fast marathon racer with EnergyRods.",
     "foam": "Lightstrike Pro + EnergyRods",
-    "link": "https://www.google.com/search?q=adidas+Adizero+Adios+Pro+4+running+shoe"
+    "link": "https://www.google.com/search?q=adidas+Adizero+Adios+Pro+4+running+shoe",
+    "longevityMiles": "120-250 miles",
+    "longevityScore": 48,
+    "longevityNote": "Race-day foams and plates are built for performance first, not maximum mileage."
   },
   {
     "id": 17,
@@ -541,7 +589,10 @@ const SHOES=[
     "plate": "Rods",
     "note": "Ultra-premium race-day shoe with very poor value score.",
     "foam": "Lightstrike Pro + EnergyRods",
-    "link": "https://www.google.com/search?q=adidas+Adizero+Adios+Pro+Evo+1+running+shoe"
+    "link": "https://www.google.com/search?q=adidas+Adizero+Adios+Pro+Evo+1+running+shoe",
+    "longevityMiles": "80-180 miles",
+    "longevityScore": 40,
+    "longevityNote": "Ultra-premium race shoes prioritize peak performance and are not ideal for high-mileage training."
   },
   {
     "id": 18,
@@ -573,7 +624,10 @@ const SHOES=[
     "plate": "Rods",
     "note": "Ultra-premium race-day option for elite-style racing.",
     "foam": "Lightstrike Pro + EnergyRods",
-    "link": "https://www.google.com/search?q=adidas+Adizero+Adios+Pro+Evo+3+running+shoe"
+    "link": "https://www.google.com/search?q=adidas+Adizero+Adios+Pro+Evo+3+running+shoe",
+    "longevityMiles": "80-180 miles",
+    "longevityScore": 40,
+    "longevityNote": "Ultra-premium race shoes prioritize peak performance and are not ideal for high-mileage training."
   },
   {
     "id": 19,
@@ -605,7 +659,10 @@ const SHOES=[
     "plate": "Yes",
     "note": "Aggressive top-tier Puma carbon racer.",
     "foam": "Nitro Elite + carbon plate",
-    "link": "https://www.google.com/search?q=PUMA+Fast-R+Nitro+Elite+3+running+shoe"
+    "link": "https://www.google.com/search?q=PUMA+Fast-R+Nitro+Elite+3+running+shoe",
+    "longevityMiles": "100-220 miles",
+    "longevityScore": 44,
+    "longevityNote": "Race-day foams and plates are built for performance first, not maximum mileage."
   },
   {
     "id": 20,
@@ -637,7 +694,10 @@ const SHOES=[
     "plate": "Yes",
     "note": "Lighter Puma race shoe for fast racing.",
     "foam": "Nitro Elite + carbon plate",
-    "link": "https://www.google.com/search?q=PUMA+Deviate+Nitro+Elite+3+running+shoe"
+    "link": "https://www.google.com/search?q=PUMA+Deviate+Nitro+Elite+3+running+shoe",
+    "longevityMiles": "120-250 miles",
+    "longevityScore": 48,
+    "longevityNote": "Race-day foams and plates are built for performance first, not maximum mileage."
   },
   {
     "id": 21,
@@ -669,7 +729,10 @@ const SHOES=[
     "plate": "Yes",
     "note": "Aggressive Saucony race-day super shoe.",
     "foam": "PWRRUN HG + carbon plate",
-    "link": "https://www.google.com/search?q=Saucony+Endorphin+Elite+2+running+shoe"
+    "link": "https://www.google.com/search?q=Saucony+Endorphin+Elite+2+running+shoe",
+    "longevityMiles": "120-250 miles",
+    "longevityScore": 48,
+    "longevityNote": "Race-day foams and plates are built for performance first, not maximum mileage."
   },
   {
     "id": 22,
@@ -701,7 +764,10 @@ const SHOES=[
     "plate": "Yes",
     "note": "More stable and approachable carbon racer.",
     "foam": "PWRRUN PB/HG + carbon plate",
-    "link": "https://www.google.com/search?q=Saucony+Endorphin+Pro+4+running+shoe"
+    "link": "https://www.google.com/search?q=Saucony+Endorphin+Pro+4+running+shoe",
+    "longevityMiles": "120-250 miles",
+    "longevityScore": 48,
+    "longevityNote": "Race-day foams and plates are built for performance first, not maximum mileage."
   },
   {
     "id": 23,
@@ -733,7 +799,10 @@ const SHOES=[
     "plate": "Yes",
     "note": "Bouncy HOKA race shoe for long-distance racing.",
     "foam": "PEBA + carbon plate",
-    "link": "https://www.google.com/search?q=HOKA+Cielo+X1+3.0+running+shoe"
+    "link": "https://www.google.com/search?q=HOKA+Cielo+X1+3.0+running+shoe",
+    "longevityMiles": "120-250 miles",
+    "longevityScore": 48,
+    "longevityNote": "Race-day foams and plates are built for performance first, not maximum mileage."
   },
   {
     "id": 24,
@@ -765,7 +834,10 @@ const SHOES=[
     "plate": "Yes",
     "note": "Carbon racer from HOKA for road racing.",
     "foam": "PEBA + carbon plate",
-    "link": "https://www.google.com/search?q=HOKA+Rocket+X+3+running+shoe"
+    "link": "https://www.google.com/search?q=HOKA+Rocket+X+3+running+shoe",
+    "longevityMiles": "120-250 miles",
+    "longevityScore": 48,
+    "longevityNote": "Race-day foams and plates are built for performance first, not maximum mileage."
   },
   {
     "id": 25,
@@ -797,7 +869,10 @@ const SHOES=[
     "plate": "Yes",
     "note": "Previous HOKA carbon racing shoe.",
     "foam": "PEBA + carbon plate",
-    "link": "https://www.google.com/search?q=HOKA+Rocket+X+2+running+shoe"
+    "link": "https://www.google.com/search?q=HOKA+Rocket+X+2+running+shoe",
+    "longevityMiles": "120-250 miles",
+    "longevityScore": 48,
+    "longevityNote": "Race-day foams and plates are built for performance first, not maximum mileage."
   },
   {
     "id": 26,
@@ -829,7 +904,10 @@ const SHOES=[
     "plate": "Yes",
     "note": "New Balance carbon racer with more forgiving fit.",
     "foam": "FuelCell + carbon plate",
-    "link": "https://www.google.com/search?q=New+Balance+FuelCell+SuperComp+Elite+v5+running+shoe"
+    "link": "https://www.google.com/search?q=New+Balance+FuelCell+SuperComp+Elite+v5+running+shoe",
+    "longevityMiles": "120-250 miles",
+    "longevityScore": 48,
+    "longevityNote": "Race-day foams and plates are built for performance first, not maximum mileage."
   },
   {
     "id": 27,
@@ -861,7 +939,10 @@ const SHOES=[
     "plate": "Yes",
     "note": "Lower-stack race shoe for shorter races and speed.",
     "foam": "FuelCell + carbon plate",
-    "link": "https://www.google.com/search?q=New+Balance+FuelCell+SuperComp+Pacer+v2+running+shoe"
+    "link": "https://www.google.com/search?q=New+Balance+FuelCell+SuperComp+Pacer+v2+running+shoe",
+    "longevityMiles": "120-250 miles",
+    "longevityScore": 48,
+    "longevityNote": "Race-day foams and plates are built for performance first, not maximum mileage."
   },
   {
     "id": 28,
@@ -893,7 +974,10 @@ const SHOES=[
     "plate": "Yes",
     "note": "Aggressive rocker-based marathon racer.",
     "foam": "Enerzy Lite + carbon plate",
-    "link": "https://www.google.com/search?q=Mizuno+Wave+Rebellion+Pro+3+running+shoe"
+    "link": "https://www.google.com/search?q=Mizuno+Wave+Rebellion+Pro+3+running+shoe",
+    "longevityMiles": "300-450 miles",
+    "longevityScore": 52,
+    "longevityNote": "Race-day foams and plates are built for performance first, not maximum mileage."
   },
   {
     "id": 29,
@@ -925,7 +1009,10 @@ const SHOES=[
     "plate": "Yes",
     "note": "Lightweight Mizuno race option.",
     "foam": "Superfoam + plate",
-    "link": "https://www.google.com/search?q=Mizuno+Hyperwarp+Pure+running+shoe"
+    "link": "https://www.google.com/search?q=Mizuno+Hyperwarp+Pure+running+shoe",
+    "longevityMiles": "120-250 miles",
+    "longevityScore": 48,
+    "longevityNote": "Race-day foams and plates are built for performance first, not maximum mileage."
   },
   {
     "id": 30,
@@ -957,7 +1044,10 @@ const SHOES=[
     "plate": "Yes",
     "note": "Premium On racing shoe.",
     "foam": "Helion HF + carbon plate",
-    "link": "https://www.google.com/search?q=On+Cloudboom+Strike+running+shoe"
+    "link": "https://www.google.com/search?q=On+Cloudboom+Strike+running+shoe",
+    "longevityMiles": "100-220 miles",
+    "longevityScore": 44,
+    "longevityNote": "Race-day foams and plates are built for performance first, not maximum mileage."
   },
   {
     "id": 31,
@@ -989,7 +1079,10 @@ const SHOES=[
     "plate": "Yes",
     "note": "On carbon racing shoe for fast road races.",
     "foam": "Helion HF + carbon plate",
-    "link": "https://www.google.com/search?q=On+Cloudboom+Echo+4+running+shoe"
+    "link": "https://www.google.com/search?q=On+Cloudboom+Echo+4+running+shoe",
+    "longevityMiles": "100-220 miles",
+    "longevityScore": 44,
+    "longevityNote": "Race-day foams and plates are built for performance first, not maximum mileage."
   },
   {
     "id": 32,
@@ -1021,7 +1114,10 @@ const SHOES=[
     "plate": "Yes",
     "note": "On race-day shoe with premium price.",
     "foam": "Helion HF + carbon plate",
-    "link": "https://www.google.com/search?q=On+Cloudboom+Volt+running+shoe"
+    "link": "https://www.google.com/search?q=On+Cloudboom+Volt+running+shoe",
+    "longevityMiles": "100-220 miles",
+    "longevityScore": 44,
+    "longevityNote": "Race-day foams and plates are built for performance first, not maximum mileage."
   },
   {
     "id": 33,
@@ -1053,7 +1149,10 @@ const SHOES=[
     "plate": "Yes",
     "note": "Brooks carbon racer with firmer performance feel.",
     "foam": "DNA GOLD + carbon plate",
-    "link": "https://www.google.com/search?q=Brooks+Hyperion+Elite+5+running+shoe"
+    "link": "https://www.google.com/search?q=Brooks+Hyperion+Elite+5+running+shoe",
+    "longevityMiles": "120-250 miles",
+    "longevityScore": 48,
+    "longevityNote": "Race-day foams and plates are built for performance first, not maximum mileage."
   },
   {
     "id": 34,
@@ -1085,7 +1184,10 @@ const SHOES=[
     "plate": "Yes",
     "note": "Carbon race shoe from TYR.",
     "foam": "Supercritical foam + carbon",
-    "link": "https://www.google.com/search?q=TYR+Valkyrie+Elite+Carbon+running+shoe"
+    "link": "https://www.google.com/search?q=TYR+Valkyrie+Elite+Carbon+running+shoe",
+    "longevityMiles": "100-220 miles",
+    "longevityScore": 44,
+    "longevityNote": "Race-day foams and plates are built for performance first, not maximum mileage."
   },
   {
     "id": 35,
@@ -1117,7 +1219,10 @@ const SHOES=[
     "plate": "Yes",
     "note": "Under Armour carbon racing option.",
     "foam": "PEBA + carbon plate",
-    "link": "https://www.google.com/search?q=Under+Armour+Velociti+Elite+3+running+shoe"
+    "link": "https://www.google.com/search?q=Under+Armour+Velociti+Elite+3+running+shoe",
+    "longevityMiles": "120-250 miles",
+    "longevityScore": 48,
+    "longevityNote": "Race-day foams and plates are built for performance first, not maximum mileage."
   },
   {
     "id": 36,
@@ -1149,7 +1254,10 @@ const SHOES=[
     "plate": "Yes",
     "note": "Salomon race shoe for fast road efforts.",
     "foam": "Energy Foam + plate",
-    "link": "https://www.google.com/search?q=Salomon+S/Lab+Phantasm+2+running+shoe"
+    "link": "https://www.google.com/search?q=Salomon+S/Lab+Phantasm+2+running+shoe",
+    "longevityMiles": "120-250 miles",
+    "longevityScore": 48,
+    "longevityNote": "Race-day foams and plates are built for performance first, not maximum mileage."
   },
   {
     "id": 37,
@@ -1181,7 +1289,10 @@ const SHOES=[
     "plate": "Yes",
     "note": "Carbon-plated trainer/racer hybrid.",
     "foam": "Floatride Energy + carbon plate",
-    "link": "https://www.google.com/search?q=Reebok+FloatZig+X1+running+shoe"
+    "link": "https://www.google.com/search?q=Reebok+FloatZig+X1+running+shoe",
+    "longevityMiles": "250-400 miles",
+    "longevityScore": 70,
+    "longevityNote": "Workout trainers can last well, but plated/superfoam setups may lose pop before the outsole is gone."
   },
   {
     "id": 38,
@@ -1213,7 +1324,10 @@ const SHOES=[
     "plate": "Yes",
     "note": "Skechers carbon racing option.",
     "foam": "Hyper Burst Pro + carbon plate",
-    "link": "https://www.google.com/search?q=Skechers+Speed+Beast+running+shoe"
+    "link": "https://www.google.com/search?q=Skechers+Speed+Beast+running+shoe",
+    "longevityMiles": "120-250 miles",
+    "longevityScore": 48,
+    "longevityNote": "Race-day foams and plates are built for performance first, not maximum mileage."
   },
   {
     "id": 39,
@@ -1245,7 +1359,10 @@ const SHOES=[
     "plate": "Nylon",
     "note": "One of the strongest tempo/workout trainers.",
     "foam": "PWRRUN PB + nylon plate",
-    "link": "https://www.google.com/search?q=Saucony+Endorphin+Speed+5+running+shoe"
+    "link": "https://www.google.com/search?q=Saucony+Endorphin+Speed+5+running+shoe",
+    "longevityMiles": "250-400 miles",
+    "longevityScore": 70,
+    "longevityNote": "Workout trainers can last well, but plated/superfoam setups may lose pop before the outsole is gone."
   },
   {
     "id": 40,
@@ -1277,7 +1394,10 @@ const SHOES=[
     "plate": "Nylon",
     "note": "Previous-gen plated trainer for faster sessions.",
     "foam": "PWRRUN PB + nylon plate",
-    "link": "https://www.google.com/search?q=Saucony+Endorphin+Speed+4+running+shoe"
+    "link": "https://www.google.com/search?q=Saucony+Endorphin+Speed+4+running+shoe",
+    "longevityMiles": "250-400 miles",
+    "longevityScore": 70,
+    "longevityNote": "Workout trainers can last well, but plated/superfoam setups may lose pop before the outsole is gone."
   },
   {
     "id": 41,
@@ -1309,7 +1429,10 @@ const SHOES=[
     "plate": "Plate-like",
     "note": "Rockered super trainer for uptempo and long runs.",
     "foam": "PWRRUN PB/PWRRUN",
-    "link": "https://www.google.com/search?q=Saucony+Endorphin+Trainer+running+shoe"
+    "link": "https://www.google.com/search?q=Saucony+Endorphin+Trainer+running+shoe",
+    "longevityMiles": "300-450 miles",
+    "longevityScore": 78,
+    "longevityNote": "Super trainers often last longer than racers, but the most energetic feel may fade before total breakdown."
   },
   {
     "id": 42,
@@ -1341,7 +1464,10 @@ const SHOES=[
     "plate": "Rods",
     "note": "Workout trainer for tempos and faster long runs.",
     "foam": "Lightstrike Pro + rods",
-    "link": "https://www.google.com/search?q=adidas+Adizero+Boston+13+running+shoe"
+    "link": "https://www.google.com/search?q=adidas+Adizero+Boston+13+running+shoe",
+    "longevityMiles": "250-400 miles",
+    "longevityScore": 70,
+    "longevityNote": "Workout trainers can last well, but plated/superfoam setups may lose pop before the outsole is gone."
   },
   {
     "id": 43,
@@ -1373,7 +1499,10 @@ const SHOES=[
     "plate": "Rods",
     "note": "Previous Boston workout trainer.",
     "foam": "Lightstrike Pro + rods",
-    "link": "https://www.google.com/search?q=adidas+Adizero+Boston+12+running+shoe"
+    "link": "https://www.google.com/search?q=adidas+Adizero+Boston+12+running+shoe",
+    "longevityMiles": "250-400 miles",
+    "longevityScore": 70,
+    "longevityNote": "Workout trainers can last well, but plated/superfoam setups may lose pop before the outsole is gone."
   },
   {
     "id": 44,
@@ -1405,7 +1534,10 @@ const SHOES=[
     "plate": "Rods",
     "note": "Fast shoe for 5K/10K and speed sessions.",
     "foam": "Lightstrike Pro + rods",
-    "link": "https://www.google.com/search?q=adidas+Adizero+Takumi+Sen+11+running+shoe"
+    "link": "https://www.google.com/search?q=adidas+Adizero+Takumi+Sen+11+running+shoe",
+    "longevityMiles": "180-300 miles",
+    "longevityScore": 57,
+    "longevityNote": "Light speed shoes usually trade durability for weight and snap."
   },
   {
     "id": 45,
@@ -1437,7 +1569,10 @@ const SHOES=[
     "plate": "Rods",
     "note": "Short-race and interval shoe.",
     "foam": "Lightstrike Pro + rods",
-    "link": "https://www.google.com/search?q=adidas+Adizero+Takumi+Sen+10+running+shoe"
+    "link": "https://www.google.com/search?q=adidas+Adizero+Takumi+Sen+10+running+shoe",
+    "longevityMiles": "180-300 miles",
+    "longevityScore": 57,
+    "longevityNote": "Light speed shoes usually trade durability for weight and snap."
   },
   {
     "id": 46,
@@ -1469,7 +1604,10 @@ const SHOES=[
     "plate": "Yes",
     "note": "ASICS plated trainer for workouts and racing if needed.",
     "foam": "FF TURBO + carbon plate",
-    "link": "https://www.google.com/search?q=ASICS+Magic+Speed+4+running+shoe"
+    "link": "https://www.google.com/search?q=ASICS+Magic+Speed+4+running+shoe",
+    "longevityMiles": "250-400 miles",
+    "longevityScore": 70,
+    "longevityNote": "Workout trainers can last well, but plated/superfoam setups may lose pop before the outsole is gone."
   },
   {
     "id": 47,
@@ -1501,7 +1639,10 @@ const SHOES=[
     "plate": "Yes",
     "note": "Previous ASICS plated tempo trainer.",
     "foam": "FF BLAST PLUS + carbon plate",
-    "link": "https://www.google.com/search?q=ASICS+Magic+Speed+3+running+shoe"
+    "link": "https://www.google.com/search?q=ASICS+Magic+Speed+3+running+shoe",
+    "longevityMiles": "250-400 miles",
+    "longevityScore": 70,
+    "longevityNote": "Workout trainers can last well, but plated/superfoam setups may lose pop before the outsole is gone."
   },
   {
     "id": 48,
@@ -1533,7 +1674,10 @@ const SHOES=[
     "plate": "Pebax plate",
     "note": "HOKA super trainer for workouts and faster long runs.",
     "foam": "PEBA/EVA + plate",
-    "link": "https://www.google.com/search?q=HOKA+Mach+X+3+running+shoe"
+    "link": "https://www.google.com/search?q=HOKA+Mach+X+3+running+shoe",
+    "longevityMiles": "250-400 miles",
+    "longevityScore": 70,
+    "longevityNote": "Workout trainers can last well, but plated/superfoam setups may lose pop before the outsole is gone."
   },
   {
     "id": 49,
@@ -1565,7 +1709,10 @@ const SHOES=[
     "plate": "Pebax plate",
     "note": "Previous HOKA plated trainer.",
     "foam": "PEBA/EVA + plate",
-    "link": "https://www.google.com/search?q=HOKA+Mach+X+2+running+shoe"
+    "link": "https://www.google.com/search?q=HOKA+Mach+X+2+running+shoe",
+    "longevityMiles": "250-400 miles",
+    "longevityScore": 70,
+    "longevityNote": "Workout trainers can last well, but plated/superfoam setups may lose pop before the outsole is gone."
   },
   {
     "id": 50,
@@ -1597,7 +1744,10 @@ const SHOES=[
     "plate": "Yes",
     "note": "Nike plated workout/long-run trainer.",
     "foam": "ZoomX/SR-02 + carbon plate",
-    "link": "https://www.google.com/search?q=Nike+Zoom+Fly+6+running+shoe"
+    "link": "https://www.google.com/search?q=Nike+Zoom+Fly+6+running+shoe",
+    "longevityMiles": "250-400 miles",
+    "longevityScore": 70,
+    "longevityNote": "Workout trainers can last well, but plated/superfoam setups may lose pop before the outsole is gone."
   },
   {
     "id": 51,
@@ -1629,7 +1779,10 @@ const SHOES=[
     "plate": "Yes",
     "note": "Fast low-profile shoe for shorter races and workouts.",
     "foam": "ZoomX + plate",
-    "link": "https://www.google.com/search?q=Nike+Streakfly+2+running+shoe"
+    "link": "https://www.google.com/search?q=Nike+Streakfly+2+running+shoe",
+    "longevityMiles": "180-300 miles",
+    "longevityScore": 57,
+    "longevityNote": "Light speed shoes usually trade durability for weight and snap."
   },
   {
     "id": 52,
@@ -1661,7 +1814,10 @@ const SHOES=[
     "plate": "Yes",
     "note": "Plated New Balance trainer for long workouts.",
     "foam": "FuelCell + carbon plate",
-    "link": "https://www.google.com/search?q=New+Balance+FuelCell+SuperComp+Trainer+v4+running+shoe"
+    "link": "https://www.google.com/search?q=New+Balance+FuelCell+SuperComp+Trainer+v4+running+shoe",
+    "longevityMiles": "250-400 miles",
+    "longevityScore": 70,
+    "longevityNote": "Workout trainers can last well, but plated/superfoam setups may lose pop before the outsole is gone."
   },
   {
     "id": 53,
@@ -1693,7 +1849,10 @@ const SHOES=[
     "plate": "Yes",
     "note": "Previous SC Trainer for workout/long-run use.",
     "foam": "FuelCell + carbon plate",
-    "link": "https://www.google.com/search?q=New+Balance+FuelCell+SuperComp+Trainer+v3+running+shoe"
+    "link": "https://www.google.com/search?q=New+Balance+FuelCell+SuperComp+Trainer+v3+running+shoe",
+    "longevityMiles": "250-400 miles",
+    "longevityScore": 70,
+    "longevityNote": "Workout trainers can last well, but plated/superfoam setups may lose pop before the outsole is gone."
   },
   {
     "id": 54,
@@ -1725,7 +1884,10 @@ const SHOES=[
     "plate": "Plate-like",
     "note": "Fast Brooks trainer for workouts and long runs.",
     "foam": "DNA GOLD/FLASH",
-    "link": "https://www.google.com/search?q=Brooks+Hyperion+Max+3+running+shoe"
+    "link": "https://www.google.com/search?q=Brooks+Hyperion+Max+3+running+shoe",
+    "longevityMiles": "300-450 miles",
+    "longevityScore": 78,
+    "longevityNote": "Super trainers often last longer than racers, but the most energetic feel may fade before total breakdown."
   },
   {
     "id": 55,
@@ -1757,7 +1919,10 @@ const SHOES=[
     "plate": "No",
     "note": "Lightweight tempo trainer with firmer feel.",
     "foam": "DNA FLASH",
-    "link": "https://www.google.com/search?q=Brooks+Hyperion+Tempo+running+shoe"
+    "link": "https://www.google.com/search?q=Brooks+Hyperion+Tempo+running+shoe",
+    "longevityMiles": "300-500 miles",
+    "longevityScore": 82,
+    "longevityNote": "Traditional daily trainers usually offer the best mileage-per-dollar."
   },
   {
     "id": 56,
@@ -1789,7 +1954,10 @@ const SHOES=[
     "plate": "No",
     "note": "Lightweight fast trainer.",
     "foam": "DNA FLASH v2",
-    "link": "https://www.google.com/search?q=Brooks+Hyperion+2+running+shoe"
+    "link": "https://www.google.com/search?q=Brooks+Hyperion+2+running+shoe",
+    "longevityMiles": "300-500 miles",
+    "longevityScore": 82,
+    "longevityNote": "Traditional daily trainers usually offer the best mileage-per-dollar."
   },
   {
     "id": 57,
@@ -1821,7 +1989,10 @@ const SHOES=[
     "plate": "Yes",
     "note": "Previous Puma plated workout trainer.",
     "foam": "NitroFoam + PWRPLATE",
-    "link": "https://www.google.com/search?q=PUMA+Deviate+Nitro+3+running+shoe"
+    "link": "https://www.google.com/search?q=PUMA+Deviate+Nitro+3+running+shoe",
+    "longevityMiles": "250-400 miles",
+    "longevityScore": 70,
+    "longevityNote": "Workout trainers can last well, but plated/superfoam setups may lose pop before the outsole is gone."
   },
   {
     "id": 58,
@@ -1853,7 +2024,10 @@ const SHOES=[
     "plate": "Yes",
     "note": "Aggressive short-race/speed option.",
     "foam": "Nitro Elite + carbon plate",
-    "link": "https://www.google.com/search?q=PUMA+Fast-FWD+Nitro+Elite+running+shoe"
+    "link": "https://www.google.com/search?q=PUMA+Fast-FWD+Nitro+Elite+running+shoe",
+    "longevityMiles": "180-300 miles",
+    "longevityScore": 57,
+    "longevityNote": "Light speed shoes usually trade durability for weight and snap."
   },
   {
     "id": 59,
@@ -1885,7 +2059,10 @@ const SHOES=[
     "plate": "No",
     "note": "Fast training option from On.",
     "foam": "Helion",
-    "link": "https://www.google.com/search?q=On+Cloudflow+5+running+shoe"
+    "link": "https://www.google.com/search?q=On+Cloudflow+5+running+shoe",
+    "longevityMiles": "300-500 miles",
+    "longevityScore": 82,
+    "longevityNote": "Traditional daily trainers usually offer the best mileage-per-dollar."
   },
   {
     "id": 60,
@@ -1917,7 +2094,10 @@ const SHOES=[
     "plate": "No",
     "note": "Cushioned On training shoe.",
     "foam": "Helion",
-    "link": "https://www.google.com/search?q=On+Cloudsurfer+Max+running+shoe"
+    "link": "https://www.google.com/search?q=On+Cloudsurfer+Max+running+shoe",
+    "longevityMiles": "350-500 miles",
+    "longevityScore": 86,
+    "longevityNote": "Max-cushion shoes are often durable for easy mileage, though softer foams can feel flat with time."
   },
   {
     "id": 61,
@@ -1949,7 +2129,10 @@ const SHOES=[
     "plate": "Plate-like",
     "note": "Salomon plated trainer for faster efforts.",
     "foam": "Energy Foam + plate",
-    "link": "https://www.google.com/search?q=Salomon+Spectur+2+running+shoe"
+    "link": "https://www.google.com/search?q=Salomon+Spectur+2+running+shoe",
+    "longevityMiles": "250-400 miles",
+    "longevityScore": 70,
+    "longevityNote": "Workout trainers can last well, but plated/superfoam setups may lose pop before the outsole is gone."
   },
   {
     "id": 62,
@@ -1981,7 +2164,10 @@ const SHOES=[
     "plate": "Yes",
     "note": "Premium Salomon trainer/racer hybrid.",
     "foam": "Energy Foam + plate",
-    "link": "https://www.google.com/search?q=Salomon+S/Lab+Spectur+running+shoe"
+    "link": "https://www.google.com/search?q=Salomon+S/Lab+Spectur+running+shoe",
+    "longevityMiles": "250-400 miles",
+    "longevityScore": 70,
+    "longevityNote": "Workout trainers can last well, but plated/superfoam setups may lose pop before the outsole is gone."
   },
   {
     "id": 63,
@@ -2013,7 +2199,10 @@ const SHOES=[
     "plate": "Yes",
     "note": "Plated Reebok trainer/racer hybrid.",
     "foam": "Floatride Energy + plate",
-    "link": "https://www.google.com/search?q=Reebok+Floatride+Energy+X+running+shoe"
+    "link": "https://www.google.com/search?q=Reebok+Floatride+Energy+X+running+shoe",
+    "longevityMiles": "350-500 miles",
+    "longevityScore": 86,
+    "longevityNote": "Workout trainers can last well, but plated/superfoam setups may lose pop before the outsole is gone."
   },
   {
     "id": 64,
@@ -2045,7 +2234,10 @@ const SHOES=[
     "plate": "Yes",
     "note": "Craft premium carbon racing shoe.",
     "foam": "Px Foam + carbon plate",
-    "link": "https://www.google.com/search?q=Craft+Kype+Pro+running+shoe"
+    "link": "https://www.google.com/search?q=Craft+Kype+Pro+running+shoe",
+    "longevityMiles": "120-250 miles",
+    "longevityScore": 48,
+    "longevityNote": "Race-day foams and plates are built for performance first, not maximum mileage."
   },
   {
     "id": 65,
@@ -2077,7 +2269,10 @@ const SHOES=[
     "plate": "Plate-like",
     "note": "Craft fast trainer for workouts.",
     "foam": "Px Foam",
-    "link": "https://www.google.com/search?q=Craft+Nordlite+Speed+running+shoe"
+    "link": "https://www.google.com/search?q=Craft+Nordlite+Speed+running+shoe",
+    "longevityMiles": "250-400 miles",
+    "longevityScore": 70,
+    "longevityNote": "Workout trainers can last well, but plated/superfoam setups may lose pop before the outsole is gone."
   },
   {
     "id": 66,
@@ -2109,7 +2304,10 @@ const SHOES=[
     "plate": "No",
     "note": "Max-cushion ASICS recovery and easy-run shoe.",
     "foam": "FF BLAST PLUS ECO",
-    "link": "https://www.google.com/search?q=ASICS+Gel-Nimbus+27+running+shoe"
+    "link": "https://www.google.com/search?q=ASICS+Gel-Nimbus+27+running+shoe",
+    "longevityMiles": "350-500 miles",
+    "longevityScore": 86,
+    "longevityNote": "Max-cushion shoes are often durable for easy mileage, though softer foams can feel flat with time."
   },
   {
     "id": 67,
@@ -2141,7 +2339,10 @@ const SHOES=[
     "plate": "No",
     "note": "Previous Nimbus comfort shoe.",
     "foam": "FF BLAST PLUS ECO",
-    "link": "https://www.google.com/search?q=ASICS+Gel-Nimbus+26+running+shoe"
+    "link": "https://www.google.com/search?q=ASICS+Gel-Nimbus+26+running+shoe",
+    "longevityMiles": "350-500 miles",
+    "longevityScore": 86,
+    "longevityNote": "Max-cushion shoes are often durable for easy mileage, though softer foams can feel flat with time."
   },
   {
     "id": 68,
@@ -2173,7 +2374,10 @@ const SHOES=[
     "plate": "No",
     "note": "Reliable daily trainer with accommodating fit.",
     "foam": "FF BLAST PLUS",
-    "link": "https://www.google.com/search?q=ASICS+Gel-Cumulus+27+running+shoe"
+    "link": "https://www.google.com/search?q=ASICS+Gel-Cumulus+27+running+shoe",
+    "longevityMiles": "300-500 miles",
+    "longevityScore": 82,
+    "longevityNote": "Traditional daily trainers usually offer the best mileage-per-dollar."
   },
   {
     "id": 69,
@@ -2205,7 +2409,10 @@ const SHOES=[
     "plate": "No",
     "note": "Premium stability shoe with max cushion.",
     "foam": "FF BLAST MAX + stability system",
-    "link": "https://www.google.com/search?q=ASICS+Gel-Kayano+33+running+shoe"
+    "link": "https://www.google.com/search?q=ASICS+Gel-Kayano+33+running+shoe",
+    "longevityMiles": "350-500 miles",
+    "longevityScore": 94,
+    "longevityNote": "Max-cushion shoes are often durable for easy mileage, though softer foams can feel flat with time."
   },
   {
     "id": 70,
@@ -2237,7 +2444,10 @@ const SHOES=[
     "plate": "No",
     "note": "Previous premium stability shoe.",
     "foam": "FF BLAST PLUS",
-    "link": "https://www.google.com/search?q=ASICS+Gel-Kayano+32+running+shoe"
+    "link": "https://www.google.com/search?q=ASICS+Gel-Kayano+32+running+shoe",
+    "longevityMiles": "350-500 miles",
+    "longevityScore": 94,
+    "longevityNote": "Max-cushion shoes are often durable for easy mileage, though softer foams can feel flat with time."
   },
   {
     "id": 71,
@@ -2269,7 +2479,10 @@ const SHOES=[
     "plate": "No",
     "note": "Lighter stability daily trainer.",
     "foam": "FF BLAST PLUS",
-    "link": "https://www.google.com/search?q=ASICS+GT-2000+14+running+shoe"
+    "link": "https://www.google.com/search?q=ASICS+GT-2000+14+running+shoe",
+    "longevityMiles": "350-500 miles",
+    "longevityScore": 94,
+    "longevityNote": "Stability shoes often have durable builds and supportive platforms."
   },
   {
     "id": 72,
@@ -2301,7 +2514,10 @@ const SHOES=[
     "plate": "No",
     "note": "Rockered max-cushion shoe for easy and long miles.",
     "foam": "FF BLAST MAX + FF BLAST PLUS",
-    "link": "https://www.google.com/search?q=ASICS+GlideRide+Max+running+shoe"
+    "link": "https://www.google.com/search?q=ASICS+GlideRide+Max+running+shoe",
+    "longevityMiles": "350-500 miles",
+    "longevityScore": 86,
+    "longevityNote": "Max-cushion shoes are often durable for easy mileage, though softer foams can feel flat with time."
   },
   {
     "id": 73,
@@ -2333,7 +2549,10 @@ const SHOES=[
     "plate": "No",
     "note": "Light and fun trainer that can handle workouts.",
     "foam": "FF BLAST PLUS",
-    "link": "https://www.google.com/search?q=ASICS+Noosa+Tri+16+running+shoe"
+    "link": "https://www.google.com/search?q=ASICS+Noosa+Tri+16+running+shoe",
+    "longevityMiles": "300-500 miles",
+    "longevityScore": 82,
+    "longevityNote": "Traditional daily trainers usually offer the best mileage-per-dollar."
   },
   {
     "id": 74,
@@ -2365,7 +2584,10 @@ const SHOES=[
     "plate": "No",
     "note": "Versatile neutral daily trainer.",
     "foam": "PWRRUN+",
-    "link": "https://www.google.com/search?q=Saucony+Ride+18+running+shoe"
+    "link": "https://www.google.com/search?q=Saucony+Ride+18+running+shoe",
+    "longevityMiles": "350-500 miles",
+    "longevityScore": 86,
+    "longevityNote": "Traditional daily trainers usually offer the best mileage-per-dollar."
   },
   {
     "id": 75,
@@ -2397,7 +2619,10 @@ const SHOES=[
     "plate": "No",
     "note": "Cushioned daily/long-run trainer.",
     "foam": "PWRRUN PB/PWRRUN+",
-    "link": "https://www.google.com/search?q=Saucony+Triumph+23+running+shoe"
+    "link": "https://www.google.com/search?q=Saucony+Triumph+23+running+shoe",
+    "longevityMiles": "350-500 miles",
+    "longevityScore": 86,
+    "longevityNote": "Max-cushion shoes are often durable for easy mileage, though softer foams can feel flat with time."
   },
   {
     "id": 76,
@@ -2429,7 +2654,10 @@ const SHOES=[
     "plate": "No",
     "note": "Max-cushion stability option.",
     "foam": "PWRRUN PB/PWRRUN frame",
-    "link": "https://www.google.com/search?q=Saucony+Hurricane+25+running+shoe"
+    "link": "https://www.google.com/search?q=Saucony+Hurricane+25+running+shoe",
+    "longevityMiles": "350-500 miles",
+    "longevityScore": 94,
+    "longevityNote": "Max-cushion shoes are often durable for easy mileage, though softer foams can feel flat with time."
   },
   {
     "id": 77,
@@ -2461,7 +2689,10 @@ const SHOES=[
     "plate": "No",
     "note": "Traditional stability daily trainer.",
     "foam": "PWRRUN",
-    "link": "https://www.google.com/search?q=Saucony+Guide+18+running+shoe"
+    "link": "https://www.google.com/search?q=Saucony+Guide+18+running+shoe",
+    "longevityMiles": "350-500 miles",
+    "longevityScore": 94,
+    "longevityNote": "Stability shoes often have durable builds and supportive platforms."
   },
   {
     "id": 78,
@@ -2493,7 +2724,10 @@ const SHOES=[
     "plate": "No",
     "note": "Lightweight flexible trainer.",
     "foam": "PWRRUN",
-    "link": "https://www.google.com/search?q=Saucony+Kinvara+16+running+shoe"
+    "link": "https://www.google.com/search?q=Saucony+Kinvara+16+running+shoe",
+    "longevityMiles": "300-500 miles",
+    "longevityScore": 82,
+    "longevityNote": "Traditional daily trainers usually offer the best mileage-per-dollar."
   },
   {
     "id": 79,
@@ -2525,7 +2759,10 @@ const SHOES=[
     "plate": "No",
     "note": "Fast stability trainer.",
     "foam": "PWRRUN PB + guidance frame",
-    "link": "https://www.google.com/search?q=Saucony+Tempus+2+running+shoe"
+    "link": "https://www.google.com/search?q=Saucony+Tempus+2+running+shoe",
+    "longevityMiles": "350-500 miles",
+    "longevityScore": 94,
+    "longevityNote": "Stability shoes often have durable builds and supportive platforms."
   },
   {
     "id": 80,
@@ -2557,7 +2794,10 @@ const SHOES=[
     "plate": "No",
     "note": "Reliable beginner-friendly daily trainer.",
     "foam": "DNA LOFT v3",
-    "link": "https://www.google.com/search?q=Brooks+Ghost+17+running+shoe"
+    "link": "https://www.google.com/search?q=Brooks+Ghost+17+running+shoe",
+    "longevityMiles": "350-500 miles",
+    "longevityScore": 86,
+    "longevityNote": "Traditional daily trainers usually offer the best mileage-per-dollar."
   },
   {
     "id": 81,
@@ -2589,7 +2829,10 @@ const SHOES=[
     "plate": "No",
     "note": "Premium comfort trainer.",
     "foam": "DNA Tuned",
-    "link": "https://www.google.com/search?q=Brooks+Glycerin+22+running+shoe"
+    "link": "https://www.google.com/search?q=Brooks+Glycerin+22+running+shoe",
+    "longevityMiles": "350-500 miles",
+    "longevityScore": 86,
+    "longevityNote": "Max-cushion shoes are often durable for easy mileage, though softer foams can feel flat with time."
   },
   {
     "id": 82,
@@ -2621,7 +2864,10 @@ const SHOES=[
     "plate": "No",
     "note": "Stable max-cushion daily shoe.",
     "foam": "DNA LOFT v3",
-    "link": "https://www.google.com/search?q=Brooks+Ghost+Max+2+running+shoe"
+    "link": "https://www.google.com/search?q=Brooks+Ghost+Max+2+running+shoe",
+    "longevityMiles": "350-500 miles",
+    "longevityScore": 86,
+    "longevityNote": "Max-cushion shoes are often durable for easy mileage, though softer foams can feel flat with time."
   },
   {
     "id": 83,
@@ -2653,7 +2899,10 @@ const SHOES=[
     "plate": "No",
     "note": "Budget-friendly lightweight trainer.",
     "foam": "DNA",
-    "link": "https://www.google.com/search?q=Brooks+Launch+11+running+shoe"
+    "link": "https://www.google.com/search?q=Brooks+Launch+11+running+shoe",
+    "longevityMiles": "250-400 miles",
+    "longevityScore": 74,
+    "longevityNote": "Budget trainers can be durable, but cushioning may feel tired earlier."
   },
   {
     "id": 84,
@@ -2685,7 +2934,10 @@ const SHOES=[
     "plate": "No",
     "note": "Classic support shoe with wide sizing.",
     "foam": "GuideRails",
-    "link": "https://www.google.com/search?q=Brooks+Adrenaline+GTS+24+running+shoe"
+    "link": "https://www.google.com/search?q=Brooks+Adrenaline+GTS+24+running+shoe",
+    "longevityMiles": "350-500 miles",
+    "longevityScore": 94,
+    "longevityNote": "Stability shoes often have durable builds and supportive platforms."
   },
   {
     "id": 85,
@@ -2717,7 +2969,10 @@ const SHOES=[
     "plate": "No",
     "note": "Maximum support option for stability-focused runners.",
     "foam": "GuideRails",
-    "link": "https://www.google.com/search?q=Brooks+Beast+GTS+24+running+shoe"
+    "link": "https://www.google.com/search?q=Brooks+Beast+GTS+24+running+shoe",
+    "longevityMiles": "350-500 miles",
+    "longevityScore": 94,
+    "longevityNote": "Stability shoes often have durable builds and supportive platforms."
   },
   {
     "id": 86,
@@ -2749,7 +3004,10 @@ const SHOES=[
     "plate": "No",
     "note": "Maximum support option with wide-fit focus.",
     "foam": "GuideRails",
-    "link": "https://www.google.com/search?q=Brooks+Ariel+GTS+24+running+shoe"
+    "link": "https://www.google.com/search?q=Brooks+Ariel+GTS+24+running+shoe",
+    "longevityMiles": "350-500 miles",
+    "longevityScore": 94,
+    "longevityNote": "Stability shoes often have durable builds and supportive platforms."
   },
   {
     "id": 87,
@@ -2781,7 +3039,10 @@ const SHOES=[
     "plate": "No",
     "note": "Versatile neutral daily trainer.",
     "foam": "ReactX + Air Zoom",
-    "link": "https://www.google.com/search?q=Nike+Pegasus+42+running+shoe"
+    "link": "https://www.google.com/search?q=Nike+Pegasus+42+running+shoe",
+    "longevityMiles": "300-500 miles",
+    "longevityScore": 82,
+    "longevityNote": "Traditional daily trainers usually offer the best mileage-per-dollar."
   },
   {
     "id": 88,
@@ -2813,7 +3074,10 @@ const SHOES=[
     "plate": "No",
     "note": "Cushioned Nike daily trainer.",
     "foam": "ZoomX + ReactX",
-    "link": "https://www.google.com/search?q=Nike+Vomero+18+running+shoe"
+    "link": "https://www.google.com/search?q=Nike+Vomero+18+running+shoe",
+    "longevityMiles": "300-500 miles",
+    "longevityScore": 82,
+    "longevityNote": "Traditional daily trainers usually offer the best mileage-per-dollar."
   },
   {
     "id": 89,
@@ -2845,7 +3109,10 @@ const SHOES=[
     "plate": "No",
     "note": "Nike stability training shoe.",
     "foam": "Cushlon/ReactX-style",
-    "link": "https://www.google.com/search?q=Nike+Structure+26+running+shoe"
+    "link": "https://www.google.com/search?q=Nike+Structure+26+running+shoe",
+    "longevityMiles": "350-500 miles",
+    "longevityScore": 94,
+    "longevityNote": "Stability shoes often have durable builds and supportive platforms."
   },
   {
     "id": 90,
@@ -2877,7 +3144,10 @@ const SHOES=[
     "plate": "No",
     "note": "Soft and bouncy recovery shoe.",
     "foam": "ZoomX",
-    "link": "https://www.google.com/search?q=Nike+Invincible+3+running+shoe"
+    "link": "https://www.google.com/search?q=Nike+Invincible+3+running+shoe",
+    "longevityMiles": "350-500 miles",
+    "longevityScore": 86,
+    "longevityNote": "Max-cushion shoes are often durable for easy mileage, though softer foams can feel flat with time."
   },
   {
     "id": 91,
@@ -2909,7 +3179,10 @@ const SHOES=[
     "plate": "No",
     "note": "Walking/recovery option, not a speed shoe.",
     "foam": "Cushlon",
-    "link": "https://www.google.com/search?q=Nike+Motiva+running+shoe"
+    "link": "https://www.google.com/search?q=Nike+Motiva+running+shoe",
+    "longevityMiles": "350-500 miles",
+    "longevityScore": 86,
+    "longevityNote": "Max-cushion shoes are often durable for easy mileage, though softer foams can feel flat with time."
   },
   {
     "id": 92,
@@ -2941,7 +3214,10 @@ const SHOES=[
     "plate": "No",
     "note": "Everyday trainer from adidas.",
     "foam": "Dreamstrike+",
-    "link": "https://www.google.com/search?q=adidas+Supernova+Rise+2+running+shoe"
+    "link": "https://www.google.com/search?q=adidas+Supernova+Rise+2+running+shoe",
+    "longevityMiles": "300-500 miles",
+    "longevityScore": 82,
+    "longevityNote": "Traditional daily trainers usually offer the best mileage-per-dollar."
   },
   {
     "id": 93,
@@ -2973,7 +3249,10 @@ const SHOES=[
     "plate": "No",
     "note": "Cushioned adidas daily trainer.",
     "foam": "Dreamstrike+",
-    "link": "https://www.google.com/search?q=adidas+Supernova+Prima+2+running+shoe"
+    "link": "https://www.google.com/search?q=adidas+Supernova+Prima+2+running+shoe",
+    "longevityMiles": "350-500 miles",
+    "longevityScore": 86,
+    "longevityNote": "Max-cushion shoes are often durable for easy mileage, though softer foams can feel flat with time."
   },
   {
     "id": 94,
@@ -3005,7 +3284,10 @@ const SHOES=[
     "plate": "No",
     "note": "Affordable fast daily trainer.",
     "foam": "Lightstrike Pro insert",
-    "link": "https://www.google.com/search?q=adidas+Adizero+SL2+running+shoe"
+    "link": "https://www.google.com/search?q=adidas+Adizero+SL2+running+shoe",
+    "longevityMiles": "300-500 miles",
+    "longevityScore": 82,
+    "longevityNote": "Traditional daily trainers usually offer the best mileage-per-dollar."
   },
   {
     "id": 95,
@@ -3037,7 +3319,10 @@ const SHOES=[
     "plate": "No",
     "note": "Budget adidas daily trainer.",
     "foam": "Lightstrike",
-    "link": "https://www.google.com/search?q=adidas+Duramo+Speed+2+running+shoe"
+    "link": "https://www.google.com/search?q=adidas+Duramo+Speed+2+running+shoe",
+    "longevityMiles": "250-400 miles",
+    "longevityScore": 74,
+    "longevityNote": "Budget trainers can be durable, but cushioning may feel tired earlier."
   },
   {
     "id": 96,
@@ -3069,7 +3354,10 @@ const SHOES=[
     "plate": "No",
     "note": "Comfort/lifestyle crossover, less performance-focused.",
     "foam": "Boost/Light Boost",
-    "link": "https://www.google.com/search?q=adidas+Ultraboost+5X+running+shoe"
+    "link": "https://www.google.com/search?q=adidas+Ultraboost+5X+running+shoe",
+    "longevityMiles": "300-500 miles",
+    "longevityScore": 82,
+    "longevityNote": "Traditional daily trainers usually offer the best mileage-per-dollar."
   },
   {
     "id": 97,
@@ -3101,7 +3389,10 @@ const SHOES=[
     "plate": "No",
     "note": "Soft neutral daily trainer.",
     "foam": "CMEVA",
-    "link": "https://www.google.com/search?q=HOKA+Clifton+10+running+shoe"
+    "link": "https://www.google.com/search?q=HOKA+Clifton+10+running+shoe",
+    "longevityMiles": "350-500 miles",
+    "longevityScore": 86,
+    "longevityNote": "Traditional daily trainers usually offer the best mileage-per-dollar."
   },
   {
     "id": 98,
@@ -3133,7 +3424,10 @@ const SHOES=[
     "plate": "No",
     "note": "Max cushion recovery/easy shoe.",
     "foam": "Supercritical EVA",
-    "link": "https://www.google.com/search?q=HOKA+Bondi+9+running+shoe"
+    "link": "https://www.google.com/search?q=HOKA+Bondi+9+running+shoe",
+    "longevityMiles": "350-500 miles",
+    "longevityScore": 86,
+    "longevityNote": "Max-cushion shoes are often durable for easy mileage, though softer foams can feel flat with time."
   },
   {
     "id": 99,
@@ -3165,7 +3459,10 @@ const SHOES=[
     "plate": "No",
     "note": "Light, fast daily trainer.",
     "foam": "Supercritical EVA",
-    "link": "https://www.google.com/search?q=HOKA+Mach+6+running+shoe"
+    "link": "https://www.google.com/search?q=HOKA+Mach+6+running+shoe",
+    "longevityMiles": "300-500 miles",
+    "longevityScore": 82,
+    "longevityNote": "Traditional daily trainers usually offer the best mileage-per-dollar."
   },
   {
     "id": 100,
@@ -3197,7 +3494,10 @@ const SHOES=[
     "plate": "No",
     "note": "Updated fast daily trainer.",
     "foam": "Supercritical EVA",
-    "link": "https://www.google.com/search?q=HOKA+Mach+7+running+shoe"
+    "link": "https://www.google.com/search?q=HOKA+Mach+7+running+shoe",
+    "longevityMiles": "300-500 miles",
+    "longevityScore": 82,
+    "longevityNote": "Traditional daily trainers usually offer the best mileage-per-dollar."
   },
   {
     "id": 101,
@@ -3229,7 +3529,10 @@ const SHOES=[
     "plate": "No",
     "note": "Cushioned daily trainer from HOKA.",
     "foam": "Supercritical EVA",
-    "link": "https://www.google.com/search?q=HOKA+Skyflow+2+running+shoe"
+    "link": "https://www.google.com/search?q=HOKA+Skyflow+2+running+shoe",
+    "longevityMiles": "300-500 miles",
+    "longevityScore": 82,
+    "longevityNote": "Traditional daily trainers usually offer the best mileage-per-dollar."
   },
   {
     "id": 102,
@@ -3261,7 +3564,10 @@ const SHOES=[
     "plate": "No",
     "note": "Light HOKA stability trainer.",
     "foam": "EVA + support",
-    "link": "https://www.google.com/search?q=HOKA+Arahi+8+running+shoe"
+    "link": "https://www.google.com/search?q=HOKA+Arahi+8+running+shoe",
+    "longevityMiles": "350-500 miles",
+    "longevityScore": 94,
+    "longevityNote": "Stability shoes often have durable builds and supportive platforms."
   },
   {
     "id": 103,
@@ -3293,7 +3599,10 @@ const SHOES=[
     "plate": "No",
     "note": "Maximum stability/cushion shoe.",
     "foam": "EVA + H-frame",
-    "link": "https://www.google.com/search?q=HOKA+Gaviota+6+running+shoe"
+    "link": "https://www.google.com/search?q=HOKA+Gaviota+6+running+shoe",
+    "longevityMiles": "350-500 miles",
+    "longevityScore": 94,
+    "longevityNote": "Max-cushion shoes are often durable for easy mileage, though softer foams can feel flat with time."
   },
   {
     "id": 104,
@@ -3325,7 +3634,10 @@ const SHOES=[
     "plate": "No",
     "note": "Walking/daily lifestyle crossover.",
     "foam": "CMEVA",
-    "link": "https://www.google.com/search?q=HOKA+Transport+running+shoe"
+    "link": "https://www.google.com/search?q=HOKA+Transport+running+shoe",
+    "longevityMiles": "300-500 miles",
+    "longevityScore": 82,
+    "longevityNote": "Traditional daily trainers usually offer the best mileage-per-dollar."
   },
   {
     "id": 105,
@@ -3357,7 +3669,10 @@ const SHOES=[
     "plate": "No",
     "note": "Door-to-trail trainer.",
     "foam": "EVA",
-    "link": "https://www.google.com/search?q=HOKA+Challenger+8+running+shoe"
+    "link": "https://www.google.com/search?q=HOKA+Challenger+8+running+shoe",
+    "longevityMiles": "350-550 miles",
+    "longevityScore": 96,
+    "longevityNote": "Trail and ultra shoes can be durable, but outsole wear depends heavily on terrain."
   },
   {
     "id": 106,
@@ -3389,7 +3704,10 @@ const SHOES=[
     "plate": "No",
     "note": "Light and fast daily trainer.",
     "foam": "FuelCell",
-    "link": "https://www.google.com/search?q=New+Balance+FuelCell+Rebel+v5+running+shoe"
+    "link": "https://www.google.com/search?q=New+Balance+FuelCell+Rebel+v5+running+shoe",
+    "longevityMiles": "300-500 miles",
+    "longevityScore": 82,
+    "longevityNote": "Traditional daily trainers usually offer the best mileage-per-dollar."
   },
   {
     "id": 107,
@@ -3421,7 +3739,10 @@ const SHOES=[
     "plate": "No",
     "note": "Reliable daily trainer with wide sizing.",
     "foam": "Fresh Foam X",
-    "link": "https://www.google.com/search?q=New+Balance+880+v15+running+shoe"
+    "link": "https://www.google.com/search?q=New+Balance+880+v15+running+shoe",
+    "longevityMiles": "350-500 miles",
+    "longevityScore": 86,
+    "longevityNote": "Traditional daily trainers usually offer the best mileage-per-dollar."
   },
   {
     "id": 108,
@@ -3453,7 +3774,10 @@ const SHOES=[
     "plate": "No",
     "note": "Max cushion shoe with wide sizing.",
     "foam": "Fresh Foam X",
-    "link": "https://www.google.com/search?q=New+Balance+Fresh+Foam+More+v6+running+shoe"
+    "link": "https://www.google.com/search?q=New+Balance+Fresh+Foam+More+v6+running+shoe",
+    "longevityMiles": "350-500 miles",
+    "longevityScore": 86,
+    "longevityNote": "Max-cushion shoes are often durable for easy mileage, though softer foams can feel flat with time."
   },
   {
     "id": 109,
@@ -3485,7 +3809,10 @@ const SHOES=[
     "plate": "No",
     "note": "Bouncy New Balance super trainer.",
     "foam": "FuelCell/PEBA blend",
-    "link": "https://www.google.com/search?q=New+Balance+Balos+v2+running+shoe"
+    "link": "https://www.google.com/search?q=New+Balance+Balos+v2+running+shoe",
+    "longevityMiles": "300-450 miles",
+    "longevityScore": 78,
+    "longevityNote": "Super trainers often last longer than racers, but the most energetic feel may fade before total breakdown."
   },
   {
     "id": 110,
@@ -3517,7 +3844,10 @@ const SHOES=[
     "plate": "No",
     "note": "Stability trainer with wide sizing.",
     "foam": "Fresh Foam X",
-    "link": "https://www.google.com/search?q=New+Balance+Fresh+Foam+X+860+v14+running+shoe"
+    "link": "https://www.google.com/search?q=New+Balance+Fresh+Foam+X+860+v14+running+shoe",
+    "longevityMiles": "350-500 miles",
+    "longevityScore": 94,
+    "longevityNote": "Stability shoes often have durable builds and supportive platforms."
   },
   {
     "id": 111,
@@ -3549,7 +3879,10 @@ const SHOES=[
     "plate": "No",
     "note": "Soft stability option.",
     "foam": "Fresh Foam X",
-    "link": "https://www.google.com/search?q=New+Balance+Fresh+Foam+X+Vongo+v6+running+shoe"
+    "link": "https://www.google.com/search?q=New+Balance+Fresh+Foam+X+Vongo+v6+running+shoe",
+    "longevityMiles": "350-500 miles",
+    "longevityScore": 94,
+    "longevityNote": "Max-cushion shoes are often durable for easy mileage, though softer foams can feel flat with time."
   },
   {
     "id": 112,
@@ -3581,7 +3914,10 @@ const SHOES=[
     "plate": "No",
     "note": "Light stability trainer.",
     "foam": "FuelCell",
-    "link": "https://www.google.com/search?q=New+Balance+FuelCell+Prism+v3+running+shoe"
+    "link": "https://www.google.com/search?q=New+Balance+FuelCell+Prism+v3+running+shoe",
+    "longevityMiles": "350-500 miles",
+    "longevityScore": 94,
+    "longevityNote": "Stability shoes often have durable builds and supportive platforms."
   },
   {
     "id": 113,
@@ -3613,7 +3949,10 @@ const SHOES=[
     "plate": "No",
     "note": "High-value neutral daily trainer.",
     "foam": "NitroFoam",
-    "link": "https://www.google.com/search?q=PUMA+Velocity+Nitro+4+running+shoe"
+    "link": "https://www.google.com/search?q=PUMA+Velocity+Nitro+4+running+shoe",
+    "longevityMiles": "300-500 miles",
+    "longevityScore": 82,
+    "longevityNote": "Traditional daily trainers usually offer the best mileage-per-dollar."
   },
   {
     "id": 114,
@@ -3645,7 +3984,10 @@ const SHOES=[
     "plate": "No",
     "note": "PUMA max-cushion trainer.",
     "foam": "NitroFoam",
-    "link": "https://www.google.com/search?q=PUMA+Magnify+Nitro+3+running+shoe"
+    "link": "https://www.google.com/search?q=PUMA+Magnify+Nitro+3+running+shoe",
+    "longevityMiles": "350-500 miles",
+    "longevityScore": 86,
+    "longevityNote": "Max-cushion shoes are often durable for easy mileage, though softer foams can feel flat with time."
   },
   {
     "id": 115,
@@ -3677,7 +4019,10 @@ const SHOES=[
     "plate": "No",
     "note": "PUMA stability trainer.",
     "foam": "NitroFoam + guidance",
-    "link": "https://www.google.com/search?q=PUMA+ForeverRun+Nitro+2+running+shoe"
+    "link": "https://www.google.com/search?q=PUMA+ForeverRun+Nitro+2+running+shoe",
+    "longevityMiles": "350-500 miles",
+    "longevityScore": 94,
+    "longevityNote": "Stability shoes often have durable builds and supportive platforms."
   },
   {
     "id": 116,
@@ -3709,7 +4054,10 @@ const SHOES=[
     "plate": "No",
     "note": "Budget Puma daily trainer.",
     "foam": "NitroFoam/EVA",
-    "link": "https://www.google.com/search?q=PUMA+Electrify+Nitro+4+running+shoe"
+    "link": "https://www.google.com/search?q=PUMA+Electrify+Nitro+4+running+shoe",
+    "longevityMiles": "250-400 miles",
+    "longevityScore": 74,
+    "longevityNote": "Budget trainers can be durable, but cushioning may feel tired earlier."
   },
   {
     "id": 117,
@@ -3741,7 +4089,10 @@ const SHOES=[
     "plate": "No",
     "note": "Lightweight speed trainer.",
     "foam": "NitroFoam",
-    "link": "https://www.google.com/search?q=PUMA+Liberate+Nitro+2+running+shoe"
+    "link": "https://www.google.com/search?q=PUMA+Liberate+Nitro+2+running+shoe",
+    "longevityMiles": "180-300 miles",
+    "longevityScore": 57,
+    "longevityNote": "Light speed shoes usually trade durability for weight and snap."
   },
   {
     "id": 118,
@@ -3773,7 +4124,10 @@ const SHOES=[
     "plate": "Wave plate",
     "note": "Classic daily trainer with Wave support.",
     "foam": "Enerzy NXT + Wave",
-    "link": "https://www.google.com/search?q=Mizuno+Wave+Rider+29+running+shoe"
+    "link": "https://www.google.com/search?q=Mizuno+Wave+Rider+29+running+shoe",
+    "longevityMiles": "350-500 miles",
+    "longevityScore": 86,
+    "longevityNote": "Traditional daily trainers usually offer the best mileage-per-dollar."
   },
   {
     "id": 119,
@@ -3805,7 +4159,10 @@ const SHOES=[
     "plate": "No",
     "note": "Cushioned Mizuno trainer.",
     "foam": "Enerzy NXT",
-    "link": "https://www.google.com/search?q=Mizuno+Wave+Sky+9+running+shoe"
+    "link": "https://www.google.com/search?q=Mizuno+Wave+Sky+9+running+shoe",
+    "longevityMiles": "350-500 miles",
+    "longevityScore": 86,
+    "longevityNote": "Max-cushion shoes are often durable for easy mileage, though softer foams can feel flat with time."
   },
   {
     "id": 120,
@@ -3837,7 +4194,10 @@ const SHOES=[
     "plate": "No",
     "note": "Fast and smooth daily trainer.",
     "foam": "Enerzy NXT",
-    "link": "https://www.google.com/search?q=Mizuno+Neo+Zen+running+shoe"
+    "link": "https://www.google.com/search?q=Mizuno+Neo+Zen+running+shoe",
+    "longevityMiles": "300-500 miles",
+    "longevityScore": 82,
+    "longevityNote": "Traditional daily trainers usually offer the best mileage-per-dollar."
   },
   {
     "id": 121,
@@ -3869,7 +4229,10 @@ const SHOES=[
     "plate": "Wave plate",
     "note": "Stability daily trainer.",
     "foam": "Enerzy + support wave",
-    "link": "https://www.google.com/search?q=Mizuno+Wave+Inspire+21+running+shoe"
+    "link": "https://www.google.com/search?q=Mizuno+Wave+Inspire+21+running+shoe",
+    "longevityMiles": "350-500 miles",
+    "longevityScore": 94,
+    "longevityNote": "Stability shoes often have durable builds and supportive platforms."
   },
   {
     "id": 122,
@@ -3901,7 +4264,10 @@ const SHOES=[
     "plate": "Wave plate",
     "note": "Max stability Mizuno option.",
     "foam": "Enerzy + Wave",
-    "link": "https://www.google.com/search?q=Mizuno+Wave+Horizon+8+running+shoe"
+    "link": "https://www.google.com/search?q=Mizuno+Wave+Horizon+8+running+shoe",
+    "longevityMiles": "350-500 miles",
+    "longevityScore": 94,
+    "longevityNote": "Max-cushion shoes are often durable for easy mileage, though softer foams can feel flat with time."
   },
   {
     "id": 123,
@@ -3933,7 +4299,10 @@ const SHOES=[
     "plate": "No",
     "note": "Smooth On daily trainer.",
     "foam": "Helion",
-    "link": "https://www.google.com/search?q=On+Cloudsurfer+2+running+shoe"
+    "link": "https://www.google.com/search?q=On+Cloudsurfer+2+running+shoe",
+    "longevityMiles": "300-500 miles",
+    "longevityScore": 82,
+    "longevityNote": "Traditional daily trainers usually offer the best mileage-per-dollar."
   },
   {
     "id": 124,
@@ -3965,7 +4334,10 @@ const SHOES=[
     "plate": "Speedboard",
     "note": "Cushioned On daily trainer.",
     "foam": "Helion",
-    "link": "https://www.google.com/search?q=On+Cloudmonster+2+running+shoe"
+    "link": "https://www.google.com/search?q=On+Cloudmonster+2+running+shoe",
+    "longevityMiles": "350-500 miles",
+    "longevityScore": 86,
+    "longevityNote": "Max-cushion shoes are often durable for easy mileage, though softer foams can feel flat with time."
   },
   {
     "id": 125,
@@ -3997,7 +4369,10 @@ const SHOES=[
     "plate": "Speedboard",
     "note": "Premium On super trainer.",
     "foam": "Helion HF + Helion",
-    "link": "https://www.google.com/search?q=On+Cloudmonster+Hyper+running+shoe"
+    "link": "https://www.google.com/search?q=On+Cloudmonster+Hyper+running+shoe",
+    "longevityMiles": "300-450 miles",
+    "longevityScore": 78,
+    "longevityNote": "Super trainers often last longer than racers, but the most energetic feel may fade before total breakdown."
   },
   {
     "id": 126,
@@ -4029,7 +4404,10 @@ const SHOES=[
     "plate": "No",
     "note": "Stable On daily trainer.",
     "foam": "Helion + support",
-    "link": "https://www.google.com/search?q=On+Cloudrunner+2+running+shoe"
+    "link": "https://www.google.com/search?q=On+Cloudrunner+2+running+shoe",
+    "longevityMiles": "350-500 miles",
+    "longevityScore": 94,
+    "longevityNote": "Stability shoes often have durable builds and supportive platforms."
   },
   {
     "id": 127,
@@ -4061,7 +4439,10 @@ const SHOES=[
     "plate": "Speedboard",
     "note": "Cushioned daily option.",
     "foam": "Helion",
-    "link": "https://www.google.com/search?q=On+Cloudstratus+3+running+shoe"
+    "link": "https://www.google.com/search?q=On+Cloudstratus+3+running+shoe",
+    "longevityMiles": "300-500 miles",
+    "longevityScore": 82,
+    "longevityNote": "Traditional daily trainers usually offer the best mileage-per-dollar."
   },
   {
     "id": 128,
@@ -4093,7 +4474,10 @@ const SHOES=[
     "plate": "Speedboard",
     "note": "Urban running/lifestyle trainer.",
     "foam": "Helion",
-    "link": "https://www.google.com/search?q=On+Cloudswift+4+running+shoe"
+    "link": "https://www.google.com/search?q=On+Cloudswift+4+running+shoe",
+    "longevityMiles": "300-500 miles",
+    "longevityScore": 82,
+    "longevityNote": "Traditional daily trainers usually offer the best mileage-per-dollar."
   },
   {
     "id": 129,
@@ -4125,7 +4509,10 @@ const SHOES=[
     "plate": "No",
     "note": "Foot-shaped daily trainer with low-drop feel.",
     "foam": "EGO P35",
-    "link": "https://www.google.com/search?q=Altra+Experience+Flow+3+running+shoe"
+    "link": "https://www.google.com/search?q=Altra+Experience+Flow+3+running+shoe",
+    "longevityMiles": "300-500 miles",
+    "longevityScore": 82,
+    "longevityNote": "Traditional daily trainers usually offer the best mileage-per-dollar."
   },
   {
     "id": 130,
@@ -4157,7 +4544,10 @@ const SHOES=[
     "plate": "No",
     "note": "Foot-shaped comfort daily trainer.",
     "foam": "EGO MAX",
-    "link": "https://www.google.com/search?q=Altra+Torin+8+running+shoe"
+    "link": "https://www.google.com/search?q=Altra+Torin+8+running+shoe",
+    "longevityMiles": "300-500 miles",
+    "longevityScore": 82,
+    "longevityNote": "Traditional daily trainers usually offer the best mileage-per-dollar."
   },
   {
     "id": 131,
@@ -4189,7 +4579,10 @@ const SHOES=[
     "plate": "No",
     "note": "Foot-shaped max cushion trainer.",
     "foam": "EGO FLO",
-    "link": "https://www.google.com/search?q=Altra+FWD+Via+running+shoe"
+    "link": "https://www.google.com/search?q=Altra+FWD+Via+running+shoe",
+    "longevityMiles": "350-500 miles",
+    "longevityScore": 86,
+    "longevityNote": "Max-cushion shoes are often durable for easy mileage, though softer foams can feel flat with time."
   },
   {
     "id": 132,
@@ -4221,7 +4614,10 @@ const SHOES=[
     "plate": "No",
     "note": "Wide toe-box fast trainer.",
     "foam": "EGO PRO",
-    "link": "https://www.google.com/search?q=Altra+Vanish+Tempo+2+running+shoe"
+    "link": "https://www.google.com/search?q=Altra+Vanish+Tempo+2+running+shoe",
+    "longevityMiles": "300-500 miles",
+    "longevityScore": 82,
+    "longevityNote": "Traditional daily trainers usually offer the best mileage-per-dollar."
   },
   {
     "id": 133,
@@ -4253,7 +4649,10 @@ const SHOES=[
     "plate": "Yes",
     "note": "Foot-shaped carbon racer.",
     "foam": "EGO PRO + carbon plate",
-    "link": "https://www.google.com/search?q=Altra+Vanish+Carbon+2+running+shoe"
+    "link": "https://www.google.com/search?q=Altra+Vanish+Carbon+2+running+shoe",
+    "longevityMiles": "120-250 miles",
+    "longevityScore": 48,
+    "longevityNote": "Race-day foams and plates are built for performance first, not maximum mileage."
   },
   {
     "id": 134,
@@ -4285,7 +4684,10 @@ const SHOES=[
     "plate": "No",
     "note": "Foot-shaped stability shoe.",
     "foam": "EGO",
-    "link": "https://www.google.com/search?q=Altra+Provision+8+running+shoe"
+    "link": "https://www.google.com/search?q=Altra+Provision+8+running+shoe",
+    "longevityMiles": "350-500 miles",
+    "longevityScore": 94,
+    "longevityNote": "Stability shoes often have durable builds and supportive platforms."
   },
   {
     "id": 135,
@@ -4317,7 +4719,10 @@ const SHOES=[
     "plate": "No",
     "note": "Max cushion support with wide toe box.",
     "foam": "EGO MAX",
-    "link": "https://www.google.com/search?q=Altra+Paradigm+7+running+shoe"
+    "link": "https://www.google.com/search?q=Altra+Paradigm+7+running+shoe",
+    "longevityMiles": "350-500 miles",
+    "longevityScore": 94,
+    "longevityNote": "Max-cushion shoes are often durable for easy mileage, though softer foams can feel flat with time."
   },
   {
     "id": 136,
@@ -4349,7 +4754,10 @@ const SHOES=[
     "plate": "No",
     "note": "Wide toe-box cushioned trainer.",
     "foam": "ZipFoam",
-    "link": "https://www.google.com/search?q=Topo+Phantom+4+running+shoe"
+    "link": "https://www.google.com/search?q=Topo+Phantom+4+running+shoe",
+    "longevityMiles": "300-450 miles",
+    "longevityScore": 78,
+    "longevityNote": "Typical road-shoe durability range for regular training."
   },
   {
     "id": 137,
@@ -4381,7 +4789,10 @@ const SHOES=[
     "plate": "No",
     "note": "Wide toe-box fast trainer.",
     "foam": "PEBA",
-    "link": "https://www.google.com/search?q=Topo+Cyclone+3+running+shoe"
+    "link": "https://www.google.com/search?q=Topo+Cyclone+3+running+shoe",
+    "longevityMiles": "300-500 miles",
+    "longevityScore": 82,
+    "longevityNote": "Traditional daily trainers usually offer the best mileage-per-dollar."
   },
   {
     "id": 138,
@@ -4413,7 +4824,10 @@ const SHOES=[
     "plate": "No",
     "note": "Wide toe-box max cushion shoe.",
     "foam": "ZipFoam",
-    "link": "https://www.google.com/search?q=Topo+Atmos+2+running+shoe"
+    "link": "https://www.google.com/search?q=Topo+Atmos+2+running+shoe",
+    "longevityMiles": "350-500 miles",
+    "longevityScore": 86,
+    "longevityNote": "Max-cushion shoes are often durable for easy mileage, though softer foams can feel flat with time."
   },
   {
     "id": 139,
@@ -4445,7 +4859,10 @@ const SHOES=[
     "plate": "No",
     "note": "Wide toe-box super trainer.",
     "foam": "PEBA core + EVA frame",
-    "link": "https://www.google.com/search?q=Topo+Specter+2+running+shoe"
+    "link": "https://www.google.com/search?q=Topo+Specter+2+running+shoe",
+    "longevityMiles": "300-450 miles",
+    "longevityScore": 78,
+    "longevityNote": "Super trainers often last longer than racers, but the most energetic feel may fade before total breakdown."
   },
   {
     "id": 140,
@@ -4477,7 +4894,10 @@ const SHOES=[
     "plate": "No",
     "note": "Wide toe-box stability trainer.",
     "foam": "ZipFoam + guidance",
-    "link": "https://www.google.com/search?q=Topo+Ultrafly+5+running+shoe"
+    "link": "https://www.google.com/search?q=Topo+Ultrafly+5+running+shoe",
+    "longevityMiles": "350-500 miles",
+    "longevityScore": 94,
+    "longevityNote": "Stability shoes often have durable builds and supportive platforms."
   },
   {
     "id": 141,
@@ -4509,7 +4929,10 @@ const SHOES=[
     "plate": "No",
     "note": "Previous wide toe-box fast trainer.",
     "foam": "PEBA",
-    "link": "https://www.google.com/search?q=Topo+Cyclone+2+running+shoe"
+    "link": "https://www.google.com/search?q=Topo+Cyclone+2+running+shoe",
+    "longevityMiles": "300-500 miles",
+    "longevityScore": 82,
+    "longevityNote": "Traditional daily trainers usually offer the best mileage-per-dollar."
   },
   {
     "id": 142,
@@ -4541,7 +4964,10 @@ const SHOES=[
     "plate": "No",
     "note": "Zero-drop wide toe-box trainer.",
     "foam": "ZipFoam",
-    "link": "https://www.google.com/search?q=Topo+Magnifly+5+running+shoe"
+    "link": "https://www.google.com/search?q=Topo+Magnifly+5+running+shoe",
+    "longevityMiles": "300-500 miles",
+    "longevityScore": 82,
+    "longevityNote": "Traditional daily trainers usually offer the best mileage-per-dollar."
   },
   {
     "id": 143,
@@ -4573,7 +4999,10 @@ const SHOES=[
     "plate": "No",
     "note": "Daily trainer from Skechers.",
     "foam": "Hyper Burst Ice",
-    "link": "https://www.google.com/search?q=Skechers+GO+RUN+Ride+12+running+shoe"
+    "link": "https://www.google.com/search?q=Skechers+GO+RUN+Ride+12+running+shoe",
+    "longevityMiles": "350-500 miles",
+    "longevityScore": 86,
+    "longevityNote": "Traditional daily trainers usually offer the best mileage-per-dollar."
   },
   {
     "id": 144,
@@ -4605,7 +5034,10 @@ const SHOES=[
     "plate": "No",
     "note": "Budget max cushion option.",
     "foam": "Hyper Burst",
-    "link": "https://www.google.com/search?q=Skechers+Max+Cushioning+Elite+3+running+shoe"
+    "link": "https://www.google.com/search?q=Skechers+Max+Cushioning+Elite+3+running+shoe",
+    "longevityMiles": "350-500 miles",
+    "longevityScore": 86,
+    "longevityNote": "Max-cushion shoes are often durable for easy mileage, though softer foams can feel flat with time."
   },
   {
     "id": 145,
@@ -4637,7 +5069,10 @@ const SHOES=[
     "plate": "Plate-like",
     "note": "Fast Skechers trainer.",
     "foam": "Hyper Burst Pro",
-    "link": "https://www.google.com/search?q=Skechers+Razor+5+running+shoe"
+    "link": "https://www.google.com/search?q=Skechers+Razor+5+running+shoe",
+    "longevityMiles": "300-500 miles",
+    "longevityScore": 82,
+    "longevityNote": "Traditional daily trainers usually offer the best mileage-per-dollar."
   },
   {
     "id": 146,
@@ -4669,7 +5104,10 @@ const SHOES=[
     "plate": "No",
     "note": "Value stability trainer.",
     "foam": "Arch Fit/HYPER BURST",
-    "link": "https://www.google.com/search?q=Skechers+GO+RUN+Persistence+2+running+shoe"
+    "link": "https://www.google.com/search?q=Skechers+GO+RUN+Persistence+2+running+shoe",
+    "longevityMiles": "350-500 miles",
+    "longevityScore": 94,
+    "longevityNote": "Stability shoes often have durable builds and supportive platforms."
   },
   {
     "id": 147,
@@ -4701,7 +5139,10 @@ const SHOES=[
     "plate": "No",
     "note": "UA daily trainer.",
     "foam": "HOVR+/UA foam",
-    "link": "https://www.google.com/search?q=Under+Armour+Infinite+Elite+2+running+shoe"
+    "link": "https://www.google.com/search?q=Under+Armour+Infinite+Elite+2+running+shoe",
+    "longevityMiles": "300-500 miles",
+    "longevityScore": 82,
+    "longevityNote": "Traditional daily trainers usually offer the best mileage-per-dollar."
   },
   {
     "id": 148,
@@ -4733,7 +5174,10 @@ const SHOES=[
     "plate": "No",
     "note": "UA cushioned trainer.",
     "foam": "HOVR+/UA foam",
-    "link": "https://www.google.com/search?q=Under+Armour+Infinite+Pro+2+running+shoe"
+    "link": "https://www.google.com/search?q=Under+Armour+Infinite+Pro+2+running+shoe",
+    "longevityMiles": "300-500 miles",
+    "longevityScore": 82,
+    "longevityNote": "Traditional daily trainers usually offer the best mileage-per-dollar."
   },
   {
     "id": 149,
@@ -4765,7 +5209,10 @@ const SHOES=[
     "plate": "No",
     "note": "Light UA trainer.",
     "foam": "Flow foam",
-    "link": "https://www.google.com/search?q=Under+Armour+Velociti+4+running+shoe"
+    "link": "https://www.google.com/search?q=Under+Armour+Velociti+4+running+shoe",
+    "longevityMiles": "300-500 miles",
+    "longevityScore": 82,
+    "longevityNote": "Traditional daily trainers usually offer the best mileage-per-dollar."
   },
   {
     "id": 150,
@@ -4797,7 +5244,10 @@ const SHOES=[
     "plate": "No",
     "note": "Cushioned Diadora trainer.",
     "foam": "DD Anima",
-    "link": "https://www.google.com/search?q=Diadora+Cellula+2+running+shoe"
+    "link": "https://www.google.com/search?q=Diadora+Cellula+2+running+shoe",
+    "longevityMiles": "350-500 miles",
+    "longevityScore": 86,
+    "longevityNote": "Max-cushion shoes are often durable for easy mileage, though softer foams can feel flat with time."
   },
   {
     "id": 151,
@@ -4829,7 +5279,10 @@ const SHOES=[
     "plate": "No",
     "note": "Premium daily trainer from Diadora.",
     "foam": "Anima N2",
-    "link": "https://www.google.com/search?q=Diadora+Atomo+V7000+2+running+shoe"
+    "link": "https://www.google.com/search?q=Diadora+Atomo+V7000+2+running+shoe",
+    "longevityMiles": "300-500 miles",
+    "longevityScore": 82,
+    "longevityNote": "Traditional daily trainers usually offer the best mileage-per-dollar."
   },
   {
     "id": 152,
@@ -4861,7 +5314,10 @@ const SHOES=[
     "plate": "Yes",
     "note": "Diadora carbon racer.",
     "foam": "Anima PBX + carbon",
-    "link": "https://www.google.com/search?q=Diadora+Gara+Carbon+2+running+shoe"
+    "link": "https://www.google.com/search?q=Diadora+Gara+Carbon+2+running+shoe",
+    "longevityMiles": "120-250 miles",
+    "longevityScore": 48,
+    "longevityNote": "Race-day foams and plates are built for performance first, not maximum mileage."
   },
   {
     "id": 153,
@@ -4893,7 +5349,10 @@ const SHOES=[
     "plate": "No",
     "note": "Ultra-focused daily trainer.",
     "foam": "LightCELL",
-    "link": "https://www.google.com/search?q=Mount+to+Coast+R1+running+shoe"
+    "link": "https://www.google.com/search?q=Mount+to+Coast+R1+running+shoe",
+    "longevityMiles": "350-550 miles",
+    "longevityScore": 89,
+    "longevityNote": "Trail and ultra shoes can be durable, but outsole wear depends heavily on terrain."
   },
   {
     "id": 154,
@@ -4925,7 +5384,10 @@ const SHOES=[
     "plate": "Plate-like",
     "note": "Long-run trainer with plate-like feel.",
     "foam": "LightCELL + plate",
-    "link": "https://www.google.com/search?q=Mount+to+Coast+P1+running+shoe"
+    "link": "https://www.google.com/search?q=Mount+to+Coast+P1+running+shoe",
+    "longevityMiles": "300-500 miles",
+    "longevityScore": 82,
+    "longevityNote": "Traditional daily trainers usually offer the best mileage-per-dollar."
   },
   {
     "id": 155,
@@ -4957,7 +5419,10 @@ const SHOES=[
     "plate": "No",
     "note": "Ultra/trail-adjacent trainer.",
     "foam": "LightCELL",
-    "link": "https://www.google.com/search?q=Mount+to+Coast+T1+running+shoe"
+    "link": "https://www.google.com/search?q=Mount+to+Coast+T1+running+shoe",
+    "longevityMiles": "350-550 miles",
+    "longevityScore": 96,
+    "longevityNote": "Trail and ultra shoes can be durable, but outsole wear depends heavily on terrain."
   },
   {
     "id": 156,
@@ -4989,7 +5454,10 @@ const SHOES=[
     "plate": "No",
     "note": "Craft daily trainer.",
     "foam": "Px Foam",
-    "link": "https://www.google.com/search?q=Craft+Pacer+2+running+shoe"
+    "link": "https://www.google.com/search?q=Craft+Pacer+2+running+shoe",
+    "longevityMiles": "300-500 miles",
+    "longevityScore": 82,
+    "longevityNote": "Traditional daily trainers usually offer the best mileage-per-dollar."
   },
   {
     "id": 157,
@@ -5021,7 +5489,10 @@ const SHOES=[
     "plate": "No",
     "note": "Ultra-oriented Craft trainer.",
     "foam": "Px Foam",
-    "link": "https://www.google.com/search?q=Craft+Nordlite+Ultra+2+running+shoe"
+    "link": "https://www.google.com/search?q=Craft+Nordlite+Ultra+2+running+shoe",
+    "longevityMiles": "350-550 miles",
+    "longevityScore": 96,
+    "longevityNote": "Trail and ultra shoes can be durable, but outsole wear depends heavily on terrain."
   },
   {
     "id": 158,
@@ -5053,7 +5524,10 @@ const SHOES=[
     "plate": "No",
     "note": "Hybrid road/trail trainer.",
     "foam": "Px Foam",
-    "link": "https://www.google.com/search?q=Craft+Xplor+Hybrid+running+shoe"
+    "link": "https://www.google.com/search?q=Craft+Xplor+Hybrid+running+shoe",
+    "longevityMiles": "350-550 miles",
+    "longevityScore": 96,
+    "longevityNote": "Trail and ultra shoes can be durable, but outsole wear depends heavily on terrain."
   },
   {
     "id": 159,
@@ -5085,7 +5559,10 @@ const SHOES=[
     "plate": "No",
     "note": "Salomon max-cushion road trainer.",
     "foam": "Energy Foam Evo",
-    "link": "https://www.google.com/search?q=Salomon+Aero+Glide+3+running+shoe"
+    "link": "https://www.google.com/search?q=Salomon+Aero+Glide+3+running+shoe",
+    "longevityMiles": "350-500 miles",
+    "longevityScore": 86,
+    "longevityNote": "Max-cushion shoes are often durable for easy mileage, though softer foams can feel flat with time."
   },
   {
     "id": 160,
@@ -5117,7 +5594,10 @@ const SHOES=[
     "plate": "No",
     "note": "Light Salomon road trainer.",
     "foam": "Energy Foam",
-    "link": "https://www.google.com/search?q=Salomon+Aero+Blaze+3+running+shoe"
+    "link": "https://www.google.com/search?q=Salomon+Aero+Blaze+3+running+shoe",
+    "longevityMiles": "300-500 miles",
+    "longevityScore": 82,
+    "longevityNote": "Traditional daily trainers usually offer the best mileage-per-dollar."
   },
   {
     "id": 161,
@@ -5149,7 +5629,10 @@ const SHOES=[
     "plate": "No",
     "note": "Fast non-plated Salomon trainer.",
     "foam": "Energy Foam",
-    "link": "https://www.google.com/search?q=Salomon+Phantasm+2+running+shoe"
+    "link": "https://www.google.com/search?q=Salomon+Phantasm+2+running+shoe",
+    "longevityMiles": "250-400 miles",
+    "longevityScore": 70,
+    "longevityNote": "Workout trainers can last well, but plated/superfoam setups may lose pop before the outsole is gone."
   },
   {
     "id": 162,
@@ -5181,7 +5664,10 @@ const SHOES=[
     "plate": "No",
     "note": "Trail option not intended as pure road racer.",
     "foam": "Energy Foam",
-    "link": "https://www.google.com/search?q=Salomon+Genesis+running+shoe"
+    "link": "https://www.google.com/search?q=Salomon+Genesis+running+shoe",
+    "longevityMiles": "350-550 miles",
+    "longevityScore": 96,
+    "longevityNote": "Trail and ultra shoes can be durable, but outsole wear depends heavily on terrain."
   },
   {
     "id": 163,
@@ -5213,7 +5699,10 @@ const SHOES=[
     "plate": "No",
     "note": "Indie high-stack performance trainer.",
     "foam": "Boom foam",
-    "link": "https://www.google.com/search?q=Li-Ning+Red+Hare+9+Ultra+running+shoe"
+    "link": "https://www.google.com/search?q=Li-Ning+Red+Hare+9+Ultra+running+shoe",
+    "longevityMiles": "300-450 miles",
+    "longevityScore": 78,
+    "longevityNote": "Super trainers often last longer than racers, but the most energetic feel may fade before total breakdown."
   },
   {
     "id": 164,
@@ -5245,7 +5734,10 @@ const SHOES=[
     "plate": "Yes",
     "note": "Chinese-market carbon racer.",
     "foam": "Boom foam + carbon",
-    "link": "https://www.google.com/search?q=Li-Ning+Feidian+4+Ultra+running+shoe"
+    "link": "https://www.google.com/search?q=Li-Ning+Feidian+4+Ultra+running+shoe",
+    "longevityMiles": "120-250 miles",
+    "longevityScore": 48,
+    "longevityNote": "Race-day foams and plates are built for performance first, not maximum mileage."
   },
   {
     "id": 165,
@@ -5277,7 +5769,10 @@ const SHOES=[
     "plate": "Yes",
     "note": "Chinese-market race-day carbon shoe.",
     "foam": "Xtep ACE + carbon",
-    "link": "https://www.google.com/search?q=Xtep+160X+6.0+Pro+running+shoe"
+    "link": "https://www.google.com/search?q=Xtep+160X+6.0+Pro+running+shoe",
+    "longevityMiles": "120-250 miles",
+    "longevityScore": 48,
+    "longevityNote": "Race-day foams and plates are built for performance first, not maximum mileage."
   },
   {
     "id": 166,
@@ -5309,7 +5804,10 @@ const SHOES=[
     "plate": "Yes",
     "note": "Chinese-market carbon racing shoe.",
     "foam": "Supercritical foam + carbon",
-    "link": "https://www.google.com/search?q=Qiaodan+Feiying+PB+5.0+running+shoe"
+    "link": "https://www.google.com/search?q=Qiaodan+Feiying+PB+5.0+running+shoe",
+    "longevityMiles": "120-250 miles",
+    "longevityScore": 48,
+    "longevityNote": "Race-day foams and plates are built for performance first, not maximum mileage."
   },
   {
     "id": 167,
@@ -5341,7 +5839,10 @@ const SHOES=[
     "plate": "Yes",
     "note": "Carbon race shoe from Anta.",
     "foam": "Nitrogen foam + carbon",
-    "link": "https://www.google.com/search?q=Anta+C202+6+GT+running+shoe"
+    "link": "https://www.google.com/search?q=Anta+C202+6+GT+running+shoe",
+    "longevityMiles": "120-250 miles",
+    "longevityScore": 48,
+    "longevityNote": "Race-day foams and plates are built for performance first, not maximum mileage."
   },
   {
     "id": 168,
@@ -5373,7 +5874,10 @@ const SHOES=[
     "plate": "Yes",
     "note": "Plated trainer/racer option.",
     "foam": "QuikFlame + plate",
-    "link": "https://www.google.com/search?q=361\u00b0+Flame+4+running+shoe"
+    "link": "https://www.google.com/search?q=361\u00b0+Flame+4+running+shoe",
+    "longevityMiles": "250-400 miles",
+    "longevityScore": 70,
+    "longevityNote": "Workout trainers can last well, but plated/superfoam setups may lose pop before the outsole is gone."
   },
   {
     "id": 169,
@@ -5405,7 +5909,10 @@ const SHOES=[
     "plate": "Yes",
     "note": "Carbon race shoe from 361\u00b0.",
     "foam": "QuikFlame + carbon",
-    "link": "https://www.google.com/search?q=361\u00b0+Furious+Future+2+running+shoe"
+    "link": "https://www.google.com/search?q=361\u00b0+Furious+Future+2+running+shoe",
+    "longevityMiles": "120-250 miles",
+    "longevityScore": 48,
+    "longevityNote": "Race-day foams and plates are built for performance first, not maximum mileage."
   },
   {
     "id": 170,
@@ -5437,7 +5944,10 @@ const SHOES=[
     "plate": "No",
     "note": "Daily trainer from 361\u00b0.",
     "foam": "Quikfoam/CQT",
-    "link": "https://www.google.com/search?q=361\u00b0+Meraki+6+running+shoe"
+    "link": "https://www.google.com/search?q=361\u00b0+Meraki+6+running+shoe",
+    "longevityMiles": "300-500 miles",
+    "longevityScore": 82,
+    "longevityNote": "Traditional daily trainers usually offer the best mileage-per-dollar."
   },
   {
     "id": 171,
@@ -5469,7 +5979,10 @@ const SHOES=[
     "plate": "Yes",
     "note": "Value carbon trainer/racer hybrid.",
     "foam": "VFOAM + carbon plate",
-    "link": "https://www.google.com/search?q=Kiprun+KD900X+LD+2+running+shoe"
+    "link": "https://www.google.com/search?q=Kiprun+KD900X+LD+2+running+shoe",
+    "longevityMiles": "250-400 miles",
+    "longevityScore": 70,
+    "longevityNote": "Workout trainers can last well, but plated/superfoam setups may lose pop before the outsole is gone."
   },
   {
     "id": 172,
@@ -5501,7 +6014,10 @@ const SHOES=[
     "plate": "No",
     "note": "Good-value tempo trainer.",
     "foam": "Pebax-style foam",
-    "link": "https://www.google.com/search?q=Kiprun+Kipstorm+Tempo+running+shoe"
+    "link": "https://www.google.com/search?q=Kiprun+Kipstorm+Tempo+running+shoe",
+    "longevityMiles": "300-500 miles",
+    "longevityScore": 82,
+    "longevityNote": "Traditional daily trainers usually offer the best mileage-per-dollar."
   },
   {
     "id": 173,
@@ -5533,7 +6049,10 @@ const SHOES=[
     "plate": "No",
     "note": "Budget daily trainer.",
     "foam": "MFOAM",
-    "link": "https://www.google.com/search?q=Kiprun+KS900+2+running+shoe"
+    "link": "https://www.google.com/search?q=Kiprun+KS900+2+running+shoe",
+    "longevityMiles": "300-500 miles",
+    "longevityScore": 82,
+    "longevityNote": "Traditional daily trainers usually offer the best mileage-per-dollar."
   },
   {
     "id": 174,
@@ -5565,7 +6084,10 @@ const SHOES=[
     "plate": "Plate-like",
     "note": "Fast trainer from TYR.",
     "foam": "LaunchPX",
-    "link": "https://www.google.com/search?q=TYR+Valkyrie+SpeedWorks+running+shoe"
+    "link": "https://www.google.com/search?q=TYR+Valkyrie+SpeedWorks+running+shoe",
+    "longevityMiles": "250-400 miles",
+    "longevityScore": 70,
+    "longevityNote": "Workout trainers can last well, but plated/superfoam setups may lose pop before the outsole is gone."
   },
   {
     "id": 175,
@@ -5597,7 +6119,10 @@ const SHOES=[
     "plate": "No",
     "note": "Daily trainer from TYR.",
     "foam": "Surge NRG",
-    "link": "https://www.google.com/search?q=TYR+Techknit+RNR-1+Runner+running+shoe"
+    "link": "https://www.google.com/search?q=TYR+Techknit+RNR-1+Runner+running+shoe",
+    "longevityMiles": "300-500 miles",
+    "longevityScore": 82,
+    "longevityNote": "Traditional daily trainers usually offer the best mileage-per-dollar."
   },
   {
     "id": 176,
@@ -5629,7 +6154,10 @@ const SHOES=[
     "plate": "No",
     "note": "Premium road/trail ultra option.",
     "foam": "Arnitel TPEE",
-    "link": "https://www.google.com/search?q=Norda+005+running+shoe"
+    "link": "https://www.google.com/search?q=Norda+005+running+shoe",
+    "longevityMiles": "350-550 miles",
+    "longevityScore": 96,
+    "longevityNote": "Trail and ultra shoes can be durable, but outsole wear depends heavily on terrain."
   },
   {
     "id": 177,
@@ -5661,7 +6189,10 @@ const SHOES=[
     "plate": "No",
     "note": "Premium trail/ultra shoe.",
     "foam": "Vibram + TPEE",
-    "link": "https://www.google.com/search?q=Norda+001+running+shoe"
+    "link": "https://www.google.com/search?q=Norda+001+running+shoe",
+    "longevityMiles": "350-550 miles",
+    "longevityScore": 96,
+    "longevityNote": "Trail and ultra shoes can be durable, but outsole wear depends heavily on terrain."
   },
   {
     "id": 178,
@@ -5693,7 +6224,10 @@ const SHOES=[
     "plate": "No",
     "note": "Trail max cushion option.",
     "foam": "ZoomX + trail outsole",
-    "link": "https://www.google.com/search?q=Nike+Zegama+2+running+shoe"
+    "link": "https://www.google.com/search?q=Nike+Zegama+2+running+shoe",
+    "longevityMiles": "350-550 miles",
+    "longevityScore": 96,
+    "longevityNote": "Trail and ultra shoes can be durable, but outsole wear depends heavily on terrain."
   },
   {
     "id": 179,
@@ -5725,7 +6259,10 @@ const SHOES=[
     "plate": "No",
     "note": "Trail/ultra classic.",
     "foam": "CMEVA",
-    "link": "https://www.google.com/search?q=HOKA+Speedgoat+6+running+shoe"
+    "link": "https://www.google.com/search?q=HOKA+Speedgoat+6+running+shoe",
+    "longevityMiles": "350-550 miles",
+    "longevityScore": 96,
+    "longevityNote": "Trail and ultra shoes can be durable, but outsole wear depends heavily on terrain."
   },
   {
     "id": 180,
@@ -5757,7 +6294,10 @@ const SHOES=[
     "plate": "No",
     "note": "Trail ultra shoe.",
     "foam": "PWRRUN PB/PWRRUN",
-    "link": "https://www.google.com/search?q=Saucony+Xodus+Ultra+3+running+shoe"
+    "link": "https://www.google.com/search?q=Saucony+Xodus+Ultra+3+running+shoe",
+    "longevityMiles": "350-550 miles",
+    "longevityScore": 96,
+    "longevityNote": "Trail and ultra shoes can be durable, but outsole wear depends heavily on terrain."
   },
   {
     "id": 181,
@@ -5789,7 +6329,10 @@ const SHOES=[
     "plate": "No",
     "note": "Wide toe-box trail ultra shoe.",
     "foam": "EGO MAX",
-    "link": "https://www.google.com/search?q=Altra+Olympus+6+running+shoe"
+    "link": "https://www.google.com/search?q=Altra+Olympus+6+running+shoe",
+    "longevityMiles": "350-550 miles",
+    "longevityScore": 96,
+    "longevityNote": "Trail and ultra shoes can be durable, but outsole wear depends heavily on terrain."
   },
   {
     "id": 182,
@@ -5821,6 +6364,9 @@ const SHOES=[
     "plate": "No",
     "note": "Wide toe-box trail trainer.",
     "foam": "ZipFoam",
-    "link": "https://www.google.com/search?q=Topo+Ultraventure+4+running+shoe"
+    "link": "https://www.google.com/search?q=Topo+Ultraventure+4+running+shoe",
+    "longevityMiles": "350-550 miles",
+    "longevityScore": 96,
+    "longevityNote": "Trail and ultra shoes can be durable, but outsole wear depends heavily on terrain."
   }
 ];
