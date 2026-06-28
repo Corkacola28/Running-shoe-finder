@@ -4,50 +4,128 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Running Shoe Finder</title>
-  <meta name="description" content="Find the best running shoe for your goal, fit, and training style." />
+  <meta name="description" content="Find your perfect running shoe in under 60 seconds." />
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
   <header class="hero">
-    <p class="eyebrow">Daily Trainers • Super Trainers • Race Shoes</p>
-    <h1>Running Shoe Finder</h1>
-    <p class="subtitle">Compare 100 running shoes and get personalized rankings based on your goal, foot fit, and training focus.</p>
-    <div class="pills" id="summaryPills"></div>
-  </header>
-  <main class="wrap">
-    <section class="panel controls">
-      <input id="q" placeholder="Search brand, shoe, category..." />
-      <select id="goal">
-        <option value="sub2">Goal: Sub-2 half marathon</option>
-        <option value="daily">Goal: Daily mileage</option>
-        <option value="marathon">Goal: Marathon training</option>
-        <option value="speed">Goal: Speed / workouts</option>
-        <option value="comfort">Goal: Comfort / recovery</option>
-        <option value="budget">Goal: Best value</option>
-      </select>
-      <select id="fit">
-        <option value="wide">Fit: Wide foot</option>
-        <option value="extraWide">Fit: Extra-wide / toe box</option>
-        <option value="standard">Fit: Standard</option>
-        <option value="narrow">Fit: Narrow okay</option>
-      </select>
-      <select id="focus">
-        <option value="balanced">Focus: Balanced</option>
-        <option value="cushion">Focus: Cushion</option>
-        <option value="speed">Focus: Speed</option>
-        <option value="stable">Focus: Stability</option>
-        <option value="value">Focus: Value</option>
-        <option value="nonplate">Focus: No plate</option>
-      </select>
-      <select id="category"><option value="">All categories</option></select>
-      <button id="reset">Reset</button>
+    <nav class="nav">
+      <div class="logo">RSF</div>
+      <a href="#finder">Finder</a>
+      <a href="#results">Results</a>
+      <a href="#database">Database</a>
+    </nav>
+    <section class="heroGrid">
+      <div>
+        <p class="eyebrow">Built for runners who hate guessing</p>
+        <h1>Find your perfect running shoe in under 60 seconds.</h1>
+        <p class="subtitle">Answer a few questions and get personalized picks from 100 daily trainers, super trainers, stability shoes, and race shoes.</p>
+        <div class="heroActions">
+          <a class="primary" href="#finder">Start shoe finder</a>
+          <a class="secondary" href="#database">Browse all shoes</a>
+        </div>
+      </div>
+      <div class="heroCard">
+        <span class="badge">Editor’s Pick</span>
+        <h2>ASICS Superblast 3</h2>
+        <p>The safest one-shoe recommendation for wide-foot half marathon training.</p>
+        <div class="miniBars">
+          <div><span>Cushion</span><b>98</b></div>
+          <div><span>Long Runs</span><b>99</b></div>
+          <div><span>Wide Fit</span><b>93</b></div>
+        </div>
+      </div>
     </section>
-    <section class="panel"><h2 class="sectionTitle first">Your top matches</h2><div class="recGrid" id="quickPicks"></div></section>
-    <section class="panel comparePanel" id="comparePanel"><h2 class="sectionTitle first">Compare selected shoes</h2><div class="compareGrid" id="compareGrid"></div></section>
-    <p class="small helper"><span class="count" id="count"></span> shoes shown. Click a card to expand. Use the checkbox to compare.</p>
-    <div class="grid" id="grid"></div>
-    <section class="panel notesPanel"><h2 class="sectionTitle first">Your notes</h2><p class="small">These save in this browser only.</p><textarea id="notes" placeholder="Example: Try Superblast 3 in store. Need 2E. Watch for Puma sale."></textarea></section>
+  </header>
+
+  <main class="wrap">
+    <section id="finder" class="finder panel">
+      <div class="sectionHead">
+        <p class="eyebrow">Guided Quiz</p>
+        <h2>Let’s narrow it down.</h2>
+        <p>Choose what matters most. Your top picks update instantly.</p>
+      </div>
+      <div class="quizGrid">
+        <label>Goal
+          <select id="goal">
+            <option value="sub2">Sub-2 half marathon</option>
+            <option value="daily">Daily mileage</option>
+            <option value="marathon">Marathon training</option>
+            <option value="speed">Speed / workouts</option>
+            <option value="comfort">Comfort / recovery</option>
+            <option value="budget">Best value</option>
+          </select>
+        </label>
+        <label>Foot fit
+          <select id="fit">
+            <option value="wide">Wide foot</option>
+            <option value="extraWide">Extra-wide / toe box</option>
+            <option value="standard">Standard</option>
+            <option value="narrow">Narrow is okay</option>
+          </select>
+        </label>
+        <label>Ride preference
+          <select id="focus">
+            <option value="balanced">Balanced</option>
+            <option value="cushion">Max cushion</option>
+            <option value="speed">Fast and bouncy</option>
+            <option value="stable">Stable/supportive</option>
+            <option value="value">Best value</option>
+            <option value="nonplate">No plate</option>
+          </select>
+        </label>
+        <label>Budget
+          <select id="budget">
+            <option value="999">Any budget</option>
+            <option value="150">Under $150</option>
+            <option value="180">Under $180</option>
+            <option value="220">Under $220</option>
+          </select>
+        </label>
+      </div>
+    </section>
+
+    <section id="results">
+      <div class="sectionHead">
+        <p class="eyebrow">Your Recommendations</p>
+        <h2>Your top matches</h2>
+        <p id="summaryLine">Rankings are personalized based on your quiz answers.</p>
+      </div>
+      <div class="topResults" id="topResults"></div>
+    </section>
+
+    <section class="panel rotation">
+      <div class="sectionHead">
+        <p class="eyebrow">Rotation Builder</p>
+        <h2>A simple shoe rotation</h2>
+      </div>
+      <div class="rotationGrid" id="rotationGrid"></div>
+    </section>
+
+    <section class="panel comparePanel" id="comparePanel">
+      <h2>Compare selected shoes</h2>
+      <div class="compareGrid" id="compareGrid"></div>
+    </section>
+
+    <section id="database">
+      <div class="sectionHead">
+        <p class="eyebrow">Full Database</p>
+        <h2>Browse all shoes</h2>
+      </div>
+      <div class="controls panel">
+        <input id="q" placeholder="Search shoe, brand, category..." />
+        <select id="category"><option value="">All categories</option></select>
+        <button id="reset">Reset</button>
+      </div>
+      <p class="small"><span id="count"></span> shoes shown. Click a card to expand it. Check boxes to compare.</p>
+      <div class="grid" id="grid"></div>
+    </section>
   </main>
+
+  <footer class="footer">
+    <p>Running Shoe Finder is a practical recommendation tool. Scores and prices are guidance only and should be checked against current retailer listings.</p>
+  </footer>
+
   <script src="data.js"></script>
   <script src="script.js"></script>
 </body>
