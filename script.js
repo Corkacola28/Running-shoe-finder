@@ -30,3 +30,49 @@ function renderDatabase(){let list=filtered();els.count.textContent=list.length;
 function renderAll(){renderStepper();renderLive();renderReport();renderCompare();renderDatabase()}
 document.addEventListener('click',e=>{let choice=e.target.closest('.chips button');if(choice){let group=choice.parentElement.dataset.group;state[group]=choice.dataset.value;choice.parentElement.querySelectorAll('button').forEach(b=>b.classList.remove('active'));choice.classList.add('active');renderAll();return}let cb=e.target.closest('[data-check]');if(cb){let id=Number(cb.dataset.check);cb.checked?selected.add(id):selected.delete(id);localStorage.setItem('selectedShoesV8',JSON.stringify([...selected]));renderCompare();return}let rm=e.target.closest('[data-remove]');if(rm){selected.delete(Number(rm.dataset.remove));localStorage.setItem('selectedShoesV8',JSON.stringify([...selected]));renderAll();return}let sc=e.target.closest('.shoeCard');if(sc)sc.classList.toggle('open')});
 document.getElementById('prevBtn').onclick=()=>{step=Math.max(0,step-1);renderAll()};document.getElementById('nextBtn').onclick=()=>{step=Math.min(6,step+1);renderAll()};document.getElementById('runBtn').onclick=()=>{document.getElementById('thinking').classList.remove('hidden');setTimeout(()=>{document.getElementById('thinking').classList.add('hidden');document.getElementById('report').scrollIntoView({behavior:'smooth'});renderAll()},900)};['input','change'].forEach(ev=>['q','category','intentFilter'].forEach(id=>els[id].addEventListener(ev,renderAll)));['likedShoes','avoidInput'].forEach(id=>document.getElementById(id).addEventListener('input',renderAll));document.getElementById('reset').onclick=()=>{els.q.value='';els.category.value='';els.intentFilter.value='';renderAll()};renderAll();
+
+function buildFeedbackMessage(){
+  const name = document.getElementById('feedbackName')?.value.trim() || 'Anonymous';
+  const type = document.getElementById('feedbackType')?.value || 'General feedback';
+  const text = document.getElementById('feedbackText')?.value.trim() || '';
+  const profile = `Current advisor settings:
+- Intent: ${intentLabels[state.intent]}
+- Goal: ${labelFor('goal',state.goal)}
+- Fit: ${labelFor('fit',state.fit)}
+- Focus: ${labelFor('focus',state.focus)}
+- Budget: ${labelFor('budget',state.budget)}`;
+  return `Name: ${name}
+
+Feedback type: ${type}
+
+Feedback:
+${text || '[No feedback entered]'}
+
+${profile}
+
+Page: ${window.location.href}`;
+}
+
+function setupFeedback(){
+  const send = document.getElementById('sendFeedback');
+  const copy = document.getElementById('copyFeedback');
+  if(!send || !copy) return;
+
+  send.addEventListener('click', () => {
+    const subject = encodeURIComponent('Running Shoe Finder Feedback');
+    const body = encodeURIComponent(buildFeedbackMessage());
+    window.location.href = `mailto:corkacola28@gmail.com?subject=${subject}&body=${body}`;
+  });
+
+  copy.addEventListener('click', async () => {
+    const message = buildFeedbackMessage();
+    try{
+      await navigator.clipboard.writeText(message);
+      copy.textContent = 'Copied!';
+      setTimeout(()=>copy.textContent='Copy feedback',1600);
+    }catch(e){
+      alert(message);
+    }
+  });
+}
+setupFeedback();
