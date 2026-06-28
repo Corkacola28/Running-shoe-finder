@@ -1,59 +1,54 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Interactive Running Shoe Finder</title>
-    <link rel="stylesheet" href="styles.css">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Running Shoe Finder</title>
+  <meta name="description" content="Find the best running shoe for your goal, fit, and training style." />
+  <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-    <div class="container">
-        <header>
-            <h1>🏃 Running Shoe Finder</h1>
-            <p>Find the perfect running shoe based on your goals, fit, and training style</p>
-        </header>
-
-        <div class="filters">
-            <div class="filter-group">
-                <label for="goal">Training Goal:</label>
-                <select id="goal">
-                    <option value="">All Goals</option>
-                    <option value="daily">Daily Training</option>
-                    <option value="speed">Speed Work</option>
-                    <option value="longrun">Long Distance</option>
-                    <option value="recovery">Recovery</option>
-                    <option value="race">Racing</option>
-                </select>
-            </div>
-
-            <div class="filter-group">
-                <label for="width">Foot Width:</label>
-                <select id="width">
-                    <option value="">All Widths</option>
-                    <option value="narrow">Narrow</option>
-                    <option value="medium">Medium</option>
-                    <option value="wide">Wide</option>
-                </select>
-            </div>
-
-            <div class="filter-group">
-                <label for="focus">Training Focus:</label>
-                <select id="focus">
-                    <option value="">All Focus</option>
-                    <option value="cushion">Maximum Cushion</option>
-                    <option value="speed">Speed & Responsiveness</option>
-                    <option value="stability">Stability</option>
-                    <option value="value">Best Value</option>
-                </select>
-            </div>
-
-            <button id="reset">Reset Filters</button>
-        </div>
-
-        <div class="results" id="results"></div>
-    </div>
-
-    <script src="data.js"></script>
-    <script src="script.js"></script>
+  <header class="hero">
+    <p class="eyebrow">Daily Trainers • Super Trainers • Race Shoes</p>
+    <h1>Running Shoe Finder</h1>
+    <p class="subtitle">Compare 100 running shoes and get personalized rankings based on your goal, foot fit, and training focus.</p>
+    <div class="pills" id="summaryPills"></div>
+  </header>
+  <main class="wrap">
+    <section class="panel controls">
+      <input id="q" placeholder="Search brand, shoe, category..." />
+      <select id="goal">
+        <option value="sub2">Goal: Sub-2 half marathon</option>
+        <option value="daily">Goal: Daily mileage</option>
+        <option value="marathon">Goal: Marathon training</option>
+        <option value="speed">Goal: Speed / workouts</option>
+        <option value="comfort">Goal: Comfort / recovery</option>
+        <option value="budget">Goal: Best value</option>
+      </select>
+      <select id="fit">
+        <option value="wide">Fit: Wide foot</option>
+        <option value="extraWide">Fit: Extra-wide / toe box</option>
+        <option value="standard">Fit: Standard</option>
+        <option value="narrow">Fit: Narrow okay</option>
+      </select>
+      <select id="focus">
+        <option value="balanced">Focus: Balanced</option>
+        <option value="cushion">Focus: Cushion</option>
+        <option value="speed">Focus: Speed</option>
+        <option value="stable">Focus: Stability</option>
+        <option value="value">Focus: Value</option>
+        <option value="nonplate">Focus: No plate</option>
+      </select>
+      <select id="category"><option value="">All categories</option></select>
+      <button id="reset">Reset</button>
+    </section>
+    <section class="panel"><h2 class="sectionTitle first">Your top matches</h2><div class="recGrid" id="quickPicks"></div></section>
+    <section class="panel comparePanel" id="comparePanel"><h2 class="sectionTitle first">Compare selected shoes</h2><div class="compareGrid" id="compareGrid"></div></section>
+    <p class="small helper"><span class="count" id="count"></span> shoes shown. Click a card to expand. Use the checkbox to compare.</p>
+    <div class="grid" id="grid"></div>
+    <section class="panel notesPanel"><h2 class="sectionTitle first">Your notes</h2><p class="small">These save in this browser only.</p><textarea id="notes" placeholder="Example: Try Superblast 3 in store. Need 2E. Watch for Puma sale."></textarea></section>
+  </main>
+  <script src="data.js"></script>
+  <script src="script.js"></script>
 </body>
 </html>
