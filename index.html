@@ -4,124 +4,147 @@
   <meta charset="utf-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <title>Running Shoe Finder</title>
+  <meta name="description" content="AI-style running shoe finder with personalized recommendations."/>
   <link rel="stylesheet" href="styles.css"/>
 </head>
 <body>
-<header class="hero">
-  <nav>
-    <b class="logo">RSF</b>
-    <a href="#finder">Finder</a>
-    <a href="#results">Results</a>
+<header class="siteHeader">
+  <nav class="nav">
+    <a class="brand" href="#">Running Shoe Finder</a>
+    <a href="#ai">AI Guide</a>
+    <a href="#results">Top Picks</a>
     <a href="#database">Database</a>
   </nav>
-  <div class="heroGrid">
-    <div>
-      <p class="eyebrow">No fake shoe pictures. No guessing.</p>
-      <h1>Find the right running shoe for your next goal.</h1>
-      <p class="subtitle">Answer four quick questions. The tool ranks 100 shoes based on distance, fit, ride feel, and budget.</p>
-      <a href="#finder" class="primary">Start the finder</a>
-    </div>
-    <div class="heroPanel">
-      <p class="eyebrow">Current default pick</p>
-      <h2>ASICS Superblast 3</h2>
-      <p>Best one-shoe option for a wide-foot runner training for a half marathon or full marathon.</p>
-      <div class="brandTile">ASICS</div>
-    </div>
-  </div>
-</header>
 
-<main class="wrap">
-  <section id="finder" class="panel finder">
-    <p class="eyebrow">Shoe Finder</p>
-    <h2>What are you looking for?</h2>
-    <p class="small">Tap one option in each row. Your recommendations update instantly.</p>
-
-    <div class="question">
-      <h3>1. What goal are you training for?</h3>
-      <div class="choiceGrid" data-group="goal">
-        <button data-value="5k">5K</button>
-        <button data-value="10k">10K</button>
-        <button data-value="10miler">10 miler</button>
-        <button data-value="half" class="active">Half marathon</button>
-        <button data-value="sub2">Sub-2 half</button>
-        <button data-value="marathon">Full marathon</button>
-        <button data-value="ultra">Ultra / long miles</button>
-        <button data-value="daily">Daily mileage</button>
-        <button data-value="speed">Speed workouts</button>
-        <button data-value="comfort">Recovery / comfort</button>
-      </div>
-    </div>
-
-    <div class="question">
-      <h3>2. How does your foot fit?</h3>
-      <div class="choiceGrid" data-group="fit">
-        <button data-value="standard">Standard</button>
-        <button data-value="wide" class="active">Wide foot</button>
-        <button data-value="extraWide">Extra wide / toe box</button>
-        <button data-value="narrow">Narrow is okay</button>
-      </div>
-    </div>
-
-    <div class="question">
-      <h3>3. What ride do you want?</h3>
-      <div class="choiceGrid" data-group="focus">
-        <button data-value="balanced" class="active">Balanced</button>
-        <button data-value="cushion">Soft / max cushion</button>
-        <button data-value="speed">Fast and bouncy</button>
-        <button data-value="stable">Stable / supportive</button>
-        <button data-value="nonplate">No plate</button>
-        <button data-value="race">Race-day feel</button>
-        <button data-value="value">Best value</button>
-      </div>
-    </div>
-
-    <div class="question">
-      <h3>4. What is your budget?</h3>
-      <div class="choiceGrid" data-group="budget">
-        <button data-value="150">Under $150</button>
-        <button data-value="180">Under $180</button>
-        <button data-value="220">Under $220</button>
-        <button data-value="300">Under $300</button>
-        <button data-value="400">Under $400</button>
-        <button data-value="500">Under $500</button>
-        <button data-value="999" class="active">No limit</button>
-      </div>
+  <section class="hero">
+    <p class="eyebrow">No shoe photos. Better decisions.</p>
+    <h1>Find the shoe that fits your run — not just your feed.</h1>
+    <p class="subtitle">A clean, performance-first shoe finder that ranks 100 running shoes by goal, fit, ride feel, and budget.</p>
+    <div class="heroActions">
+      <a href="#ai" class="primary">Start with the AI guide</a>
+      <a href="#database" class="secondary">Browse all shoes</a>
     </div>
   </section>
+</header>
 
-  <section id="results">
-    <p class="eyebrow">Your recommendations</p>
-    <h2>Top matches</h2>
-    <p id="summary" class="small"></p>
+<main>
+  <section id="ai" class="aiShell">
+    <div class="aiPanel">
+      <div class="aiHeader">
+        <div class="orb">AI</div>
+        <div>
+          <p class="eyebrow">Shoe Companion</p>
+          <h2>Let’s find your best match.</h2>
+        </div>
+      </div>
+
+      <div class="chat">
+        <div class="bubble assistant">Tell me what you’re training for, how your foot fits, and what kind of ride you like. I’ll rank the shoes and explain why.</div>
+      </div>
+
+      <div class="questionBlock">
+        <h3>1. What are you training for?</h3>
+        <div class="chips" data-group="goal">
+          <button data-value="5k">5K</button>
+          <button data-value="10k">10K</button>
+          <button data-value="10miler">10 miler</button>
+          <button data-value="half" class="active">Half marathon</button>
+          <button data-value="sub2">Sub-2 half</button>
+          <button data-value="marathon">Full marathon</button>
+          <button data-value="ultra">Ultra / long runs</button>
+          <button data-value="daily">Daily miles</button>
+          <button data-value="speed">Speed workouts</button>
+          <button data-value="comfort">Recovery</button>
+        </div>
+      </div>
+
+      <div class="questionBlock">
+        <h3>2. How does your foot fit?</h3>
+        <div class="chips" data-group="fit">
+          <button data-value="standard">Standard</button>
+          <button data-value="wide" class="active">Wide</button>
+          <button data-value="extraWide">Extra-wide / toe box</button>
+          <button data-value="narrow">Narrow is okay</button>
+        </div>
+      </div>
+
+      <div class="questionBlock">
+        <h3>3. What ride do you want?</h3>
+        <div class="chips" data-group="focus">
+          <button data-value="balanced" class="active">Balanced</button>
+          <button data-value="cushion">Soft / cushioned</button>
+          <button data-value="speed">Fast + bouncy</button>
+          <button data-value="stable">Stable</button>
+          <button data-value="nonplate">No plate</button>
+          <button data-value="race">Race-day feel</button>
+          <button data-value="value">Best value</button>
+        </div>
+      </div>
+
+      <div class="questionBlock">
+        <h3>4. What budget feels right?</h3>
+        <div class="chips" data-group="budget">
+          <button data-value="150">Under $150</button>
+          <button data-value="180">Under $180</button>
+          <button data-value="220">Under $220</button>
+          <button data-value="300">Under $300</button>
+          <button data-value="400">Under $400</button>
+          <button data-value="500">Under $500</button>
+          <button data-value="999" class="active">No limit</button>
+        </div>
+      </div>
+    </div>
+
+    <aside class="insightPanel">
+      <p class="eyebrow">AI Summary</p>
+      <h2 id="aiTitle">Your best match is loading...</h2>
+      <p id="aiSummary"></p>
+      <div id="aiReasons" class="reasonList"></div>
+    </aside>
+  </section>
+
+  <section id="results" class="section">
+    <div class="sectionHeader">
+      <p class="eyebrow">Top Picks</p>
+      <h2>Your recommended shoes</h2>
+      <p id="summary" class="muted"></p>
+    </div>
     <div id="topResults" class="topResults"></div>
   </section>
 
-  <section class="panel">
-    <p class="eyebrow">Rotation Builder</p>
-    <h2>Suggested rotation</h2>
+  <section class="section rotation">
+    <div class="sectionHeader">
+      <p class="eyebrow">Rotation Builder</p>
+      <h2>Suggested shoe rotation</h2>
+    </div>
     <div id="rotation" class="rotationGrid"></div>
   </section>
 
-  <section id="comparePanel" class="panel comparePanel">
-    <h2>Compare selected shoes</h2>
+  <section id="comparePanel" class="section comparePanel">
+    <div class="sectionHeader">
+      <p class="eyebrow">Compare</p>
+      <h2>Selected shoes</h2>
+    </div>
     <div id="compareGrid" class="compareGrid"></div>
   </section>
 
-  <section id="database">
-    <p class="eyebrow">Full database</p>
-    <h2>Browse all shoes</h2>
-    <div class="controls panel">
-      <input id="q" placeholder="Search shoe, brand, category..."/>
+  <section id="database" class="section">
+    <div class="sectionHeader">
+      <p class="eyebrow">Database</p>
+      <h2>Browse all shoes</h2>
+    </div>
+    <div class="toolbar">
+      <input id="q" placeholder="Search shoe, brand, category, foam..."/>
       <select id="category"><option value="">All categories</option></select>
       <button id="reset">Reset</button>
     </div>
-    <p class="small"><b id="count"></b> shoes shown. Click any card to expand.</p>
+    <p class="muted"><b id="count"></b> shoes shown. Click a card to expand.</p>
     <div id="grid" class="grid"></div>
   </section>
 </main>
 
 <footer>
-  <p>Exact product photos require licensed or official image URLs. This version uses clean brand cards instead of fake shoe art.</p>
+  <p>No shoe photos by design — this tool is built to reduce bias toward colorways and focus on fit, purpose, and performance.</p>
 </footer>
 
 <script src="data.js"></script>
