@@ -130,7 +130,7 @@ main{max-width:1180px;margin:auto;padding:0 24px 72px}.advisorShell{display:grid
 
 /* V13 mobile search fix */
 .databaseToolbar{
-  grid-template-columns:1fr 180px 190px auto auto;
+  grid-template-columns:1fr 180px 190px auto;
   align-items:center;
 }
 .searchGroup{
@@ -140,7 +140,7 @@ main{max-width:1180px;margin:auto;padding:0 24px 72px}.advisorShell{display:grid
   align-items:center;
 }
 .searchGroup input{min-width:0;}
-#searchBtn,#clearSearch,#reset{white-space:nowrap;}
+#searchBtn,#reset{white-space:nowrap;}
 .searchHint{margin:10px 4px 0;}
 .searchActiveNotice{
   display:inline-flex;
@@ -163,5 +163,5 @@ main{max-width:1180px;margin:auto;padding:0 24px 72px}.advisorShell{display:grid
 }
 @media(max-width:430px){
   .searchGroup{grid-template-columns:1fr;}
-  #searchBtn,#clearSearch,#reset{width:100%;}
+  #searchBtn,#reset{width:100%;}
 }

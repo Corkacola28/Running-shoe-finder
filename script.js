@@ -148,7 +148,7 @@ const els={
   els.category.appendChild(o);
 });
 
-let selected=new Set(JSON.parse(localStorage.getItem('selectedShoesV13')||'[]'));
+let selected=new Set(JSON.parse(localStorage.getItem('selectedShoesV14')||'[]'));
 let activeSearchQuery='';
 
 function mappedIntent(){
@@ -532,14 +532,14 @@ document.addEventListener('click',e=>{
   if(cb){
     let id=Number(cb.dataset.check);
     cb.checked?selected.add(id):selected.delete(id);
-    localStorage.setItem('selectedShoesV13',JSON.stringify([...selected]));
+    localStorage.setItem('selectedShoesV14',JSON.stringify([...selected]));
     renderCompare();
     return;
   }
   let rm=e.target.closest('[data-remove]');
   if(rm){
     selected.delete(Number(rm.dataset.remove));
-    localStorage.setItem('selectedShoesV13',JSON.stringify([...selected]));
+    localStorage.setItem('selectedShoesV14',JSON.stringify([...selected]));
     renderAll(false);
     return;
   }
@@ -574,11 +574,6 @@ els.q?.addEventListener('keydown', e=>{
     e.preventDefault();
     runDatabaseSearch();
   }
-});
-document.getElementById('clearSearch')?.addEventListener('click', ()=>{
-  els.q.value='';
-  activeSearchQuery='';
-  renderAll(false);
 });
 
 document.getElementById('reset').onclick=()=>{els.q.value='';activeSearchQuery='';els.category.value='';els.intentFilter.value='';renderAll(false)};
