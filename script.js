@@ -127,7 +127,7 @@ const els={
   aiQuestionSub:document.getElementById('aiQuestionSub'),
   q:document.getElementById('q'),
   category:document.getElementById('category'),
-  intentFilter:document.getElementById('intentFilter'),
+  intentFilter:document.getElementById('intentFilter'),searchHint:document.getElementById('searchHint'),
   grid:document.getElementById('grid'),
   count:document.getElementById('count'),
   liveTitle:document.getElementById('liveTitle'),
@@ -148,7 +148,8 @@ const els={
   els.category.appendChild(o);
 });
 
-let selected=new Set(JSON.parse(localStorage.getItem('selectedShoesV12')||'[]'));
+let selected=new Set(JSON.parse(localStorage.getItem('selectedShoesV13')||'[]'));
+let activeSearchQuery='';
 
 function mappedIntent(){
   if(state.intent==='firstShoe') return 'dailyTrainer';
@@ -221,11 +222,41 @@ function score(s){
   return Math.round(Math.max(0,Math.min(100,b)));
 }
 
+function normalizeText(text){
+  return String(text||'').toLowerCase().replace(/[^a-z0-9]+/g,' ').trim();
+}
+
+function shoeSearchBlob(s){
+  return normalizeText(`${s.name} ${s.brand} ${s.category} ${s.foam} ${s.note}`);
+}
+
+function searchRelevance(s, q){
+  if(!q) return 0;
+  const nq=normalizeText(q);
+  const name=normalizeText(s.name);
+  const brand=normalizeText(s.brand);
+  const blob=shoeSearchBlob(s);
+  if(name===nq) return 1000;
+  if(name.includes(nq)) return 900;
+  if(`${brand} ${name}`.includes(nq)) return 850;
+  const terms=nq.split(/\s+/).filter(Boolean);
+  let hits=terms.filter(t=>blob.includes(t)).length;
+  return hits ? 500 + hits*40 : 0;
+}
+
 function filtered(){
   const max=Number(state.budget||999);
-  const q=els.q.value.toLowerCase().trim();
+  const rawQ=(activeSearchQuery || els.q.value || '').trim();
+  const hasSearch=rawQ.length>0;
   let list=SHOES.filter(s=>s.price<=max);
-  if(q)list=list.filter(s=>JSON.stringify(s).toLowerCase().includes(q));
+
+  if(hasSearch){
+    list=list
+      .map(s=>({...s,_searchRelevance:searchRelevance(s,rawQ)}))
+      .filter(s=>s._searchRelevance>0);
+    return list.sort((a,b)=>(b._searchRelevance-a._searchRelevance)||(score(b)-score(a)));
+  }
+
   if(els.category.value)list=list.filter(s=>s.category===els.category.value);
   if(els.intentFilter.value)list=list.filter(s=>(s.intent?.[els.intentFilter.value]??0)>=78);
   return list.sort((a,b)=>score(b)-score(a));
@@ -424,8 +455,16 @@ function renderCompare(){
 
 function renderDatabase(){
   let list=filtered();
+  const rawQ=(activeSearchQuery || els.q.value || '').trim();
   els.count.textContent=list.length;
-  els.grid.innerHTML=list.map((s,i)=>shoeCard(s,i+1)).join('');
+  if(els.searchHint){
+    if(rawQ){
+      els.searchHint.innerHTML=`<span class="searchActiveNotice">Showing search results for “${rawQ}”. Intent/category filters are ignored during search so exact shoes can appear.</span>`;
+    }else{
+      els.searchHint.textContent='Tip: on mobile, type a shoe name and tap Search. Example: Superblast 3.';
+    }
+  }
+  els.grid.innerHTML=list.length ? list.map((s,i)=>shoeCard(s,i+1)).join('') : `<div class="miniCard"><b>No shoes found</b><p class="muted">Try a shorter search, like “Superblast”, “Alphafly”, “Novablast”, or clear the search.</p></div>`;
 }
 
 function renderAll(updateQuestion=true){
@@ -493,14 +532,14 @@ document.addEventListener('click',e=>{
   if(cb){
     let id=Number(cb.dataset.check);
     cb.checked?selected.add(id):selected.delete(id);
-    localStorage.setItem('selectedShoesV12',JSON.stringify([...selected]));
+    localStorage.setItem('selectedShoesV13',JSON.stringify([...selected]));
     renderCompare();
     return;
   }
   let rm=e.target.closest('[data-remove]');
   if(rm){
     selected.delete(Number(rm.dataset.remove));
-    localStorage.setItem('selectedShoesV12',JSON.stringify([...selected]));
+    localStorage.setItem('selectedShoesV13',JSON.stringify([...selected]));
     renderAll(false);
     return;
   }
@@ -519,7 +558,29 @@ document.getElementById('buildReport').onclick=()=>{
     renderAll(false);
   },900);
 };
-['input','change'].forEach(ev=>['q','category','intentFilter'].forEach(id=>els[id].addEventListener(ev,()=>renderAll(false))));
-document.getElementById('reset').onclick=()=>{els.q.value='';els.category.value='';els.intentFilter.value='';renderAll(false)};
+['change'].forEach(ev=>['category','intentFilter'].forEach(id=>els[id].addEventListener(ev,()=>renderAll(false))));
+els.q?.addEventListener('input',()=>{ activeSearchQuery=''; });
+
+function runDatabaseSearch(){
+  activeSearchQuery=(els.q.value||'').trim();
+  if(document.activeElement && document.activeElement.blur) document.activeElement.blur();
+  renderAll(false);
+  document.getElementById('database')?.scrollIntoView({behavior:'smooth', block:'start'});
+}
+
+document.getElementById('searchBtn')?.addEventListener('click', runDatabaseSearch);
+els.q?.addEventListener('keydown', e=>{
+  if(e.key==='Enter'){
+    e.preventDefault();
+    runDatabaseSearch();
+  }
+});
+document.getElementById('clearSearch')?.addEventListener('click', ()=>{
+  els.q.value='';
+  activeSearchQuery='';
+  renderAll(false);
+});
+
+document.getElementById('reset').onclick=()=>{els.q.value='';activeSearchQuery='';els.category.value='';els.intentFilter.value='';renderAll(false)};
 setupFeedback();
 renderAll();

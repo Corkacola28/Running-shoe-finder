@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Running Shoe Finder V12</title>
+<title>Running Shoe Finder V13</title>
 <link rel="stylesheet" href="styles.css"/>
 </head>
 <body>
@@ -129,10 +129,13 @@
   <div class="sectionHeader">
     <p class="eyebrow">Database</p>
     <h2>Browse all shoes</h2>
-    <p class="muted">Search across the full shoe database. Rankings still follow your ShoeAI answers.</p>
+    <p class="muted">Search across the full shoe database. Use the Search button on mobile to find exact shoes quickly.</p>
   </div>
-  <div class="toolbar">
-    <input id="q" placeholder="Search shoe, brand, category, foam..."/>
+  <div class="toolbar databaseToolbar">
+    <div class="searchGroup">
+      <input id="q" type="search" inputmode="search" enterkeyhint="search" autocomplete="off" placeholder="Search Superblast 3, Alphafly, Novablast..."/>
+      <button id="searchBtn" class="primaryBtn" type="button">Search</button>
+    </div>
     <select id="intentFilter">
       <option value="">All shoe intents</option>
       <option value="raceDay">Race-day</option>
@@ -144,8 +147,10 @@
       <option value="valuePick">Value</option>
     </select>
     <select id="category"><option value="">All categories</option></select>
-    <button id="reset">Reset</button>
+    <button id="clearSearch" class="secondaryBtn" type="button">Clear</button>
+    <button id="reset" class="secondaryBtn" type="button">Reset all</button>
   </div>
+  <p id="searchHint" class="muted searchHint"></p>
   <p class="muted"><b id="count"></b> shoes shown. Click a card to expand. Check boxes to compare.</p>
   <div id="grid" class="grid"></div>
 </section>

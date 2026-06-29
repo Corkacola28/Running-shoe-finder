@@ -126,3 +126,42 @@ main{max-width:1180px;margin:auto;padding:0 24px 72px}.advisorShell{display:grid
 .questionProgress span.active{
   background:var(--blue);
 }
+
+
+/* V13 mobile search fix */
+.databaseToolbar{
+  grid-template-columns:1fr 180px 190px auto auto;
+  align-items:center;
+}
+.searchGroup{
+  display:grid;
+  grid-template-columns:1fr auto;
+  gap:8px;
+  align-items:center;
+}
+.searchGroup input{min-width:0;}
+#searchBtn,#clearSearch,#reset{white-space:nowrap;}
+.searchHint{margin:10px 4px 0;}
+.searchActiveNotice{
+  display:inline-flex;
+  margin-top:8px;
+  padding:8px 10px;
+  border-radius:999px;
+  background:#e8f2ff;
+  color:var(--blue);
+  font-size:12px;
+  font-weight:750;
+}
+@media(max-width:900px){
+  .databaseToolbar{
+    grid-template-columns:1fr;
+    position:relative;
+    top:auto;
+  }
+  .searchGroup{grid-template-columns:1fr auto;}
+  #searchBtn{padding-left:16px;padding-right:16px;}
+}
+@media(max-width:430px){
+  .searchGroup{grid-template-columns:1fr;}
+  #searchBtn,#clearSearch,#reset{width:100%;}
+}
