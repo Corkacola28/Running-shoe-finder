@@ -204,3 +204,54 @@ main{max-width:1180px;margin:auto;padding:0 24px 72px}.advisorShell{display:grid
   color:var(--muted);
   margin-top:4px;
 }
+
+
+/* V17 rotation report fix */
+.rotationReportIntro{
+  grid-column:1/-1;
+}
+.rotationOption{
+  background:rgba(255,255,255,.88);
+  border:1px solid rgba(210,210,215,.75);
+  border-radius:var(--radius);
+  box-shadow:var(--shadow);
+  padding:22px;
+}
+.rotationOptionHeader h3{
+  margin:10px 0 6px;
+  font-size:26px;
+  letter-spacing:-.04em;
+}
+.rotationSlots{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+  gap:12px;
+  margin-top:16px;
+}
+.rotationSlot{
+  background:#f5f5f7;
+  border-radius:22px;
+  padding:14px;
+}
+.rotationSlot b,
+.rotationSlot span,
+.rotationSlot small{
+  display:block;
+}
+.rotationSlot span{
+  font-weight:800;
+  margin-top:6px;
+}
+.rotationSlot small{
+  color:var(--muted);
+  margin-top:4px;
+}
+#topFive .rotationOption{
+  grid-column:span 5;
+}
+@media(max-width:1000px){
+  #topFive .rotationOption{grid-column:span 2;}
+}
+@media(max-width:700px){
+  #topFive .rotationOption{grid-column:span 1;}
+}

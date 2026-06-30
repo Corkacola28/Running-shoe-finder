@@ -150,7 +150,7 @@ const els={
   els.category.appendChild(o);
 });
 
-let selected=new Set(JSON.parse(localStorage.getItem('selectedShoesV16')||'[]'));
+let selected=new Set(JSON.parse(localStorage.getItem('selectedShoesV17')||'[]'));
 let activeSearchQuery='';
 
 function mappedIntent(){
@@ -721,14 +721,14 @@ document.addEventListener('click',e=>{
   if(cb){
     let id=Number(cb.dataset.check);
     cb.checked?selected.add(id):selected.delete(id);
-    localStorage.setItem('selectedShoesV16',JSON.stringify([...selected]));
+    localStorage.setItem('selectedShoesV17',JSON.stringify([...selected]));
     renderCompare();
     return;
   }
   let rm=e.target.closest('[data-remove]');
   if(rm){
     selected.delete(Number(rm.dataset.remove));
-    localStorage.setItem('selectedShoesV16',JSON.stringify([...selected]));
+    localStorage.setItem('selectedShoesV17',JSON.stringify([...selected]));
     renderAll(false);
     return;
   }
@@ -768,3 +768,157 @@ els.q?.addEventListener('keydown', e=>{
 document.getElementById('reset').onclick=()=>{els.q.value='';activeSearchQuery='';els.category.value='';els.intentFilter.value='';renderAll(false)};
 setupFeedback();
 renderAll();
+
+
+/* V17 ROTATION OVERRIDE
+   Ensures "Build me a rotation" shows multiple complete rotations at the top of the report,
+   instead of a single-shoe perfect-match layout.
+*/
+function v17SortByIntent(intent, filterFn=null){
+  let max=Number(state.budget||999);
+  let list=SHOES.filter(s=>s.price<=max);
+  if(filterFn) list=list.filter(filterFn);
+  return list.sort((a,b)=>((b.intent?.[intent]??0)-(a.intent?.[intent]??0)) || (score(b)-score(a)));
+}
+
+function v17Pick(list, used){
+  let pick=list.find(s=>s && !used.has(s.id)) || list[0];
+  if(pick) used.add(pick.id);
+  return pick;
+}
+
+function v17BuildRotationOptions(){
+  const daily=v17SortByIntent('dailyTrainer', s=>s.plate==='No' || (s.intent?.dailyTrainer??0)>=90);
+  const long=v17SortByIntent('longRun');
+  const race=v17SortByIntent('raceDay', s=>(s.intent?.raceDay??0)>=70 || s.race>=70);
+  const recovery=v17SortByIntent('recovery');
+  const workout=v17SortByIntent('tempoWorkout');
+  const value=v17SortByIntent('valuePick');
+  const trail=v17SortByIntent('trail', s=>(s.intent?.trail??0)>=75);
+  const wideFilter=s=>s.widthScore>=85;
+
+  const make=(name,note,picks)=>{
+    const used=new Set();
+    return {
+      name,
+      note,
+      slots:picks.map(([label,list])=>[label,v17Pick(list,used)])
+    };
+  };
+
+  const rotations=[
+    make('Balanced Road Rotation','Best all-around setup for most runners.',[
+      ['Daily Trainer',daily],
+      ['Long Run Shoe',long],
+      ['Race / Fast Shoe',race],
+      ['Recovery Shoe',recovery]
+    ]),
+    make('Performance Rotation','More speed-focused for workouts and race prep.',[
+      ['Daily Trainer',daily.slice(1).concat(daily)],
+      ['Workout Shoe',workout],
+      ['Race-Day Shoe',race],
+      ['Long Run Shoe',long]
+    ]),
+    make('Comfort + Durability Rotation','Prioritizes protection, easy mileage, and longevity.',[
+      ['Daily Trainer',daily.filter(s=>(s.longevityScore||0)>=78).concat(daily)],
+      ['Long Run Shoe',long.filter(s=>s.cushion>=88).concat(long)],
+      ['Recovery Shoe',recovery],
+      ['Race / Fast Shoe',race.filter(s=>s.price<=260).concat(workout,race)]
+    ]),
+    make('Value Rotation','Covers the main use cases while trying to avoid overspending.',[
+      ['Daily Trainer',value.filter(s=>(s.intent?.dailyTrainer??0)>=80).concat(daily)],
+      ['Workout Shoe',value.filter(s=>(s.intent?.tempoWorkout??0)>=75).concat(workout)],
+      ['Long Run Shoe',value.filter(s=>(s.intent?.longRun??0)>=80).concat(long)],
+      ['Recovery Shoe',value.filter(s=>(s.intent?.recovery??0)>=80).concat(recovery)]
+    ])
+  ];
+
+  if(state.fit==='wide' || state.fit==='extraWide'){
+    rotations.push(make('Wide-Foot Friendly Rotation','Prioritizes roomier fits and wide-foot compatibility.',[
+      ['Daily Trainer',daily.filter(wideFilter).concat(daily)],
+      ['Long Run Shoe',long.filter(wideFilter).concat(long)],
+      ['Race / Fast Shoe',race.filter(s=>s.widthScore>=78).concat(workout,race)],
+      ['Recovery Shoe',recovery.filter(s=>s.widthScore>=88).concat(recovery)]
+    ]));
+  }
+
+  rotations.push(make('Trail / Mixed Surface Rotation','For runners who want road shoes plus a trail option.',[
+    ['Road Daily Trainer',daily],
+    ['Trail Shoe',trail],
+    ['Long Run Shoe',long],
+    ['Race / Fast Shoe',race]
+  ]));
+
+  return rotations.filter(rot=>rot.slots.every(([_,s])=>s));
+}
+
+function v17RotationCard(rotation,index){
+  const avg=Math.round(rotation.slots.reduce((sum,[_,s])=>sum+score(s),0)/rotation.slots.length);
+  return `<article class="rotationOption">
+    <div class="rotationOptionHeader">
+      <span class="pill good">Rotation ${index+1} • ${avg}/100</span>
+      <h3>${rotation.name}</h3>
+      <p class="muted">${rotation.note}</p>
+    </div>
+    <div class="rotationSlots">
+      ${rotation.slots.map(([label,s])=>`<div class="rotationSlot">
+        <b>${label}</b>
+        <span>${s.name}</span>
+        <small>${s.brand} • ${s.category} • $${s.price}</small>
+        <div class="pillRow">
+          <span class="pill">Match ${score(s)}</span>
+          <span class="pill">⏱ ${s.longevityMiles||'300-500 miles'}</span>
+          <span class="pill">Fit ${s.widthScore}</span>
+        </div>
+      </div>`).join('')}
+    </div>
+  </article>`;
+}
+
+const originalRenderReportV17 = renderReport;
+renderReport = function(){
+  if(state.intent !== 'rotation'){
+    originalRenderReportV17();
+    return;
+  }
+
+  const rotations=v17BuildRotationOptions();
+  const topHeading=document.getElementById('topShoesHeading');
+  const rotationHeading=document.getElementById('rotationHeading');
+  if(topHeading) topHeading.textContent='Your complete rotation options';
+  if(rotationHeading) rotationHeading.textContent='More rotation combinations';
+
+  els.reportSummary.textContent=`Purpose: Full rotation • Goal: ${labelFor('goal',state.goal)} • Fit: ${labelFor('fit',state.fit)} • Priority: ${labelFor('focus',state.focus)} • Budget: ${labelFor('budget',state.budget)}`;
+
+  els.perfectMatch.innerHTML=`<div class="rotationReportIntro">
+    <p class="eyebrow">Rotation Builder</p>
+    <h2>Here are your full shoe rotations.</h2>
+    <p class="muted">Each option includes a daily trainer, long-run shoe, race/fast shoe, and recovery shoe. This is better than forcing one shoe to do every job.</p>
+  </div>`;
+
+  els.topFive.innerHTML=rotations.slice(0,4).map(v17RotationCard).join('');
+
+  els.nearMisses.innerHTML=rotations.slice(4).map((rot,i)=>`<div class="miniCard">
+    <b>${rot.name}</b>
+    <p class="muted">${rot.note}</p>
+    <p>${rot.slots.map(([label,s])=>`${label}: ${s.name}`).join('<br>')}</p>
+  </div>`).join('') || `<div class="miniCard"><b>No extra rotations</b><p class="muted">Try changing budget, fit, or goal to generate different combinations.</p></div>`;
+
+  const weak=filtered().slice(-4).reverse();
+  els.avoidList.innerHTML=weak.map(s=>`<div class="miniCard">
+    <b>${s.name}</b>
+    <p class="muted">${s.category} • ${score(s)}/100</p>
+    <p>Not as strong for building a balanced rotation.</p>
+  </div>`).join('');
+
+  els.rotation.innerHTML=rotations.map(v17RotationCard).join('');
+};
+
+const originalRenderRotationV17 = renderRotation;
+renderRotation = function(){
+  if(state.intent==='rotation'){
+    els.rotation.innerHTML=v17BuildRotationOptions().map(v17RotationCard).join('');
+    return;
+  }
+  originalRenderRotationV17();
+};
