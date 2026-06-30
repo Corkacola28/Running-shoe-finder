@@ -24,7 +24,8 @@ const SHOES=[
       "recovery": 86,
       "stability": 88,
       "valuePick": 82,
-      "rotation": 98
+      "rotation": 98,
+      "trail": 70
     },
     "plate": "No",
     "note": "Best one-shoe super trainer for long runs, daily miles, and faster efforts.",
@@ -59,7 +60,8 @@ const SHOES=[
       "recovery": 86,
       "stability": 87,
       "valuePick": 84,
-      "rotation": 96
+      "rotation": 96,
+      "trail": 67
     },
     "plate": "No",
     "note": "Previous-gen super trainer that still works for long runs and faster training.",
@@ -94,7 +96,8 @@ const SHOES=[
       "recovery": 76,
       "stability": 82,
       "valuePick": 78,
-      "rotation": 95
+      "rotation": 95,
+      "trail": 67
     },
     "plate": "No",
     "note": "Explosive non-plated super trainer for fast daily miles and workouts.",
@@ -129,7 +132,8 @@ const SHOES=[
       "recovery": 80,
       "stability": 84,
       "valuePick": 100,
-      "rotation": 93
+      "rotation": 93,
+      "trail": 68
     },
     "plate": "No",
     "note": "Light, versatile, high-value trainer with a fast daily feel.",
@@ -164,7 +168,8 @@ const SHOES=[
       "recovery": 76,
       "stability": 74,
       "valuePick": 86,
-      "rotation": 87
+      "rotation": 87,
+      "trail": 63
     },
     "plate": "No",
     "note": "Dark-horse super trainer with limited fit/return data.",
@@ -199,7 +204,8 @@ const SHOES=[
       "recovery": 92,
       "stability": 82,
       "valuePick": 65,
-      "rotation": 74
+      "rotation": 74,
+      "trail": 60
     },
     "plate": "No",
     "note": "Comfortable trainer, but less proven for serious running volume.",
@@ -234,7 +240,8 @@ const SHOES=[
       "recovery": 32,
       "stability": 82,
       "valuePick": 60,
-      "rotation": 70
+      "rotation": 70,
+      "trail": 42
     },
     "plate": "Yes",
     "note": "Elite marathon racing shoe with aggressive propulsion.",
@@ -269,7 +276,8 @@ const SHOES=[
       "recovery": 25,
       "stability": 76,
       "valuePick": 66,
-      "rotation": 66
+      "rotation": 66,
+      "trail": 39
     },
     "plate": "Yes",
     "note": "Light race-day shoe for fast efforts and racing.",
@@ -304,7 +312,8 @@ const SHOES=[
       "recovery": 26,
       "stability": 76,
       "valuePick": 70,
-      "rotation": 67
+      "rotation": 67,
+      "trail": 40
     },
     "plate": "Yes",
     "note": "Proven carbon racer for 5K through marathon.",
@@ -339,7 +348,8 @@ const SHOES=[
       "recovery": 28,
       "stability": 80,
       "valuePick": 64,
-      "rotation": 68
+      "rotation": 68,
+      "trail": 41
     },
     "plate": "Yes",
     "note": "Top-tier carbon racer built for aggressive race efforts.",
@@ -374,7 +384,8 @@ const SHOES=[
       "recovery": 28,
       "stability": 82,
       "valuePick": 64,
-      "rotation": 68
+      "rotation": 68,
+      "trail": 41
     },
     "plate": "Yes",
     "note": "Carbon racer for cadence-focused runners.",
@@ -409,7 +420,8 @@ const SHOES=[
       "recovery": 20,
       "stability": 72,
       "valuePick": 52,
-      "rotation": 64
+      "rotation": 64,
+      "trail": 40
     },
     "plate": "Yes",
     "note": "Extremely light and aggressive ASICS racer.",
@@ -444,7 +456,8 @@ const SHOES=[
       "recovery": 28,
       "stability": 80,
       "valuePick": 68,
-      "rotation": 68
+      "rotation": 68,
+      "trail": 40
     },
     "plate": "Yes",
     "note": "Previous generation top-tier ASICS racer.",
@@ -479,7 +492,8 @@ const SHOES=[
       "recovery": 28,
       "stability": 81,
       "valuePick": 68,
-      "rotation": 67
+      "rotation": 67,
+      "trail": 40
     },
     "plate": "Yes",
     "note": "Cadence-oriented ASICS racing shoe.",
@@ -514,7 +528,8 @@ const SHOES=[
       "recovery": 25,
       "stability": 76,
       "valuePick": 64,
-      "rotation": 66
+      "rotation": 66,
+      "trail": 40
     },
     "plate": "Rods",
     "note": "Elite carbon/rod racing shoe for road races.",
@@ -549,7 +564,8 @@ const SHOES=[
       "recovery": 25,
       "stability": 76,
       "valuePick": 66,
-      "rotation": 66
+      "rotation": 66,
+      "trail": 40
     },
     "plate": "Rods",
     "note": "Fast marathon racer with EnergyRods.",
@@ -584,7 +600,8 @@ const SHOES=[
       "recovery": 10,
       "stability": 68,
       "valuePick": 27,
-      "rotation": 56
+      "rotation": 56,
+      "trail": 38
     },
     "plate": "Rods",
     "note": "Ultra-premium race-day shoe with very poor value score.",
@@ -619,7 +636,8 @@ const SHOES=[
       "recovery": 10,
       "stability": 70,
       "valuePick": 27,
-      "rotation": 57
+      "rotation": 57,
+      "trail": 39
     },
     "plate": "Rods",
     "note": "Ultra-premium race-day option for elite-style racing.",
@@ -654,7 +672,8 @@ const SHOES=[
       "recovery": 18,
       "stability": 76,
       "valuePick": 66,
-      "rotation": 64
+      "rotation": 64,
+      "trail": 39
     },
     "plate": "Yes",
     "note": "Aggressive top-tier Puma carbon racer.",
@@ -689,7 +708,8 @@ const SHOES=[
       "recovery": 25,
       "stability": 76,
       "valuePick": 80,
-      "rotation": 65
+      "rotation": 65,
+      "trail": 39
     },
     "plate": "Yes",
     "note": "Lighter Puma race shoe for fast racing.",
@@ -724,7 +744,8 @@ const SHOES=[
       "recovery": 22,
       "stability": 76,
       "valuePick": 60,
-      "rotation": 64
+      "rotation": 64,
+      "trail": 40
     },
     "plate": "Yes",
     "note": "Aggressive Saucony race-day super shoe.",
@@ -759,7 +780,8 @@ const SHOES=[
       "recovery": 32,
       "stability": 80,
       "valuePick": 80,
-      "rotation": 68
+      "rotation": 68,
+      "trail": 40
     },
     "plate": "Yes",
     "note": "More stable and approachable carbon racer.",
@@ -794,7 +816,8 @@ const SHOES=[
       "recovery": 24,
       "stability": 76,
       "valuePick": 60,
-      "rotation": 66
+      "rotation": 66,
+      "trail": 40
     },
     "plate": "Yes",
     "note": "Bouncy HOKA race shoe for long-distance racing.",
@@ -829,7 +852,8 @@ const SHOES=[
       "recovery": 28,
       "stability": 78,
       "valuePick": 66,
-      "rotation": 66
+      "rotation": 66,
+      "trail": 39
     },
     "plate": "Yes",
     "note": "Carbon racer from HOKA for road racing.",
@@ -864,7 +888,8 @@ const SHOES=[
       "recovery": 28,
       "stability": 78,
       "valuePick": 68,
-      "rotation": 65
+      "rotation": 65,
+      "trail": 39
     },
     "plate": "Yes",
     "note": "Previous HOKA carbon racing shoe.",
@@ -899,7 +924,8 @@ const SHOES=[
       "recovery": 30,
       "stability": 80,
       "valuePick": 66,
-      "rotation": 67
+      "rotation": 67,
+      "trail": 40
     },
     "plate": "Yes",
     "note": "New Balance carbon racer with more forgiving fit.",
@@ -934,7 +960,8 @@ const SHOES=[
       "recovery": 18,
       "stability": 74,
       "valuePick": 80,
-      "rotation": 63
+      "rotation": 63,
+      "trail": 36
     },
     "plate": "Yes",
     "note": "Lower-stack race shoe for shorter races and speed.",
@@ -969,7 +996,8 @@ const SHOES=[
       "recovery": 20,
       "stability": 72,
       "valuePick": 62,
-      "rotation": 63
+      "rotation": 63,
+      "trail": 39
     },
     "plate": "Yes",
     "note": "Aggressive rocker-based marathon racer.",
@@ -1004,7 +1032,8 @@ const SHOES=[
       "recovery": 18,
       "stability": 70,
       "valuePick": 64,
-      "rotation": 61
+      "rotation": 61,
+      "trail": 38
     },
     "plate": "Yes",
     "note": "Lightweight Mizuno race option.",
@@ -1039,7 +1068,8 @@ const SHOES=[
       "recovery": 24,
       "stability": 76,
       "valuePick": 62,
-      "rotation": 64
+      "rotation": 64,
+      "trail": 39
     },
     "plate": "Yes",
     "note": "Premium On racing shoe.",
@@ -1074,7 +1104,8 @@ const SHOES=[
       "recovery": 22,
       "stability": 74,
       "valuePick": 62,
-      "rotation": 62
+      "rotation": 62,
+      "trail": 39
     },
     "plate": "Yes",
     "note": "On carbon racing shoe for fast road races.",
@@ -1109,7 +1140,8 @@ const SHOES=[
       "recovery": 20,
       "stability": 74,
       "valuePick": 60,
-      "rotation": 60
+      "rotation": 60,
+      "trail": 38
     },
     "plate": "Yes",
     "note": "On race-day shoe with premium price.",
@@ -1144,7 +1176,8 @@ const SHOES=[
       "recovery": 26,
       "stability": 78,
       "valuePick": 68,
-      "rotation": 64
+      "rotation": 64,
+      "trail": 39
     },
     "plate": "Yes",
     "note": "Brooks carbon racer with firmer performance feel.",
@@ -1179,7 +1212,8 @@ const SHOES=[
       "recovery": 25,
       "stability": 78,
       "valuePick": 67,
-      "rotation": 65
+      "rotation": 65,
+      "trail": 39
     },
     "plate": "Yes",
     "note": "Carbon race shoe from TYR.",
@@ -1214,7 +1248,8 @@ const SHOES=[
       "recovery": 20,
       "stability": 74,
       "valuePick": 66,
-      "rotation": 61
+      "rotation": 61,
+      "trail": 37
     },
     "plate": "Yes",
     "note": "Under Armour carbon racing option.",
@@ -1249,7 +1284,8 @@ const SHOES=[
       "recovery": 22,
       "stability": 76,
       "valuePick": 62,
-      "rotation": 62
+      "rotation": 62,
+      "trail": 38
     },
     "plate": "Yes",
     "note": "Salomon race shoe for fast road efforts.",
@@ -1284,7 +1320,8 @@ const SHOES=[
       "recovery": 55,
       "stability": 78,
       "valuePick": 84,
-      "rotation": 81
+      "rotation": 81,
+      "trail": 64
     },
     "plate": "Yes",
     "note": "Carbon-plated trainer/racer hybrid.",
@@ -1319,7 +1356,8 @@ const SHOES=[
       "recovery": 24,
       "stability": 74,
       "valuePick": 70,
-      "rotation": 64
+      "rotation": 64,
+      "trail": 39
     },
     "plate": "Yes",
     "note": "Skechers carbon racing option.",
@@ -1354,7 +1392,8 @@ const SHOES=[
       "recovery": 70,
       "stability": 80,
       "valuePick": 85,
-      "rotation": 90
+      "rotation": 90,
+      "trail": 66
     },
     "plate": "Nylon",
     "note": "One of the strongest tempo/workout trainers.",
@@ -1389,7 +1428,8 @@ const SHOES=[
       "recovery": 68,
       "stability": 80,
       "valuePick": 86,
-      "rotation": 88
+      "rotation": 88,
+      "trail": 66
     },
     "plate": "Nylon",
     "note": "Previous-gen plated trainer for faster sessions.",
@@ -1424,7 +1464,8 @@ const SHOES=[
       "recovery": 70,
       "stability": 82,
       "valuePick": 84,
-      "rotation": 89
+      "rotation": 89,
+      "trail": 66
     },
     "plate": "Plate-like",
     "note": "Rockered super trainer for uptempo and long runs.",
@@ -1459,7 +1500,8 @@ const SHOES=[
       "recovery": 55,
       "stability": 80,
       "valuePick": 84,
-      "rotation": 81
+      "rotation": 81,
+      "trail": 66
     },
     "plate": "Rods",
     "note": "Workout trainer for tempos and faster long runs.",
@@ -1494,7 +1536,8 @@ const SHOES=[
       "recovery": 55,
       "stability": 78,
       "valuePick": 86,
-      "rotation": 80
+      "rotation": 80,
+      "trail": 66
     },
     "plate": "Rods",
     "note": "Previous Boston workout trainer.",
@@ -1529,7 +1572,8 @@ const SHOES=[
       "recovery": 35,
       "stability": 72,
       "valuePick": 78,
-      "rotation": 70
+      "rotation": 70,
+      "trail": 61
     },
     "plate": "Rods",
     "note": "Fast shoe for 5K/10K and speed sessions.",
@@ -1564,7 +1608,8 @@ const SHOES=[
       "recovery": 35,
       "stability": 72,
       "valuePick": 80,
-      "rotation": 70
+      "rotation": 70,
+      "trail": 61
     },
     "plate": "Rods",
     "note": "Short-race and interval shoe.",
@@ -1599,7 +1644,8 @@ const SHOES=[
       "recovery": 45,
       "stability": 78,
       "valuePick": 84,
-      "rotation": 78
+      "rotation": 78,
+      "trail": 64
     },
     "plate": "Yes",
     "note": "ASICS plated trainer for workouts and racing if needed.",
@@ -1634,7 +1680,8 @@ const SHOES=[
       "recovery": 45,
       "stability": 78,
       "valuePick": 86,
-      "rotation": 78
+      "rotation": 78,
+      "trail": 66
     },
     "plate": "Yes",
     "note": "Previous ASICS plated tempo trainer.",
@@ -1669,7 +1716,8 @@ const SHOES=[
       "recovery": 65,
       "stability": 82,
       "valuePick": 82,
-      "rotation": 88
+      "rotation": 88,
+      "trail": 66
     },
     "plate": "Pebax plate",
     "note": "HOKA super trainer for workouts and faster long runs.",
@@ -1704,7 +1752,8 @@ const SHOES=[
       "recovery": 62,
       "stability": 80,
       "valuePick": 82,
-      "rotation": 86
+      "rotation": 86,
+      "trail": 65
     },
     "plate": "Pebax plate",
     "note": "Previous HOKA plated trainer.",
@@ -1739,7 +1788,8 @@ const SHOES=[
       "recovery": 55,
       "stability": 78,
       "valuePick": 82,
-      "rotation": 81
+      "rotation": 81,
+      "trail": 64
     },
     "plate": "Yes",
     "note": "Nike plated workout/long-run trainer.",
@@ -1774,7 +1824,8 @@ const SHOES=[
       "recovery": 40,
       "stability": 70,
       "valuePick": 78,
-      "rotation": 70
+      "rotation": 70,
+      "trail": 60
     },
     "plate": "Yes",
     "note": "Fast low-profile shoe for shorter races and workouts.",
@@ -1809,7 +1860,8 @@ const SHOES=[
       "recovery": 68,
       "stability": 80,
       "valuePick": 82,
-      "rotation": 87
+      "rotation": 87,
+      "trail": 66
     },
     "plate": "Yes",
     "note": "Plated New Balance trainer for long workouts.",
@@ -1844,7 +1896,8 @@ const SHOES=[
       "recovery": 68,
       "stability": 80,
       "valuePick": 84,
-      "rotation": 86
+      "rotation": 86,
+      "trail": 62
     },
     "plate": "Yes",
     "note": "Previous SC Trainer for workout/long-run use.",
@@ -1879,7 +1932,8 @@ const SHOES=[
       "recovery": 65,
       "stability": 82,
       "valuePick": 82,
-      "rotation": 88
+      "rotation": 88,
+      "trail": 66
     },
     "plate": "Plate-like",
     "note": "Fast Brooks trainer for workouts and long runs.",
@@ -1914,7 +1968,8 @@ const SHOES=[
       "recovery": 52,
       "stability": 78,
       "valuePick": 82,
-      "rotation": 75
+      "rotation": 75,
+      "trail": 60
     },
     "plate": "No",
     "note": "Lightweight tempo trainer with firmer feel.",
@@ -1949,7 +2004,8 @@ const SHOES=[
       "recovery": 55,
       "stability": 78,
       "valuePick": 86,
-      "rotation": 77
+      "rotation": 77,
+      "trail": 64
     },
     "plate": "No",
     "note": "Lightweight fast trainer.",
@@ -1984,7 +2040,8 @@ const SHOES=[
       "recovery": 58,
       "stability": 82,
       "valuePick": 99,
-      "rotation": 83
+      "rotation": 83,
+      "trail": 67
     },
     "plate": "Yes",
     "note": "Previous Puma plated workout trainer.",
@@ -2019,7 +2076,8 @@ const SHOES=[
       "recovery": 28,
       "stability": 68,
       "valuePick": 74,
-      "rotation": 66
+      "rotation": 66,
+      "trail": 60
     },
     "plate": "Yes",
     "note": "Aggressive short-race/speed option.",
@@ -2054,7 +2112,8 @@ const SHOES=[
       "recovery": 58,
       "stability": 76,
       "valuePick": 78,
-      "rotation": 80
+      "rotation": 80,
+      "trail": 61
     },
     "plate": "No",
     "note": "Fast training option from On.",
@@ -2089,7 +2148,8 @@ const SHOES=[
       "recovery": 100,
       "stability": 78,
       "valuePick": 72,
-      "rotation": 85
+      "rotation": 85,
+      "trail": 63
     },
     "plate": "No",
     "note": "Cushioned On training shoe.",
@@ -2124,7 +2184,8 @@ const SHOES=[
       "recovery": 58,
       "stability": 80,
       "valuePick": 82,
-      "rotation": 81
+      "rotation": 81,
+      "trail": 63
     },
     "plate": "Plate-like",
     "note": "Salomon plated trainer for faster efforts.",
@@ -2159,7 +2220,8 @@ const SHOES=[
       "recovery": 55,
       "stability": 78,
       "valuePick": 74,
-      "rotation": 80
+      "rotation": 80,
+      "trail": 64
     },
     "plate": "Yes",
     "note": "Premium Salomon trainer/racer hybrid.",
@@ -2194,7 +2256,8 @@ const SHOES=[
       "recovery": 55,
       "stability": 78,
       "valuePick": 84,
-      "rotation": 79
+      "rotation": 79,
+      "trail": 61
     },
     "plate": "Yes",
     "note": "Plated Reebok trainer/racer hybrid.",
@@ -2229,7 +2292,8 @@ const SHOES=[
       "recovery": 22,
       "stability": 74,
       "valuePick": 52,
-      "rotation": 63
+      "rotation": 63,
+      "trail": 39
     },
     "plate": "Yes",
     "note": "Craft premium carbon racing shoe.",
@@ -2264,7 +2328,8 @@ const SHOES=[
       "recovery": 60,
       "stability": 78,
       "valuePick": 78,
-      "rotation": 82
+      "rotation": 82,
+      "trail": 61
     },
     "plate": "Plate-like",
     "note": "Craft fast trainer for workouts.",
@@ -2299,7 +2364,8 @@ const SHOES=[
       "recovery": 100,
       "stability": 84,
       "valuePick": 82,
-      "rotation": 82
+      "rotation": 82,
+      "trail": 65
     },
     "plate": "No",
     "note": "Max-cushion ASICS recovery and easy-run shoe.",
@@ -2334,7 +2400,8 @@ const SHOES=[
       "recovery": 100,
       "stability": 84,
       "valuePick": 84,
-      "rotation": 82
+      "rotation": 82,
+      "trail": 64
     },
     "plate": "No",
     "note": "Previous Nimbus comfort shoe.",
@@ -2369,7 +2436,8 @@ const SHOES=[
       "recovery": 88,
       "stability": 84,
       "valuePick": 87,
-      "rotation": 81
+      "rotation": 81,
+      "trail": 66
     },
     "plate": "No",
     "note": "Reliable daily trainer with accommodating fit.",
@@ -2404,7 +2472,8 @@ const SHOES=[
       "recovery": 100,
       "stability": 100,
       "valuePick": 80,
-      "rotation": 82
+      "rotation": 82,
+      "trail": 66
     },
     "plate": "No",
     "note": "Premium stability shoe with max cushion.",
@@ -2439,7 +2508,8 @@ const SHOES=[
       "recovery": 100,
       "stability": 100,
       "valuePick": 80,
-      "rotation": 80
+      "rotation": 80,
+      "trail": 66
     },
     "plate": "No",
     "note": "Previous premium stability shoe.",
@@ -2474,7 +2544,8 @@ const SHOES=[
       "recovery": 84,
       "stability": 100,
       "valuePick": 88,
-      "rotation": 78
+      "rotation": 78,
+      "trail": 64
     },
     "plate": "No",
     "note": "Lighter stability daily trainer.",
@@ -2509,7 +2580,8 @@ const SHOES=[
       "recovery": 100,
       "stability": 88,
       "valuePick": 86,
-      "rotation": 86
+      "rotation": 86,
+      "trail": 64
     },
     "plate": "No",
     "note": "Rockered max-cushion shoe for easy and long miles.",
@@ -2544,7 +2616,8 @@ const SHOES=[
       "recovery": 62,
       "stability": 80,
       "valuePick": 88,
-      "rotation": 78
+      "rotation": 78,
+      "trail": 61
     },
     "plate": "No",
     "note": "Light and fun trainer that can handle workouts.",
@@ -2579,7 +2652,8 @@ const SHOES=[
       "recovery": 86,
       "stability": 85,
       "valuePick": 99,
-      "rotation": 84
+      "rotation": 84,
+      "trail": 64
     },
     "plate": "No",
     "note": "Versatile neutral daily trainer.",
@@ -2614,7 +2688,8 @@ const SHOES=[
       "recovery": 100,
       "stability": 82,
       "valuePick": 82,
-      "rotation": 90
+      "rotation": 90,
+      "trail": 63
     },
     "plate": "No",
     "note": "Cushioned daily/long-run trainer.",
@@ -2649,7 +2724,8 @@ const SHOES=[
       "recovery": 100,
       "stability": 100,
       "valuePick": 80,
-      "rotation": 83
+      "rotation": 83,
+      "trail": 65
     },
     "plate": "No",
     "note": "Max-cushion stability option.",
@@ -2684,7 +2760,8 @@ const SHOES=[
       "recovery": 83,
       "stability": 100,
       "valuePick": 86,
-      "rotation": 77
+      "rotation": 77,
+      "trail": 64
     },
     "plate": "No",
     "note": "Traditional stability daily trainer.",
@@ -2719,7 +2796,8 @@ const SHOES=[
       "recovery": 55,
       "stability": 75,
       "valuePick": 98,
-      "rotation": 75
+      "rotation": 75,
+      "trail": 60
     },
     "plate": "No",
     "note": "Lightweight flexible trainer.",
@@ -2754,7 +2832,8 @@ const SHOES=[
       "recovery": 80,
       "stability": 100,
       "valuePick": 86,
-      "rotation": 87
+      "rotation": 87,
+      "trail": 65
     },
     "plate": "No",
     "note": "Fast stability trainer.",
@@ -2789,7 +2868,8 @@ const SHOES=[
       "recovery": 88,
       "stability": 88,
       "valuePick": 87,
-      "rotation": 81
+      "rotation": 81,
+      "trail": 66
     },
     "plate": "No",
     "note": "Reliable beginner-friendly daily trainer.",
@@ -2824,7 +2904,8 @@ const SHOES=[
       "recovery": 100,
       "stability": 88,
       "valuePick": 82,
-      "rotation": 86
+      "rotation": 86,
+      "trail": 65
     },
     "plate": "No",
     "note": "Premium comfort trainer.",
@@ -2859,7 +2940,8 @@ const SHOES=[
       "recovery": 100,
       "stability": 90,
       "valuePick": 87,
-      "rotation": 84
+      "rotation": 84,
+      "trail": 67
     },
     "plate": "No",
     "note": "Stable max-cushion daily shoe.",
@@ -2894,7 +2976,8 @@ const SHOES=[
       "recovery": 55,
       "stability": 78,
       "valuePick": 100,
-      "rotation": 69
+      "rotation": 69,
+      "trail": 60
     },
     "plate": "No",
     "note": "Budget-friendly lightweight trainer.",
@@ -2929,7 +3012,8 @@ const SHOES=[
       "recovery": 88,
       "stability": 100,
       "valuePick": 86,
-      "rotation": 76
+      "rotation": 76,
+      "trail": 66
     },
     "plate": "No",
     "note": "Classic support shoe with wide sizing.",
@@ -2964,7 +3048,8 @@ const SHOES=[
       "recovery": 90,
       "stability": 100,
       "valuePick": 78,
-      "rotation": 70
+      "rotation": 70,
+      "trail": 67
     },
     "plate": "No",
     "note": "Maximum support option for stability-focused runners.",
@@ -2999,7 +3084,8 @@ const SHOES=[
       "recovery": 90,
       "stability": 100,
       "valuePick": 78,
-      "rotation": 70
+      "rotation": 70,
+      "trail": 67
     },
     "plate": "No",
     "note": "Maximum support option with wide-fit focus.",
@@ -3034,7 +3120,8 @@ const SHOES=[
       "recovery": 80,
       "stability": 82,
       "valuePick": 84,
-      "rotation": 82
+      "rotation": 82,
+      "trail": 63
     },
     "plate": "No",
     "note": "Versatile neutral daily trainer.",
@@ -3069,7 +3156,8 @@ const SHOES=[
       "recovery": 98,
       "stability": 82,
       "valuePick": 86,
-      "rotation": 87
+      "rotation": 87,
+      "trail": 65
     },
     "plate": "No",
     "note": "Cushioned Nike daily trainer.",
@@ -3104,7 +3192,8 @@ const SHOES=[
       "recovery": 86,
       "stability": 100,
       "valuePick": 83,
-      "rotation": 75
+      "rotation": 75,
+      "trail": 64
     },
     "plate": "No",
     "note": "Nike stability training shoe.",
@@ -3139,7 +3228,8 @@ const SHOES=[
       "recovery": 100,
       "stability": 72,
       "valuePick": 75,
-      "rotation": 85
+      "rotation": 85,
+      "trail": 61
     },
     "plate": "No",
     "note": "Soft and bouncy recovery shoe.",
@@ -3174,7 +3264,8 @@ const SHOES=[
       "recovery": 98,
       "stability": 86,
       "valuePick": 86,
-      "rotation": 65
+      "rotation": 65,
+      "trail": 54
     },
     "plate": "No",
     "note": "Walking/recovery option, not a speed shoe.",
@@ -3209,7 +3300,8 @@ const SHOES=[
       "recovery": 82,
       "stability": 84,
       "valuePick": 86,
-      "rotation": 80
+      "rotation": 80,
+      "trail": 63
     },
     "plate": "No",
     "note": "Everyday trainer from adidas.",
@@ -3244,7 +3336,8 @@ const SHOES=[
       "recovery": 98,
       "stability": 84,
       "valuePick": 82,
-      "rotation": 86
+      "rotation": 86,
+      "trail": 65
     },
     "plate": "No",
     "note": "Cushioned adidas daily trainer.",
@@ -3279,7 +3372,8 @@ const SHOES=[
       "recovery": 65,
       "stability": 78,
       "valuePick": 100,
-      "rotation": 82
+      "rotation": 82,
+      "trail": 62
     },
     "plate": "No",
     "note": "Affordable fast daily trainer.",
@@ -3314,7 +3408,8 @@ const SHOES=[
       "recovery": 55,
       "stability": 76,
       "valuePick": 100,
-      "rotation": 70
+      "rotation": 70,
+      "trail": 60
     },
     "plate": "No",
     "note": "Budget adidas daily trainer.",
@@ -3349,7 +3444,8 @@ const SHOES=[
       "recovery": 86,
       "stability": 78,
       "valuePick": 65,
-      "rotation": 72
+      "rotation": 72,
+      "trail": 60
     },
     "plate": "No",
     "note": "Comfort/lifestyle crossover, less performance-focused.",
@@ -3384,7 +3480,8 @@ const SHOES=[
       "recovery": 92,
       "stability": 82,
       "valuePick": 84,
-      "rotation": 82
+      "rotation": 82,
+      "trail": 64
     },
     "plate": "No",
     "note": "Soft neutral daily trainer.",
@@ -3419,7 +3516,8 @@ const SHOES=[
       "recovery": 100,
       "stability": 86,
       "valuePick": 78,
-      "rotation": 81
+      "rotation": 81,
+      "trail": 63
     },
     "plate": "No",
     "note": "Max cushion recovery/easy shoe.",
@@ -3454,7 +3552,8 @@ const SHOES=[
       "recovery": 60,
       "stability": 80,
       "valuePick": 99,
-      "rotation": 80
+      "rotation": 80,
+      "trail": 62
     },
     "plate": "No",
     "note": "Light, fast daily trainer.",
@@ -3489,7 +3588,8 @@ const SHOES=[
       "recovery": 62,
       "stability": 80,
       "valuePick": 88,
-      "rotation": 82
+      "rotation": 82,
+      "trail": 66
     },
     "plate": "No",
     "note": "Updated fast daily trainer.",
@@ -3524,7 +3624,8 @@ const SHOES=[
       "recovery": 98,
       "stability": 84,
       "valuePick": 82,
-      "rotation": 83
+      "rotation": 83,
+      "trail": 64
     },
     "plate": "No",
     "note": "Cushioned daily trainer from HOKA.",
@@ -3559,7 +3660,8 @@ const SHOES=[
       "recovery": 86,
       "stability": 100,
       "valuePick": 84,
-      "rotation": 74
+      "rotation": 74,
+      "trail": 64
     },
     "plate": "No",
     "note": "Light HOKA stability trainer.",
@@ -3594,7 +3696,8 @@ const SHOES=[
       "recovery": 100,
       "stability": 100,
       "valuePick": 76,
-      "rotation": 78
+      "rotation": 78,
+      "trail": 64
     },
     "plate": "No",
     "note": "Maximum stability/cushion shoe.",
@@ -3629,7 +3732,8 @@ const SHOES=[
       "recovery": 86,
       "stability": 88,
       "valuePick": 78,
-      "rotation": 68
+      "rotation": 68,
+      "trail": 54
     },
     "plate": "No",
     "note": "Walking/daily lifestyle crossover.",
@@ -3664,7 +3768,8 @@ const SHOES=[
       "recovery": 88,
       "stability": 86,
       "valuePick": 78,
-      "rotation": 78
+      "rotation": 78,
+      "trail": 100
     },
     "plate": "No",
     "note": "Door-to-trail trainer.",
@@ -3699,7 +3804,8 @@ const SHOES=[
       "recovery": 62,
       "stability": 74,
       "valuePick": 100,
-      "rotation": 83
+      "rotation": 83,
+      "trail": 64
     },
     "plate": "No",
     "note": "Light and fast daily trainer.",
@@ -3734,7 +3840,8 @@ const SHOES=[
       "recovery": 86,
       "stability": 86,
       "valuePick": 88,
-      "rotation": 79
+      "rotation": 79,
+      "trail": 65
     },
     "plate": "No",
     "note": "Reliable daily trainer with wide sizing.",
@@ -3769,7 +3876,8 @@ const SHOES=[
       "recovery": 100,
       "stability": 84,
       "valuePick": 80,
-      "rotation": 80
+      "rotation": 80,
+      "trail": 67
     },
     "plate": "No",
     "note": "Max cushion shoe with wide sizing.",
@@ -3804,7 +3912,8 @@ const SHOES=[
       "recovery": 84,
       "stability": 78,
       "valuePick": 78,
-      "rotation": 92
+      "rotation": 92,
+      "trail": 63
     },
     "plate": "No",
     "note": "Bouncy New Balance super trainer.",
@@ -3839,7 +3948,8 @@ const SHOES=[
       "recovery": 88,
       "stability": 100,
       "valuePick": 86,
-      "rotation": 76
+      "rotation": 76,
+      "trail": 66
     },
     "plate": "No",
     "note": "Stability trainer with wide sizing.",
@@ -3874,7 +3984,8 @@ const SHOES=[
       "recovery": 100,
       "stability": 100,
       "valuePick": 80,
-      "rotation": 78
+      "rotation": 78,
+      "trail": 65
     },
     "plate": "No",
     "note": "Soft stability option.",
@@ -3909,7 +4020,8 @@ const SHOES=[
       "recovery": 68,
       "stability": 100,
       "valuePick": 86,
-      "rotation": 77
+      "rotation": 77,
+      "trail": 62
     },
     "plate": "No",
     "note": "Light stability trainer.",
@@ -3944,7 +4056,8 @@ const SHOES=[
       "recovery": 78,
       "stability": 82,
       "valuePick": 100,
-      "rotation": 84
+      "rotation": 84,
+      "trail": 63
     },
     "plate": "No",
     "note": "High-value neutral daily trainer.",
@@ -3979,7 +4092,8 @@ const SHOES=[
       "recovery": 100,
       "stability": 84,
       "valuePick": 88,
-      "rotation": 85
+      "rotation": 85,
+      "trail": 65
     },
     "plate": "No",
     "note": "PUMA max-cushion trainer.",
@@ -4014,7 +4128,8 @@ const SHOES=[
       "recovery": 90,
       "stability": 100,
       "valuePick": 86,
-      "rotation": 80
+      "rotation": 80,
+      "trail": 65
     },
     "plate": "No",
     "note": "PUMA stability trainer.",
@@ -4049,7 +4164,8 @@ const SHOES=[
       "recovery": 68,
       "stability": 78,
       "valuePick": 100,
-      "rotation": 73
+      "rotation": 73,
+      "trail": 61
     },
     "plate": "No",
     "note": "Budget Puma daily trainer.",
@@ -4084,7 +4200,8 @@ const SHOES=[
       "recovery": 40,
       "stability": 70,
       "valuePick": 100,
-      "rotation": 70
+      "rotation": 70,
+      "trail": 61
     },
     "plate": "No",
     "note": "Lightweight speed trainer.",
@@ -4119,7 +4236,8 @@ const SHOES=[
       "recovery": 84,
       "stability": 88,
       "valuePick": 86,
-      "rotation": 81
+      "rotation": 81,
+      "trail": 64
     },
     "plate": "Wave plate",
     "note": "Classic daily trainer with Wave support.",
@@ -4154,7 +4272,8 @@ const SHOES=[
       "recovery": 100,
       "stability": 86,
       "valuePick": 78,
-      "rotation": 82
+      "rotation": 82,
+      "trail": 63
     },
     "plate": "No",
     "note": "Cushioned Mizuno trainer.",
@@ -4189,7 +4308,8 @@ const SHOES=[
       "recovery": 70,
       "stability": 76,
       "valuePick": 88,
-      "rotation": 83
+      "rotation": 83,
+      "trail": 62
     },
     "plate": "No",
     "note": "Fast and smooth daily trainer.",
@@ -4224,7 +4344,8 @@ const SHOES=[
       "recovery": 86,
       "stability": 100,
       "valuePick": 86,
-      "rotation": 75
+      "rotation": 75,
+      "trail": 64
     },
     "plate": "Wave plate",
     "note": "Stability daily trainer.",
@@ -4259,7 +4380,8 @@ const SHOES=[
       "recovery": 100,
       "stability": 100,
       "valuePick": 76,
-      "rotation": 76
+      "rotation": 76,
+      "trail": 63
     },
     "plate": "Wave plate",
     "note": "Max stability Mizuno option.",
@@ -4294,7 +4416,8 @@ const SHOES=[
       "recovery": 84,
       "stability": 76,
       "valuePick": 76,
-      "rotation": 78
+      "rotation": 78,
+      "trail": 62
     },
     "plate": "No",
     "note": "Smooth On daily trainer.",
@@ -4329,7 +4452,8 @@ const SHOES=[
       "recovery": 94,
       "stability": 78,
       "valuePick": 74,
-      "rotation": 83
+      "rotation": 83,
+      "trail": 62
     },
     "plate": "Speedboard",
     "note": "Cushioned On daily trainer.",
@@ -4364,7 +4488,8 @@ const SHOES=[
       "recovery": 78,
       "stability": 78,
       "valuePick": 70,
-      "rotation": 88
+      "rotation": 88,
+      "trail": 63
     },
     "plate": "Speedboard",
     "note": "Premium On super trainer.",
@@ -4399,7 +4524,8 @@ const SHOES=[
       "recovery": 84,
       "stability": 100,
       "valuePick": 78,
-      "rotation": 72
+      "rotation": 72,
+      "trail": 63
     },
     "plate": "No",
     "note": "Stable On daily trainer.",
@@ -4434,7 +4560,8 @@ const SHOES=[
       "recovery": 94,
       "stability": 82,
       "valuePick": 70,
-      "rotation": 78
+      "rotation": 78,
+      "trail": 62
     },
     "plate": "Speedboard",
     "note": "Cushioned daily option.",
@@ -4469,7 +4596,8 @@ const SHOES=[
       "recovery": 76,
       "stability": 76,
       "valuePick": 72,
-      "rotation": 70
+      "rotation": 70,
+      "trail": 61
     },
     "plate": "Speedboard",
     "note": "Urban running/lifestyle trainer.",
@@ -4504,7 +4632,8 @@ const SHOES=[
       "recovery": 84,
       "stability": 78,
       "valuePick": 85,
-      "rotation": 79
+      "rotation": 79,
+      "trail": 64
     },
     "plate": "No",
     "note": "Foot-shaped daily trainer with low-drop feel.",
@@ -4539,7 +4668,8 @@ const SHOES=[
       "recovery": 90,
       "stability": 78,
       "valuePick": 82,
-      "rotation": 77
+      "rotation": 77,
+      "trail": 65
     },
     "plate": "No",
     "note": "Foot-shaped comfort daily trainer.",
@@ -4574,7 +4704,8 @@ const SHOES=[
       "recovery": 100,
       "stability": 78,
       "valuePick": 78,
-      "rotation": 81
+      "rotation": 81,
+      "trail": 64
     },
     "plate": "No",
     "note": "Foot-shaped max cushion trainer.",
@@ -4609,7 +4740,8 @@ const SHOES=[
       "recovery": 60,
       "stability": 72,
       "valuePick": 80,
-      "rotation": 80
+      "rotation": 80,
+      "trail": 61
     },
     "plate": "No",
     "note": "Wide toe-box fast trainer.",
@@ -4644,7 +4776,8 @@ const SHOES=[
       "recovery": 20,
       "stability": 70,
       "valuePick": 70,
-      "rotation": 60
+      "rotation": 60,
+      "trail": 39
     },
     "plate": "Yes",
     "note": "Foot-shaped carbon racer.",
@@ -4679,7 +4812,8 @@ const SHOES=[
       "recovery": 86,
       "stability": 100,
       "valuePick": 84,
-      "rotation": 71
+      "rotation": 71,
+      "trail": 65
     },
     "plate": "No",
     "note": "Foot-shaped stability shoe.",
@@ -4714,7 +4848,8 @@ const SHOES=[
       "recovery": 100,
       "stability": 100,
       "valuePick": 76,
-      "rotation": 75
+      "rotation": 75,
+      "trail": 65
     },
     "plate": "No",
     "note": "Max cushion support with wide toe box.",
@@ -4749,7 +4884,8 @@ const SHOES=[
       "recovery": 98,
       "stability": 84,
       "valuePick": 86,
-      "rotation": 80
+      "rotation": 80,
+      "trail": 66
     },
     "plate": "No",
     "note": "Wide toe-box cushioned trainer.",
@@ -4784,7 +4920,8 @@ const SHOES=[
       "recovery": 56,
       "stability": 76,
       "valuePick": 88,
-      "rotation": 80
+      "rotation": 80,
+      "trail": 66
     },
     "plate": "No",
     "note": "Wide toe-box fast trainer.",
@@ -4819,7 +4956,8 @@ const SHOES=[
       "recovery": 100,
       "stability": 84,
       "valuePick": 82,
-      "rotation": 82
+      "rotation": 82,
+      "trail": 67
     },
     "plate": "No",
     "note": "Wide toe-box max cushion shoe.",
@@ -4854,7 +4992,8 @@ const SHOES=[
       "recovery": 74,
       "stability": 82,
       "valuePick": 86,
-      "rotation": 88
+      "rotation": 88,
+      "trail": 64
     },
     "plate": "No",
     "note": "Wide toe-box super trainer.",
@@ -4889,7 +5028,8 @@ const SHOES=[
       "recovery": 86,
       "stability": 100,
       "valuePick": 86,
-      "rotation": 74
+      "rotation": 74,
+      "trail": 66
     },
     "plate": "No",
     "note": "Wide toe-box stability trainer.",
@@ -4924,7 +5064,8 @@ const SHOES=[
       "recovery": 54,
       "stability": 74,
       "valuePick": 86,
-      "rotation": 78
+      "rotation": 78,
+      "trail": 62
     },
     "plate": "No",
     "note": "Previous wide toe-box fast trainer.",
@@ -4959,7 +5100,8 @@ const SHOES=[
       "recovery": 86,
       "stability": 82,
       "valuePick": 88,
-      "rotation": 76
+      "rotation": 76,
+      "trail": 65
     },
     "plate": "No",
     "note": "Zero-drop wide toe-box trainer.",
@@ -4994,7 +5136,8 @@ const SHOES=[
       "recovery": 84,
       "stability": 80,
       "valuePick": 86,
-      "rotation": 81
+      "rotation": 81,
+      "trail": 63
     },
     "plate": "No",
     "note": "Daily trainer from Skechers.",
@@ -5029,7 +5172,8 @@ const SHOES=[
       "recovery": 100,
       "stability": 80,
       "valuePick": 99,
-      "rotation": 79
+      "rotation": 79,
+      "trail": 63
     },
     "plate": "No",
     "note": "Budget max cushion option.",
@@ -5064,7 +5208,8 @@ const SHOES=[
       "recovery": 58,
       "stability": 76,
       "valuePick": 86,
-      "rotation": 81
+      "rotation": 81,
+      "trail": 64
     },
     "plate": "Plate-like",
     "note": "Fast Skechers trainer.",
@@ -5099,7 +5244,8 @@ const SHOES=[
       "recovery": 86,
       "stability": 100,
       "valuePick": 88,
-      "rotation": 72
+      "rotation": 72,
+      "trail": 63
     },
     "plate": "No",
     "note": "Value stability trainer.",
@@ -5134,7 +5280,8 @@ const SHOES=[
       "recovery": 86,
       "stability": 84,
       "valuePick": 78,
-      "rotation": 78
+      "rotation": 78,
+      "trail": 63
     },
     "plate": "No",
     "note": "UA daily trainer.",
@@ -5169,7 +5316,8 @@ const SHOES=[
       "recovery": 92,
       "stability": 82,
       "valuePick": 82,
-      "rotation": 77
+      "rotation": 77,
+      "trail": 63
     },
     "plate": "No",
     "note": "UA cushioned trainer.",
@@ -5204,7 +5352,8 @@ const SHOES=[
       "recovery": 58,
       "stability": 76,
       "valuePick": 82,
-      "rotation": 78
+      "rotation": 78,
+      "trail": 61
     },
     "plate": "No",
     "note": "Light UA trainer.",
@@ -5239,7 +5388,8 @@ const SHOES=[
       "recovery": 100,
       "stability": 86,
       "valuePick": 76,
-      "rotation": 81
+      "rotation": 81,
+      "trail": 63
     },
     "plate": "No",
     "note": "Cushioned Diadora trainer.",
@@ -5274,7 +5424,8 @@ const SHOES=[
       "recovery": 84,
       "stability": 82,
       "valuePick": 74,
-      "rotation": 80
+      "rotation": 80,
+      "trail": 61
     },
     "plate": "No",
     "note": "Premium daily trainer from Diadora.",
@@ -5309,7 +5460,8 @@ const SHOES=[
       "recovery": 20,
       "stability": 74,
       "valuePick": 50,
-      "rotation": 60
+      "rotation": 60,
+      "trail": 38
     },
     "plate": "Yes",
     "note": "Diadora carbon racer.",
@@ -5344,7 +5496,8 @@ const SHOES=[
       "recovery": 86,
       "stability": 86,
       "valuePick": 78,
-      "rotation": 88
+      "rotation": 88,
+      "trail": 100
     },
     "plate": "No",
     "note": "Ultra-focused daily trainer.",
@@ -5379,7 +5532,8 @@ const SHOES=[
       "recovery": 86,
       "stability": 88,
       "valuePick": 78,
-      "rotation": 87
+      "rotation": 87,
+      "trail": 65
     },
     "plate": "Plate-like",
     "note": "Long-run trainer with plate-like feel.",
@@ -5414,7 +5568,8 @@ const SHOES=[
       "recovery": 88,
       "stability": 90,
       "valuePick": 74,
-      "rotation": 82
+      "rotation": 82,
+      "trail": 99
     },
     "plate": "No",
     "note": "Ultra/trail-adjacent trainer.",
@@ -5449,7 +5604,8 @@ const SHOES=[
       "recovery": 78,
       "stability": 80,
       "valuePick": 80,
-      "rotation": 80
+      "rotation": 80,
+      "trail": 62
     },
     "plate": "No",
     "note": "Craft daily trainer.",
@@ -5484,7 +5640,8 @@ const SHOES=[
       "recovery": 86,
       "stability": 84,
       "valuePick": 74,
-      "rotation": 84
+      "rotation": 84,
+      "trail": 98
     },
     "plate": "No",
     "note": "Ultra-oriented Craft trainer.",
@@ -5519,7 +5676,8 @@ const SHOES=[
       "recovery": 86,
       "stability": 86,
       "valuePick": 78,
-      "rotation": 78
+      "rotation": 78,
+      "trail": 99
     },
     "plate": "No",
     "note": "Hybrid road/trail trainer.",
@@ -5554,7 +5712,8 @@ const SHOES=[
       "recovery": 100,
       "stability": 84,
       "valuePick": 80,
-      "rotation": 84
+      "rotation": 84,
+      "trail": 65
     },
     "plate": "No",
     "note": "Salomon max-cushion road trainer.",
@@ -5589,7 +5748,8 @@ const SHOES=[
       "recovery": 62,
       "stability": 80,
       "valuePick": 84,
-      "rotation": 78
+      "rotation": 78,
+      "trail": 62
     },
     "plate": "No",
     "note": "Light Salomon road trainer.",
@@ -5624,7 +5784,8 @@ const SHOES=[
       "recovery": 56,
       "stability": 78,
       "valuePick": 80,
-      "rotation": 78
+      "rotation": 78,
+      "trail": 62
     },
     "plate": "No",
     "note": "Fast non-plated Salomon trainer.",
@@ -5659,7 +5820,8 @@ const SHOES=[
       "recovery": 88,
       "stability": 90,
       "valuePick": 76,
-      "rotation": 75
+      "rotation": 75,
+      "trail": 100
     },
     "plate": "No",
     "note": "Trail option not intended as pure road racer.",
@@ -5694,7 +5856,8 @@ const SHOES=[
       "recovery": 70,
       "stability": 70,
       "valuePick": 78,
-      "rotation": 88
+      "rotation": 88,
+      "trail": 65
     },
     "plate": "No",
     "note": "Indie high-stack performance trainer.",
@@ -5729,7 +5892,8 @@ const SHOES=[
       "recovery": 18,
       "stability": 68,
       "valuePick": 54,
-      "rotation": 61
+      "rotation": 61,
+      "trail": 38
     },
     "plate": "Yes",
     "note": "Chinese-market carbon racer.",
@@ -5764,7 +5928,8 @@ const SHOES=[
       "recovery": 18,
       "stability": 70,
       "valuePick": 58,
-      "rotation": 61
+      "rotation": 61,
+      "trail": 38
     },
     "plate": "Yes",
     "note": "Chinese-market race-day carbon shoe.",
@@ -5799,7 +5964,8 @@ const SHOES=[
       "recovery": 18,
       "stability": 70,
       "valuePick": 68,
-      "rotation": 61
+      "rotation": 61,
+      "trail": 38
     },
     "plate": "Yes",
     "note": "Chinese-market carbon racing shoe.",
@@ -5834,7 +6000,8 @@ const SHOES=[
       "recovery": 20,
       "stability": 72,
       "valuePick": 70,
-      "rotation": 64
+      "rotation": 64,
+      "trail": 38
     },
     "plate": "Yes",
     "note": "Carbon race shoe from Anta.",
@@ -5869,7 +6036,8 @@ const SHOES=[
       "recovery": 52,
       "stability": 78,
       "valuePick": 84,
-      "rotation": 80
+      "rotation": 80,
+      "trail": 66
     },
     "plate": "Yes",
     "note": "Plated trainer/racer option.",
@@ -5904,7 +6072,8 @@ const SHOES=[
       "recovery": 22,
       "stability": 74,
       "valuePick": 72,
-      "rotation": 66
+      "rotation": 66,
+      "trail": 39
     },
     "plate": "Yes",
     "note": "Carbon race shoe from 361\u00b0.",
@@ -5939,7 +6108,8 @@ const SHOES=[
       "recovery": 84,
       "stability": 84,
       "valuePick": 84,
-      "rotation": 80
+      "rotation": 80,
+      "trail": 63
     },
     "plate": "No",
     "note": "Daily trainer from 361\u00b0.",
@@ -5974,7 +6144,8 @@ const SHOES=[
       "recovery": 55,
       "stability": 78,
       "valuePick": 88,
-      "rotation": 82
+      "rotation": 82,
+      "trail": 65
     },
     "plate": "Yes",
     "note": "Value carbon trainer/racer hybrid.",
@@ -6009,7 +6180,8 @@ const SHOES=[
       "recovery": 68,
       "stability": 78,
       "valuePick": 100,
-      "rotation": 84
+      "rotation": 84,
+      "trail": 63
     },
     "plate": "No",
     "note": "Good-value tempo trainer.",
@@ -6044,7 +6216,8 @@ const SHOES=[
       "recovery": 86,
       "stability": 84,
       "valuePick": 100,
-      "rotation": 76
+      "rotation": 76,
+      "trail": 63
     },
     "plate": "No",
     "note": "Budget daily trainer.",
@@ -6079,7 +6252,8 @@ const SHOES=[
       "recovery": 60,
       "stability": 78,
       "valuePick": 80,
-      "rotation": 80
+      "rotation": 80,
+      "trail": 62
     },
     "plate": "Plate-like",
     "note": "Fast trainer from TYR.",
@@ -6114,7 +6288,8 @@ const SHOES=[
       "recovery": 84,
       "stability": 84,
       "valuePick": 76,
-      "rotation": 78
+      "rotation": 78,
+      "trail": 63
     },
     "plate": "No",
     "note": "Daily trainer from TYR.",
@@ -6149,7 +6324,8 @@ const SHOES=[
       "recovery": 82,
       "stability": 88,
       "valuePick": 47,
-      "rotation": 83
+      "rotation": 83,
+      "trail": 100
     },
     "plate": "No",
     "note": "Premium road/trail ultra option.",
@@ -6184,7 +6360,8 @@ const SHOES=[
       "recovery": 88,
       "stability": 92,
       "valuePick": 47,
-      "rotation": 74
+      "rotation": 74,
+      "trail": 100
     },
     "plate": "No",
     "note": "Premium trail/ultra shoe.",
@@ -6219,7 +6396,8 @@ const SHOES=[
       "recovery": 92,
       "stability": 88,
       "valuePick": 72,
-      "rotation": 76
+      "rotation": 76,
+      "trail": 100
     },
     "plate": "No",
     "note": "Trail max cushion option.",
@@ -6254,7 +6432,8 @@ const SHOES=[
       "recovery": 90,
       "stability": 90,
       "valuePick": 82,
-      "rotation": 76
+      "rotation": 76,
+      "trail": 100
     },
     "plate": "No",
     "note": "Trail/ultra classic.",
@@ -6289,7 +6468,8 @@ const SHOES=[
       "recovery": 92,
       "stability": 90,
       "valuePick": 80,
-      "rotation": 76
+      "rotation": 76,
+      "trail": 100
     },
     "plate": "No",
     "note": "Trail ultra shoe.",
@@ -6324,7 +6504,8 @@ const SHOES=[
       "recovery": 94,
       "stability": 88,
       "valuePick": 74,
-      "rotation": 74
+      "rotation": 74,
+      "trail": 100
     },
     "plate": "No",
     "note": "Wide toe-box trail ultra shoe.",
@@ -6359,7 +6540,8 @@ const SHOES=[
       "recovery": 90,
       "stability": 88,
       "valuePick": 84,
-      "rotation": 75
+      "rotation": 75,
+      "trail": 100
     },
     "plate": "No",
     "note": "Wide toe-box trail trainer.",
@@ -6368,5 +6550,1733 @@ const SHOES=[
     "longevityMiles": "350-550 miles",
     "longevityScore": 96,
     "longevityNote": "Trail and ultra shoes can be durable, but outsole wear depends heavily on terrain."
+  },
+  {
+    "id": 183,
+    "name": "HOKA Mafate Speed 4",
+    "brand": "HOKA",
+    "category": "Trail / Ultra",
+    "price": 185,
+    "widthScore": 82,
+    "width": "Average / try on",
+    "cushion": 90,
+    "speed": 76,
+    "stability": 88,
+    "value": 76,
+    "longrun": 94,
+    "daily": 76,
+    "recovery": 88,
+    "tempo": 70,
+    "race": 42,
+    "intent": {
+      "raceDay": 32,
+      "tempoWorkout": 70,
+      "dailyTrainer": 76,
+      "longRun": 99,
+      "recovery": 88,
+      "stability": 88,
+      "valuePick": 76,
+      "rotation": 82,
+      "trail": 100
+    },
+    "plate": "No",
+    "note": "Cushioned trail shoe for longer, faster trail efforts.",
+    "foam": "ProFly+",
+    "link": "https://www.google.com/search?q=HOKA+Mafate+Speed+4+running+shoe",
+    "longevityMiles": "350-550 miles",
+    "longevityScore": 84,
+    "longevityNote": "Trail-shoe longevity depends heavily on terrain, outsole wear, mud, rocks, and how much road use they see."
+  },
+  {
+    "id": 184,
+    "name": "HOKA Mafate 5",
+    "brand": "HOKA",
+    "category": "Trail / Ultra",
+    "price": 185,
+    "widthScore": 82,
+    "width": "Average / try on",
+    "cushion": 92,
+    "speed": 74,
+    "stability": 88,
+    "value": 74,
+    "longrun": 95,
+    "daily": 76,
+    "recovery": 90,
+    "tempo": 68,
+    "race": 40,
+    "intent": {
+      "raceDay": 30,
+      "tempoWorkout": 68,
+      "dailyTrainer": 76,
+      "longRun": 100,
+      "recovery": 90,
+      "stability": 88,
+      "valuePick": 74,
+      "rotation": 82,
+      "trail": 100
+    },
+    "plate": "No",
+    "note": "Premium cushioned trail shoe for long-distance trail running.",
+    "foam": "Supercritical EVA",
+    "link": "https://www.google.com/search?q=HOKA+Mafate+5+running+shoe",
+    "longevityMiles": "350-550 miles",
+    "longevityScore": 84,
+    "longevityNote": "Trail-shoe longevity depends heavily on terrain, outsole wear, mud, rocks, and how much road use they see."
+  },
+  {
+    "id": 185,
+    "name": "HOKA Tecton X 3",
+    "brand": "HOKA",
+    "category": "Plated Trail Racer",
+    "price": 275,
+    "widthScore": 78,
+    "width": "Average / try on",
+    "cushion": 86,
+    "speed": 92,
+    "stability": 82,
+    "value": 64,
+    "longrun": 90,
+    "daily": 64,
+    "recovery": 50,
+    "tempo": 88,
+    "race": 86,
+    "intent": {
+      "raceDay": 92,
+      "tempoWorkout": 93,
+      "dailyTrainer": 64,
+      "longRun": 90,
+      "recovery": 50,
+      "stability": 82,
+      "valuePick": 59,
+      "rotation": 73,
+      "trail": 100
+    },
+    "plate": "Yes",
+    "note": "Carbon-plated trail racer for fast trail racing and ultras.",
+    "foam": "PEBA + carbon plates",
+    "link": "https://www.google.com/search?q=HOKA+Tecton+X+3+running+shoe",
+    "longevityMiles": "350-550 miles",
+    "longevityScore": 84,
+    "longevityNote": "Trail-shoe longevity depends heavily on terrain, outsole wear, mud, rocks, and how much road use they see."
+  },
+  {
+    "id": 186,
+    "name": "HOKA Zinal 2",
+    "brand": "HOKA",
+    "category": "Light Trail Shoe",
+    "price": 160,
+    "widthScore": 76,
+    "width": "Average / try on",
+    "cushion": 70,
+    "speed": 88,
+    "stability": 78,
+    "value": 78,
+    "longrun": 70,
+    "daily": 72,
+    "recovery": 45,
+    "tempo": 88,
+    "race": 65,
+    "intent": {
+      "raceDay": 55,
+      "tempoWorkout": 93,
+      "dailyTrainer": 72,
+      "longRun": 70,
+      "recovery": 45,
+      "stability": 78,
+      "valuePick": 83,
+      "rotation": 69,
+      "trail": 95
+    },
+    "plate": "No",
+    "note": "Light trail shoe for faster short-to-mid distance trail runs.",
+    "foam": "CMEVA",
+    "link": "https://www.google.com/search?q=HOKA+Zinal+2+running+shoe",
+    "longevityMiles": "350-550 miles",
+    "longevityScore": 84,
+    "longevityNote": "Trail-shoe longevity depends heavily on terrain, outsole wear, mud, rocks, and how much road use they see."
+  },
+  {
+    "id": 187,
+    "name": "HOKA Torrent 4",
+    "brand": "HOKA",
+    "category": "Light Trail Shoe",
+    "price": 130,
+    "widthScore": 80,
+    "width": "Average / try on",
+    "cushion": 74,
+    "speed": 84,
+    "stability": 82,
+    "value": 90,
+    "longrun": 76,
+    "daily": 78,
+    "recovery": 55,
+    "tempo": 82,
+    "race": 55,
+    "intent": {
+      "raceDay": 45,
+      "tempoWorkout": 82,
+      "dailyTrainer": 78,
+      "longRun": 76,
+      "recovery": 55,
+      "stability": 82,
+      "valuePick": 95,
+      "rotation": 73,
+      "trail": 100
+    },
+    "plate": "No",
+    "note": "Lighter value-oriented trail shoe for mixed terrain.",
+    "foam": "CMEVA",
+    "link": "https://www.google.com/search?q=HOKA+Torrent+4+running+shoe",
+    "longevityMiles": "350-550 miles",
+    "longevityScore": 84,
+    "longevityNote": "Trail-shoe longevity depends heavily on terrain, outsole wear, mud, rocks, and how much road use they see."
+  },
+  {
+    "id": 188,
+    "name": "Nike Pegasus Trail 5",
+    "brand": "Nike",
+    "category": "Road/Trail Daily",
+    "price": 150,
+    "widthScore": 82,
+    "width": "Average / try on",
+    "cushion": 84,
+    "speed": 70,
+    "stability": 86,
+    "value": 84,
+    "longrun": 86,
+    "daily": 86,
+    "recovery": 88,
+    "tempo": 58,
+    "race": 28,
+    "intent": {
+      "raceDay": 18,
+      "tempoWorkout": 58,
+      "dailyTrainer": 86,
+      "longRun": 86,
+      "recovery": 88,
+      "stability": 86,
+      "valuePick": 89,
+      "rotation": 80,
+      "trail": 100
+    },
+    "plate": "No",
+    "note": "Door-to-trail option for runners who mix road and light trail.",
+    "foam": "ReactX",
+    "link": "https://www.google.com/search?q=Nike+Pegasus+Trail+5+running+shoe",
+    "longevityMiles": "350-550 miles",
+    "longevityScore": 84,
+    "longevityNote": "Trail-shoe longevity depends heavily on terrain, outsole wear, mud, rocks, and how much road use they see."
+  },
+  {
+    "id": 189,
+    "name": "Nike Wildhorse 8",
+    "brand": "Nike",
+    "category": "Trail Daily",
+    "price": 130,
+    "widthScore": 82,
+    "width": "Average / try on",
+    "cushion": 78,
+    "speed": 58,
+    "stability": 88,
+    "value": 88,
+    "longrun": 82,
+    "daily": 78,
+    "recovery": 82,
+    "tempo": 45,
+    "race": 12,
+    "intent": {
+      "raceDay": 2,
+      "tempoWorkout": 45,
+      "dailyTrainer": 78,
+      "longRun": 82,
+      "recovery": 82,
+      "stability": 88,
+      "valuePick": 93,
+      "rotation": 72,
+      "trail": 100
+    },
+    "plate": "No",
+    "note": "Stable trail daily shoe for dirt, gravel, and moderate terrain.",
+    "foam": "React foam",
+    "link": "https://www.google.com/search?q=Nike+Wildhorse+8+running+shoe",
+    "longevityMiles": "350-550 miles",
+    "longevityScore": 84,
+    "longevityNote": "Trail-shoe longevity depends heavily on terrain, outsole wear, mud, rocks, and how much road use they see."
+  },
+  {
+    "id": 190,
+    "name": "Nike Ultrafly",
+    "brand": "Nike",
+    "category": "Plated Trail Racer",
+    "price": 260,
+    "widthScore": 78,
+    "width": "Average / try on",
+    "cushion": 84,
+    "speed": 88,
+    "stability": 82,
+    "value": 62,
+    "longrun": 88,
+    "daily": 62,
+    "recovery": 45,
+    "tempo": 84,
+    "race": 82,
+    "intent": {
+      "raceDay": 88,
+      "tempoWorkout": 89,
+      "dailyTrainer": 62,
+      "longRun": 88,
+      "recovery": 45,
+      "stability": 82,
+      "valuePick": 57,
+      "rotation": 70,
+      "trail": 97
+    },
+    "plate": "Yes",
+    "note": "Carbon-plated trail racer for fast trail racing.",
+    "foam": "ZoomX + carbon plate",
+    "link": "https://www.google.com/search?q=Nike+Ultrafly+running+shoe",
+    "longevityMiles": "350-550 miles",
+    "longevityScore": 84,
+    "longevityNote": "Trail-shoe longevity depends heavily on terrain, outsole wear, mud, rocks, and how much road use they see."
+  },
+  {
+    "id": 191,
+    "name": "Saucony Peregrine 15",
+    "brand": "Saucony",
+    "category": "Trail Daily",
+    "price": 140,
+    "widthScore": 84,
+    "width": "Average / try on",
+    "cushion": 76,
+    "speed": 76,
+    "stability": 88,
+    "value": 88,
+    "longrun": 82,
+    "daily": 80,
+    "recovery": 74,
+    "tempo": 72,
+    "race": 45,
+    "intent": {
+      "raceDay": 35,
+      "tempoWorkout": 72,
+      "dailyTrainer": 80,
+      "longRun": 82,
+      "recovery": 74,
+      "stability": 88,
+      "valuePick": 93,
+      "rotation": 77,
+      "trail": 100
+    },
+    "plate": "No",
+    "note": "Versatile trail shoe for technical terrain and daily trail runs.",
+    "foam": "PWRRUN",
+    "link": "https://www.google.com/search?q=Saucony+Peregrine+15+running+shoe",
+    "longevityMiles": "350-550 miles",
+    "longevityScore": 84,
+    "longevityNote": "Trail-shoe longevity depends heavily on terrain, outsole wear, mud, rocks, and how much road use they see."
+  },
+  {
+    "id": 192,
+    "name": "Saucony Endorphin Rift",
+    "brand": "Saucony",
+    "category": "Fast Trail Shoe",
+    "price": 170,
+    "widthScore": 80,
+    "width": "Average / try on",
+    "cushion": 82,
+    "speed": 86,
+    "stability": 82,
+    "value": 78,
+    "longrun": 84,
+    "daily": 76,
+    "recovery": 70,
+    "tempo": 86,
+    "race": 60,
+    "intent": {
+      "raceDay": 50,
+      "tempoWorkout": 91,
+      "dailyTrainer": 76,
+      "longRun": 84,
+      "recovery": 70,
+      "stability": 82,
+      "valuePick": 78,
+      "rotation": 79,
+      "trail": 96
+    },
+    "plate": "No",
+    "note": "Fast trail shoe for runnable trails and trail workouts.",
+    "foam": "PWRRUN PB",
+    "link": "https://www.google.com/search?q=Saucony+Endorphin+Rift+running+shoe",
+    "longevityMiles": "350-550 miles",
+    "longevityScore": 84,
+    "longevityNote": "Trail-shoe longevity depends heavily on terrain, outsole wear, mud, rocks, and how much road use they see."
+  },
+  {
+    "id": 193,
+    "name": "Brooks Cascadia 18",
+    "brand": "Brooks",
+    "category": "Trail Daily",
+    "price": 140,
+    "widthScore": 88,
+    "width": "Wide-friendly",
+    "cushion": 80,
+    "speed": 58,
+    "stability": 92,
+    "value": 86,
+    "longrun": 86,
+    "daily": 80,
+    "recovery": 84,
+    "tempo": 45,
+    "race": 12,
+    "intent": {
+      "raceDay": 2,
+      "tempoWorkout": 45,
+      "dailyTrainer": 80,
+      "longRun": 86,
+      "recovery": 84,
+      "stability": 92,
+      "valuePick": 91,
+      "rotation": 74,
+      "trail": 100
+    },
+    "plate": "No",
+    "note": "Stable protective trail shoe for mixed and technical terrain.",
+    "foam": "DNA LOFT v2",
+    "link": "https://www.google.com/search?q=Brooks+Cascadia+18+running+shoe",
+    "longevityMiles": "350-550 miles",
+    "longevityScore": 84,
+    "longevityNote": "Trail-shoe longevity depends heavily on terrain, outsole wear, mud, rocks, and how much road use they see."
+  },
+  {
+    "id": 194,
+    "name": "Brooks Caldera 8",
+    "brand": "Brooks",
+    "category": "Trail / Ultra",
+    "price": 150,
+    "widthScore": 88,
+    "width": "Wide-friendly",
+    "cushion": 90,
+    "speed": 54,
+    "stability": 90,
+    "value": 84,
+    "longrun": 92,
+    "daily": 78,
+    "recovery": 92,
+    "tempo": 40,
+    "race": 10,
+    "intent": {
+      "raceDay": 0,
+      "tempoWorkout": 40,
+      "dailyTrainer": 78,
+      "longRun": 97,
+      "recovery": 92,
+      "stability": 90,
+      "valuePick": 89,
+      "rotation": 76,
+      "trail": 100
+    },
+    "plate": "No",
+    "note": "Max-cushion trail shoe for long trail runs and ultras.",
+    "foam": "DNA LOFT v3",
+    "link": "https://www.google.com/search?q=Brooks+Caldera+8+running+shoe",
+    "longevityMiles": "350-550 miles",
+    "longevityScore": 84,
+    "longevityNote": "Trail-shoe longevity depends heavily on terrain, outsole wear, mud, rocks, and how much road use they see."
+  },
+  {
+    "id": 195,
+    "name": "Brooks Catamount 4",
+    "brand": "Brooks",
+    "category": "Fast Trail Shoe",
+    "price": 170,
+    "widthScore": 82,
+    "width": "Average / try on",
+    "cushion": 78,
+    "speed": 88,
+    "stability": 84,
+    "value": 80,
+    "longrun": 82,
+    "daily": 74,
+    "recovery": 60,
+    "tempo": 88,
+    "race": 68,
+    "intent": {
+      "raceDay": 58,
+      "tempoWorkout": 93,
+      "dailyTrainer": 74,
+      "longRun": 82,
+      "recovery": 60,
+      "stability": 84,
+      "valuePick": 80,
+      "rotation": 76,
+      "trail": 100
+    },
+    "plate": "Plate-like",
+    "note": "Fast Brooks trail shoe for racing and uptempo trails.",
+    "foam": "DNA FLASH + propulsion plate",
+    "link": "https://www.google.com/search?q=Brooks+Catamount+4+running+shoe",
+    "longevityMiles": "350-550 miles",
+    "longevityScore": 84,
+    "longevityNote": "Trail-shoe longevity depends heavily on terrain, outsole wear, mud, rocks, and how much road use they see."
+  },
+  {
+    "id": 196,
+    "name": "Brooks Divide 5",
+    "brand": "Brooks",
+    "category": "Road/Trail Daily",
+    "price": 110,
+    "widthScore": 86,
+    "width": "Wide-friendly",
+    "cushion": 74,
+    "speed": 58,
+    "stability": 84,
+    "value": 92,
+    "longrun": 76,
+    "daily": 80,
+    "recovery": 78,
+    "tempo": 45,
+    "race": 10,
+    "intent": {
+      "raceDay": 0,
+      "tempoWorkout": 45,
+      "dailyTrainer": 80,
+      "longRun": 76,
+      "recovery": 78,
+      "stability": 84,
+      "valuePick": 97,
+      "rotation": 70,
+      "trail": 97
+    },
+    "plate": "No",
+    "note": "Budget-friendly road-to-trail shoe.",
+    "foam": "DNA LOFT",
+    "link": "https://www.google.com/search?q=Brooks+Divide+5+running+shoe",
+    "longevityMiles": "350-550 miles",
+    "longevityScore": 84,
+    "longevityNote": "Trail-shoe longevity depends heavily on terrain, outsole wear, mud, rocks, and how much road use they see."
+  },
+  {
+    "id": 197,
+    "name": "New Balance Fresh Foam X Hierro v9",
+    "brand": "New Balance",
+    "category": "Trail / Ultra",
+    "price": 155,
+    "widthScore": 92,
+    "width": "Excellent for wide feet",
+    "cushion": 88,
+    "speed": 56,
+    "stability": 88,
+    "value": 82,
+    "longrun": 90,
+    "daily": 78,
+    "recovery": 90,
+    "tempo": 42,
+    "race": 10,
+    "intent": {
+      "raceDay": 0,
+      "tempoWorkout": 42,
+      "dailyTrainer": 78,
+      "longRun": 95,
+      "recovery": 90,
+      "stability": 88,
+      "valuePick": 87,
+      "rotation": 75,
+      "trail": 100
+    },
+    "plate": "No",
+    "note": "Comfortable trail shoe with wide sizing availability.",
+    "foam": "Fresh Foam X",
+    "link": "https://www.google.com/search?q=New+Balance+Fresh+Foam+X+Hierro+v9+running+shoe",
+    "longevityMiles": "350-550 miles",
+    "longevityScore": 84,
+    "longevityNote": "Trail-shoe longevity depends heavily on terrain, outsole wear, mud, rocks, and how much road use they see."
+  },
+  {
+    "id": 198,
+    "name": "New Balance Fresh Foam X More Trail v3",
+    "brand": "New Balance",
+    "category": "Max Cushion Trail",
+    "price": 170,
+    "widthScore": 92,
+    "width": "Excellent for wide feet",
+    "cushion": 94,
+    "speed": 48,
+    "stability": 86,
+    "value": 76,
+    "longrun": 90,
+    "daily": 74,
+    "recovery": 96,
+    "tempo": 35,
+    "race": 8,
+    "intent": {
+      "raceDay": 0,
+      "tempoWorkout": 35,
+      "dailyTrainer": 74,
+      "longRun": 90,
+      "recovery": 96,
+      "stability": 86,
+      "valuePick": 76,
+      "rotation": 74,
+      "trail": 100
+    },
+    "plate": "No",
+    "note": "Max-cushion trail shoe for comfort-focused trail runners.",
+    "foam": "Fresh Foam X",
+    "link": "https://www.google.com/search?q=New+Balance+Fresh+Foam+X+More+Trail+v3+running+shoe",
+    "longevityMiles": "350-550 miles",
+    "longevityScore": 84,
+    "longevityNote": "Trail-shoe longevity depends heavily on terrain, outsole wear, mud, rocks, and how much road use they see."
+  },
+  {
+    "id": 199,
+    "name": "New Balance FuelCell Summit Unknown v5",
+    "brand": "New Balance",
+    "category": "Fast Trail Shoe",
+    "price": 140,
+    "widthScore": 84,
+    "width": "Average / try on",
+    "cushion": 74,
+    "speed": 82,
+    "stability": 82,
+    "value": 86,
+    "longrun": 76,
+    "daily": 78,
+    "recovery": 58,
+    "tempo": 82,
+    "race": 55,
+    "intent": {
+      "raceDay": 45,
+      "tempoWorkout": 82,
+      "dailyTrainer": 78,
+      "longRun": 76,
+      "recovery": 58,
+      "stability": 82,
+      "valuePick": 91,
+      "rotation": 74,
+      "trail": 100
+    },
+    "plate": "No",
+    "note": "Light trail shoe for faster off-road efforts.",
+    "foam": "FuelCell",
+    "link": "https://www.google.com/search?q=New+Balance+FuelCell+Summit+Unknown+v5+running+shoe",
+    "longevityMiles": "350-550 miles",
+    "longevityScore": 84,
+    "longevityNote": "Trail-shoe longevity depends heavily on terrain, outsole wear, mud, rocks, and how much road use they see."
+  },
+  {
+    "id": 200,
+    "name": "ASICS Trabuco Max 4",
+    "brand": "ASICS",
+    "category": "Trail / Ultra",
+    "price": 160,
+    "widthScore": 88,
+    "width": "Wide-friendly",
+    "cushion": 92,
+    "speed": 52,
+    "stability": 90,
+    "value": 84,
+    "longrun": 94,
+    "daily": 76,
+    "recovery": 94,
+    "tempo": 40,
+    "race": 8,
+    "intent": {
+      "raceDay": 0,
+      "tempoWorkout": 40,
+      "dailyTrainer": 76,
+      "longRun": 99,
+      "recovery": 94,
+      "stability": 90,
+      "valuePick": 89,
+      "rotation": 76,
+      "trail": 100
+    },
+    "plate": "No",
+    "note": "Max-cushion ASICS trail shoe for long runs and protection.",
+    "foam": "FF BLAST PLUS ECO",
+    "link": "https://www.google.com/search?q=ASICS+Trabuco+Max+4+running+shoe",
+    "longevityMiles": "350-550 miles",
+    "longevityScore": 84,
+    "longevityNote": "Trail-shoe longevity depends heavily on terrain, outsole wear, mud, rocks, and how much road use they see."
+  },
+  {
+    "id": 201,
+    "name": "ASICS Gel-Trabuco 13",
+    "brand": "ASICS",
+    "category": "Trail Daily",
+    "price": 140,
+    "widthScore": 88,
+    "width": "Wide-friendly",
+    "cushion": 82,
+    "speed": 58,
+    "stability": 92,
+    "value": 88,
+    "longrun": 86,
+    "daily": 78,
+    "recovery": 86,
+    "tempo": 45,
+    "race": 12,
+    "intent": {
+      "raceDay": 2,
+      "tempoWorkout": 45,
+      "dailyTrainer": 78,
+      "longRun": 86,
+      "recovery": 86,
+      "stability": 92,
+      "valuePick": 93,
+      "rotation": 74,
+      "trail": 100
+    },
+    "plate": "No",
+    "note": "Protective and stable daily trail shoe.",
+    "foam": "FF BLAST PLUS ECO",
+    "link": "https://www.google.com/search?q=ASICS+Gel-Trabuco+13+running+shoe",
+    "longevityMiles": "350-550 miles",
+    "longevityScore": 84,
+    "longevityNote": "Trail-shoe longevity depends heavily on terrain, outsole wear, mud, rocks, and how much road use they see."
+  },
+  {
+    "id": 202,
+    "name": "ASICS Fuji Lite 5",
+    "brand": "ASICS",
+    "category": "Light Trail Shoe",
+    "price": 130,
+    "widthScore": 84,
+    "width": "Average / try on",
+    "cushion": 74,
+    "speed": 78,
+    "stability": 80,
+    "value": 88,
+    "longrun": 76,
+    "daily": 80,
+    "recovery": 60,
+    "tempo": 78,
+    "race": 45,
+    "intent": {
+      "raceDay": 35,
+      "tempoWorkout": 78,
+      "dailyTrainer": 80,
+      "longRun": 76,
+      "recovery": 60,
+      "stability": 80,
+      "valuePick": 93,
+      "rotation": 74,
+      "trail": 100
+    },
+    "plate": "No",
+    "note": "Light trail shoe for moderate terrain and faster trail days.",
+    "foam": "FF BLAST",
+    "link": "https://www.google.com/search?q=ASICS+Fuji+Lite+5+running+shoe",
+    "longevityMiles": "350-550 miles",
+    "longevityScore": 84,
+    "longevityNote": "Trail-shoe longevity depends heavily on terrain, outsole wear, mud, rocks, and how much road use they see."
+  },
+  {
+    "id": 203,
+    "name": "ASICS Fuji Speed 3",
+    "brand": "ASICS",
+    "category": "Fast Trail Shoe",
+    "price": 170,
+    "widthScore": 82,
+    "width": "Average / try on",
+    "cushion": 76,
+    "speed": 88,
+    "stability": 78,
+    "value": 78,
+    "longrun": 78,
+    "daily": 72,
+    "recovery": 55,
+    "tempo": 88,
+    "race": 65,
+    "intent": {
+      "raceDay": 55,
+      "tempoWorkout": 93,
+      "dailyTrainer": 72,
+      "longRun": 78,
+      "recovery": 55,
+      "stability": 78,
+      "valuePick": 78,
+      "rotation": 73,
+      "trail": 100
+    },
+    "plate": "Plate-like",
+    "note": "Fast ASICS trail shoe for racing and workouts.",
+    "foam": "FF BLAST PLUS + plate",
+    "link": "https://www.google.com/search?q=ASICS+Fuji+Speed+3+running+shoe",
+    "longevityMiles": "350-550 miles",
+    "longevityScore": 84,
+    "longevityNote": "Trail-shoe longevity depends heavily on terrain, outsole wear, mud, rocks, and how much road use they see."
+  },
+  {
+    "id": 204,
+    "name": "Salomon S/Lab Genesis",
+    "brand": "Salomon",
+    "category": "Trail Racer",
+    "price": 200,
+    "widthScore": 80,
+    "width": "Average / try on",
+    "cushion": 82,
+    "speed": 84,
+    "stability": 90,
+    "value": 70,
+    "longrun": 88,
+    "daily": 66,
+    "recovery": 70,
+    "tempo": 84,
+    "race": 70,
+    "intent": {
+      "raceDay": 76,
+      "tempoWorkout": 84,
+      "dailyTrainer": 66,
+      "longRun": 88,
+      "recovery": 70,
+      "stability": 90,
+      "valuePick": 70,
+      "rotation": 77,
+      "trail": 100
+    },
+    "plate": "No",
+    "note": "Premium technical trail racing shoe.",
+    "foam": "Energy Foam",
+    "link": "https://www.google.com/search?q=Salomon+S/Lab+Genesis+running+shoe",
+    "longevityMiles": "350-550 miles",
+    "longevityScore": 84,
+    "longevityNote": "Trail-shoe longevity depends heavily on terrain, outsole wear, mud, rocks, and how much road use they see."
+  },
+  {
+    "id": 205,
+    "name": "Salomon Sense Ride 5",
+    "brand": "Salomon",
+    "category": "Trail Daily",
+    "price": 140,
+    "widthScore": 82,
+    "width": "Average / try on",
+    "cushion": 78,
+    "speed": 60,
+    "stability": 86,
+    "value": 86,
+    "longrun": 84,
+    "daily": 80,
+    "recovery": 82,
+    "tempo": 48,
+    "race": 12,
+    "intent": {
+      "raceDay": 2,
+      "tempoWorkout": 48,
+      "dailyTrainer": 80,
+      "longRun": 84,
+      "recovery": 82,
+      "stability": 86,
+      "valuePick": 91,
+      "rotation": 74,
+      "trail": 100
+    },
+    "plate": "No",
+    "note": "Do-it-all Salomon trail shoe for varied terrain.",
+    "foam": "Energy Foam",
+    "link": "https://www.google.com/search?q=Salomon+Sense+Ride+5+running+shoe",
+    "longevityMiles": "350-550 miles",
+    "longevityScore": 84,
+    "longevityNote": "Trail-shoe longevity depends heavily on terrain, outsole wear, mud, rocks, and how much road use they see."
+  },
+  {
+    "id": 206,
+    "name": "Salomon Ultra Glide 3",
+    "brand": "Salomon",
+    "category": "Trail / Ultra",
+    "price": 160,
+    "widthScore": 82,
+    "width": "Average / try on",
+    "cushion": 90,
+    "speed": 58,
+    "stability": 86,
+    "value": 80,
+    "longrun": 92,
+    "daily": 76,
+    "recovery": 92,
+    "tempo": 45,
+    "race": 10,
+    "intent": {
+      "raceDay": 0,
+      "tempoWorkout": 45,
+      "dailyTrainer": 76,
+      "longRun": 97,
+      "recovery": 92,
+      "stability": 86,
+      "valuePick": 85,
+      "rotation": 76,
+      "trail": 100
+    },
+    "plate": "No",
+    "note": "Cushioned trail shoe for longer off-road runs.",
+    "foam": "Energy Foam",
+    "link": "https://www.google.com/search?q=Salomon+Ultra+Glide+3+running+shoe",
+    "longevityMiles": "350-550 miles",
+    "longevityScore": 84,
+    "longevityNote": "Trail-shoe longevity depends heavily on terrain, outsole wear, mud, rocks, and how much road use they see."
+  },
+  {
+    "id": 207,
+    "name": "Salomon S/Lab Ultra Glide",
+    "brand": "Salomon",
+    "category": "Trail Racer",
+    "price": 250,
+    "widthScore": 80,
+    "width": "Average / try on",
+    "cushion": 88,
+    "speed": 82,
+    "stability": 86,
+    "value": 62,
+    "longrun": 92,
+    "daily": 62,
+    "recovery": 78,
+    "tempo": 82,
+    "race": 70,
+    "intent": {
+      "raceDay": 76,
+      "tempoWorkout": 82,
+      "dailyTrainer": 62,
+      "longRun": 92,
+      "recovery": 78,
+      "stability": 86,
+      "valuePick": 57,
+      "rotation": 78,
+      "trail": 98
+    },
+    "plate": "No",
+    "note": "Premium Salomon ultra-distance trail racing shoe.",
+    "foam": "Energy Foam",
+    "link": "https://www.google.com/search?q=Salomon+S/Lab+Ultra+Glide+running+shoe",
+    "longevityMiles": "350-550 miles",
+    "longevityScore": 84,
+    "longevityNote": "Trail-shoe longevity depends heavily on terrain, outsole wear, mud, rocks, and how much road use they see."
+  },
+  {
+    "id": 208,
+    "name": "Altra Lone Peak 9",
+    "brand": "Altra",
+    "category": "Wide Toe Box Trail",
+    "price": 140,
+    "widthScore": 98,
+    "width": "Excellent for wide feet",
+    "cushion": 76,
+    "speed": 54,
+    "stability": 86,
+    "value": 86,
+    "longrun": 86,
+    "daily": 78,
+    "recovery": 84,
+    "tempo": 40,
+    "race": 8,
+    "intent": {
+      "raceDay": 0,
+      "tempoWorkout": 40,
+      "dailyTrainer": 78,
+      "longRun": 86,
+      "recovery": 84,
+      "stability": 86,
+      "valuePick": 91,
+      "rotation": 72,
+      "trail": 100
+    },
+    "plate": "No",
+    "note": "Classic wide toe-box trail shoe for hiking and trail running.",
+    "foam": "EGO",
+    "link": "https://www.google.com/search?q=Altra+Lone+Peak+9+running+shoe",
+    "longevityMiles": "350-550 miles",
+    "longevityScore": 84,
+    "longevityNote": "Trail-shoe longevity depends heavily on terrain, outsole wear, mud, rocks, and how much road use they see."
+  },
+  {
+    "id": 209,
+    "name": "Altra Timp 5",
+    "brand": "Altra",
+    "category": "Wide Toe Box Trail / Ultra",
+    "price": 155,
+    "widthScore": 98,
+    "width": "Excellent for wide feet",
+    "cushion": 86,
+    "speed": 62,
+    "stability": 84,
+    "value": 82,
+    "longrun": 90,
+    "daily": 78,
+    "recovery": 88,
+    "tempo": 52,
+    "race": 18,
+    "intent": {
+      "raceDay": 8,
+      "tempoWorkout": 52,
+      "dailyTrainer": 78,
+      "longRun": 95,
+      "recovery": 88,
+      "stability": 84,
+      "valuePick": 87,
+      "rotation": 77,
+      "trail": 100
+    },
+    "plate": "No",
+    "note": "Cushioned wide toe-box trail shoe.",
+    "foam": "EGO MAX",
+    "link": "https://www.google.com/search?q=Altra+Timp+5+running+shoe",
+    "longevityMiles": "350-550 miles",
+    "longevityScore": 84,
+    "longevityNote": "Trail-shoe longevity depends heavily on terrain, outsole wear, mud, rocks, and how much road use they see."
+  },
+  {
+    "id": 210,
+    "name": "Altra Mont Blanc Carbon",
+    "brand": "Altra",
+    "category": "Plated Trail Racer",
+    "price": 260,
+    "widthScore": 96,
+    "width": "Excellent for wide feet",
+    "cushion": 84,
+    "speed": 88,
+    "stability": 78,
+    "value": 62,
+    "longrun": 84,
+    "daily": 62,
+    "recovery": 55,
+    "tempo": 86,
+    "race": 82,
+    "intent": {
+      "raceDay": 88,
+      "tempoWorkout": 91,
+      "dailyTrainer": 62,
+      "longRun": 84,
+      "recovery": 55,
+      "stability": 78,
+      "valuePick": 57,
+      "rotation": 72,
+      "trail": 98
+    },
+    "plate": "Yes",
+    "note": "Wide toe-box carbon trail racer.",
+    "foam": "EGO PRO + carbon plate",
+    "link": "https://www.google.com/search?q=Altra+Mont+Blanc+Carbon+running+shoe",
+    "longevityMiles": "350-550 miles",
+    "longevityScore": 84,
+    "longevityNote": "Trail-shoe longevity depends heavily on terrain, outsole wear, mud, rocks, and how much road use they see."
+  },
+  {
+    "id": 211,
+    "name": "Topo MTN Racer 4",
+    "brand": "Topo Athletic",
+    "category": "Wide Toe Box Trail Racer",
+    "price": 150,
+    "widthScore": 97,
+    "width": "Excellent for wide feet",
+    "cushion": 82,
+    "speed": 76,
+    "stability": 86,
+    "value": 86,
+    "longrun": 86,
+    "daily": 78,
+    "recovery": 78,
+    "tempo": 76,
+    "race": 50,
+    "intent": {
+      "raceDay": 56,
+      "tempoWorkout": 76,
+      "dailyTrainer": 78,
+      "longRun": 86,
+      "recovery": 78,
+      "stability": 86,
+      "valuePick": 91,
+      "rotation": 80,
+      "trail": 100
+    },
+    "plate": "No",
+    "note": "Wide toe-box trail shoe with a faster trail feel.",
+    "foam": "ZipFoam",
+    "link": "https://www.google.com/search?q=Topo+MTN+Racer+4+running+shoe",
+    "longevityMiles": "350-550 miles",
+    "longevityScore": 84,
+    "longevityNote": "Trail-shoe longevity depends heavily on terrain, outsole wear, mud, rocks, and how much road use they see."
+  },
+  {
+    "id": 212,
+    "name": "Topo Terraventure 4",
+    "brand": "Topo Athletic",
+    "category": "Wide Toe Box Trail",
+    "price": 135,
+    "widthScore": 97,
+    "width": "Excellent for wide feet",
+    "cushion": 78,
+    "speed": 58,
+    "stability": 90,
+    "value": 88,
+    "longrun": 84,
+    "daily": 78,
+    "recovery": 82,
+    "tempo": 45,
+    "race": 10,
+    "intent": {
+      "raceDay": 0,
+      "tempoWorkout": 45,
+      "dailyTrainer": 78,
+      "longRun": 84,
+      "recovery": 82,
+      "stability": 90,
+      "valuePick": 93,
+      "rotation": 72,
+      "trail": 100
+    },
+    "plate": "No",
+    "note": "Protective wide toe-box trail shoe for technical ground.",
+    "foam": "ZipFoam + rock plate",
+    "link": "https://www.google.com/search?q=Topo+Terraventure+4+running+shoe",
+    "longevityMiles": "350-550 miles",
+    "longevityScore": 84,
+    "longevityNote": "Trail-shoe longevity depends heavily on terrain, outsole wear, mud, rocks, and how much road use they see."
+  },
+  {
+    "id": 213,
+    "name": "La Sportiva Prodigio",
+    "brand": "La Sportiva",
+    "category": "Trail / Ultra",
+    "price": 155,
+    "widthScore": 78,
+    "width": "Average / try on",
+    "cushion": 84,
+    "speed": 74,
+    "stability": 86,
+    "value": 80,
+    "longrun": 90,
+    "daily": 76,
+    "recovery": 84,
+    "tempo": 72,
+    "race": 45,
+    "intent": {
+      "raceDay": 35,
+      "tempoWorkout": 72,
+      "dailyTrainer": 76,
+      "longRun": 95,
+      "recovery": 84,
+      "stability": 86,
+      "valuePick": 85,
+      "rotation": 80,
+      "trail": 100
+    },
+    "plate": "No",
+    "note": "Long-distance trail shoe with a responsive ride.",
+    "foam": "XFlow",
+    "link": "https://www.google.com/search?q=La+Sportiva+Prodigio+running+shoe",
+    "longevityMiles": "350-550 miles",
+    "longevityScore": 84,
+    "longevityNote": "Trail-shoe longevity depends heavily on terrain, outsole wear, mud, rocks, and how much road use they see."
+  },
+  {
+    "id": 214,
+    "name": "La Sportiva Prodigio Pro",
+    "brand": "La Sportiva",
+    "category": "Trail Racer",
+    "price": 175,
+    "widthScore": 76,
+    "width": "Average / try on",
+    "cushion": 82,
+    "speed": 86,
+    "stability": 84,
+    "value": 72,
+    "longrun": 88,
+    "daily": 70,
+    "recovery": 72,
+    "tempo": 86,
+    "race": 65,
+    "intent": {
+      "raceDay": 71,
+      "tempoWorkout": 91,
+      "dailyTrainer": 70,
+      "longRun": 88,
+      "recovery": 72,
+      "stability": 84,
+      "valuePick": 72,
+      "rotation": 79,
+      "trail": 100
+    },
+    "plate": "No",
+    "note": "Faster La Sportiva trail racing shoe.",
+    "foam": "XFlow Speed",
+    "link": "https://www.google.com/search?q=La+Sportiva+Prodigio+Pro+running+shoe",
+    "longevityMiles": "350-550 miles",
+    "longevityScore": 84,
+    "longevityNote": "Trail-shoe longevity depends heavily on terrain, outsole wear, mud, rocks, and how much road use they see."
+  },
+  {
+    "id": 215,
+    "name": "La Sportiva Mutant",
+    "brand": "La Sportiva",
+    "category": "Technical Trail",
+    "price": 165,
+    "widthScore": 76,
+    "width": "Average / try on",
+    "cushion": 76,
+    "speed": 54,
+    "stability": 94,
+    "value": 80,
+    "longrun": 84,
+    "daily": 70,
+    "recovery": 78,
+    "tempo": 40,
+    "race": 8,
+    "intent": {
+      "raceDay": 0,
+      "tempoWorkout": 40,
+      "dailyTrainer": 70,
+      "longRun": 84,
+      "recovery": 78,
+      "stability": 94,
+      "valuePick": 80,
+      "rotation": 68,
+      "trail": 100
+    },
+    "plate": "No",
+    "note": "Technical mountain trail shoe with strong grip and security.",
+    "foam": "EVA",
+    "link": "https://www.google.com/search?q=La+Sportiva+Mutant+running+shoe",
+    "longevityMiles": "350-550 miles",
+    "longevityScore": 84,
+    "longevityNote": "Trail-shoe longevity depends heavily on terrain, outsole wear, mud, rocks, and how much road use they see."
+  },
+  {
+    "id": 216,
+    "name": "NNormal Kjerag",
+    "brand": "NNormal",
+    "category": "Trail Racer",
+    "price": 195,
+    "widthScore": 78,
+    "width": "Average / try on",
+    "cushion": 70,
+    "speed": 90,
+    "stability": 86,
+    "value": 72,
+    "longrun": 82,
+    "daily": 68,
+    "recovery": 58,
+    "tempo": 90,
+    "race": 72,
+    "intent": {
+      "raceDay": 78,
+      "tempoWorkout": 95,
+      "dailyTrainer": 68,
+      "longRun": 82,
+      "recovery": 58,
+      "stability": 86,
+      "valuePick": 72,
+      "rotation": 74,
+      "trail": 100
+    },
+    "plate": "No",
+    "note": "Light high-performance trail racing shoe.",
+    "foam": "EExpure",
+    "link": "https://www.google.com/search?q=NNormal+Kjerag+running+shoe",
+    "longevityMiles": "350-550 miles",
+    "longevityScore": 84,
+    "longevityNote": "Trail-shoe longevity depends heavily on terrain, outsole wear, mud, rocks, and how much road use they see."
+  },
+  {
+    "id": 217,
+    "name": "NNormal Tomir 2.0",
+    "brand": "NNormal",
+    "category": "Trail / Ultra",
+    "price": 165,
+    "widthScore": 82,
+    "width": "Average / try on",
+    "cushion": 84,
+    "speed": 62,
+    "stability": 90,
+    "value": 80,
+    "longrun": 90,
+    "daily": 76,
+    "recovery": 86,
+    "tempo": 50,
+    "race": 15,
+    "intent": {
+      "raceDay": 5,
+      "tempoWorkout": 50,
+      "dailyTrainer": 76,
+      "longRun": 95,
+      "recovery": 86,
+      "stability": 90,
+      "valuePick": 80,
+      "rotation": 76,
+      "trail": 100
+    },
+    "plate": "No",
+    "note": "Durable trail shoe for long days and mixed terrain.",
+    "foam": "EExpure",
+    "link": "https://www.google.com/search?q=NNormal+Tomir+2.0+running+shoe",
+    "longevityMiles": "350-550 miles",
+    "longevityScore": 84,
+    "longevityNote": "Trail-shoe longevity depends heavily on terrain, outsole wear, mud, rocks, and how much road use they see."
+  },
+  {
+    "id": 218,
+    "name": "Norda 002",
+    "brand": "Norda",
+    "category": "Technical Trail",
+    "price": 295,
+    "widthScore": 84,
+    "width": "Average / try on",
+    "cushion": 78,
+    "speed": 64,
+    "stability": 94,
+    "value": 52,
+    "longrun": 86,
+    "daily": 66,
+    "recovery": 78,
+    "tempo": 50,
+    "race": 12,
+    "intent": {
+      "raceDay": 2,
+      "tempoWorkout": 50,
+      "dailyTrainer": 66,
+      "longRun": 86,
+      "recovery": 78,
+      "stability": 94,
+      "valuePick": 47,
+      "rotation": 70,
+      "trail": 100
+    },
+    "plate": "No",
+    "note": "More technical and precise Norda trail shoe.",
+    "foam": "TPEE + Vibram",
+    "link": "https://www.google.com/search?q=Norda+002+running+shoe",
+    "longevityMiles": "350-550 miles",
+    "longevityScore": 84,
+    "longevityNote": "Trail-shoe longevity depends heavily on terrain, outsole wear, mud, rocks, and how much road use they see."
+  },
+  {
+    "id": 219,
+    "name": "Merrell Agility Peak 5",
+    "brand": "Merrell",
+    "category": "Trail / Ultra",
+    "price": 140,
+    "widthScore": 84,
+    "width": "Average / try on",
+    "cushion": 86,
+    "speed": 52,
+    "stability": 90,
+    "value": 88,
+    "longrun": 88,
+    "daily": 76,
+    "recovery": 90,
+    "tempo": 38,
+    "race": 8,
+    "intent": {
+      "raceDay": 0,
+      "tempoWorkout": 38,
+      "dailyTrainer": 76,
+      "longRun": 93,
+      "recovery": 90,
+      "stability": 90,
+      "valuePick": 93,
+      "rotation": 73,
+      "trail": 100
+    },
+    "plate": "No",
+    "note": "Cushioned trail shoe with strong value.",
+    "foam": "FloatPro",
+    "link": "https://www.google.com/search?q=Merrell+Agility+Peak+5+running+shoe",
+    "longevityMiles": "350-550 miles",
+    "longevityScore": 84,
+    "longevityNote": "Trail-shoe longevity depends heavily on terrain, outsole wear, mud, rocks, and how much road use they see."
+  },
+  {
+    "id": 220,
+    "name": "Merrell MTL Long Sky 2 Matryx",
+    "brand": "Merrell",
+    "category": "Trail Racer",
+    "price": 180,
+    "widthScore": 80,
+    "width": "Average / try on",
+    "cushion": 76,
+    "speed": 80,
+    "stability": 86,
+    "value": 78,
+    "longrun": 82,
+    "daily": 70,
+    "recovery": 70,
+    "tempo": 80,
+    "race": 55,
+    "intent": {
+      "raceDay": 61,
+      "tempoWorkout": 80,
+      "dailyTrainer": 70,
+      "longRun": 82,
+      "recovery": 70,
+      "stability": 86,
+      "valuePick": 78,
+      "rotation": 76,
+      "trail": 96
+    },
+    "plate": "No",
+    "note": "Fast technical trail shoe with durable upper.",
+    "foam": "FloatPro",
+    "link": "https://www.google.com/search?q=Merrell+MTL+Long+Sky+2+Matryx+running+shoe",
+    "longevityMiles": "350-550 miles",
+    "longevityScore": 84,
+    "longevityNote": "Trail-shoe longevity depends heavily on terrain, outsole wear, mud, rocks, and how much road use they see."
+  },
+  {
+    "id": 221,
+    "name": "Merrell MTL Skyfire 2 Matryx",
+    "brand": "Merrell",
+    "category": "Fast Trail Shoe",
+    "price": 200,
+    "widthScore": 78,
+    "width": "Average / try on",
+    "cushion": 70,
+    "speed": 90,
+    "stability": 84,
+    "value": 70,
+    "longrun": 76,
+    "daily": 62,
+    "recovery": 55,
+    "tempo": 90,
+    "race": 68,
+    "intent": {
+      "raceDay": 58,
+      "tempoWorkout": 95,
+      "dailyTrainer": 62,
+      "longRun": 76,
+      "recovery": 55,
+      "stability": 84,
+      "valuePick": 70,
+      "rotation": 71,
+      "trail": 98
+    },
+    "plate": "Plate-like",
+    "note": "Very light technical trail racing shoe.",
+    "foam": "FloatPro + plate",
+    "link": "https://www.google.com/search?q=Merrell+MTL+Skyfire+2+Matryx+running+shoe",
+    "longevityMiles": "350-550 miles",
+    "longevityScore": 84,
+    "longevityNote": "Trail-shoe longevity depends heavily on terrain, outsole wear, mud, rocks, and how much road use they see."
+  },
+  {
+    "id": 222,
+    "name": "Inov-8 Trailfly",
+    "brand": "Inov-8",
+    "category": "Trail / Ultra",
+    "price": 170,
+    "widthScore": 82,
+    "width": "Average / try on",
+    "cushion": 84,
+    "speed": 62,
+    "stability": 88,
+    "value": 78,
+    "longrun": 90,
+    "daily": 76,
+    "recovery": 86,
+    "tempo": 52,
+    "race": 15,
+    "intent": {
+      "raceDay": 5,
+      "tempoWorkout": 52,
+      "dailyTrainer": 76,
+      "longRun": 95,
+      "recovery": 86,
+      "stability": 88,
+      "valuePick": 78,
+      "rotation": 76,
+      "trail": 100
+    },
+    "plate": "No",
+    "note": "Trail/ultra option with strong grip focus.",
+    "foam": "Flyspeed",
+    "link": "https://www.google.com/search?q=Inov-8+Trailfly+running+shoe",
+    "longevityMiles": "350-550 miles",
+    "longevityScore": 84,
+    "longevityNote": "Trail-shoe longevity depends heavily on terrain, outsole wear, mud, rocks, and how much road use they see."
+  },
+  {
+    "id": 223,
+    "name": "Inov-8 X-Talon Ultra 260 V2",
+    "brand": "Inov-8",
+    "category": "Technical Trail",
+    "price": 150,
+    "widthScore": 80,
+    "width": "Average / try on",
+    "cushion": 68,
+    "speed": 58,
+    "stability": 92,
+    "value": 82,
+    "longrun": 78,
+    "daily": 66,
+    "recovery": 72,
+    "tempo": 42,
+    "race": 8,
+    "intent": {
+      "raceDay": 0,
+      "tempoWorkout": 42,
+      "dailyTrainer": 66,
+      "longRun": 78,
+      "recovery": 72,
+      "stability": 92,
+      "valuePick": 87,
+      "rotation": 64,
+      "trail": 100
+    },
+    "plate": "No",
+    "note": "Technical muddy-terrain trail shoe.",
+    "foam": "POWERFLOW MAX",
+    "link": "https://www.google.com/search?q=Inov-8+X-Talon+Ultra+260+V2+running+shoe",
+    "longevityMiles": "350-550 miles",
+    "longevityScore": 84,
+    "longevityNote": "Trail-shoe longevity depends heavily on terrain, outsole wear, mud, rocks, and how much road use they see."
+  },
+  {
+    "id": 224,
+    "name": "Scarpa Spin Ultra 2",
+    "brand": "Scarpa",
+    "category": "Trail / Ultra",
+    "price": 160,
+    "widthScore": 80,
+    "width": "Average / try on",
+    "cushion": 82,
+    "speed": 60,
+    "stability": 90,
+    "value": 80,
+    "longrun": 88,
+    "daily": 74,
+    "recovery": 84,
+    "tempo": 48,
+    "race": 12,
+    "intent": {
+      "raceDay": 2,
+      "tempoWorkout": 48,
+      "dailyTrainer": 74,
+      "longRun": 93,
+      "recovery": 84,
+      "stability": 90,
+      "valuePick": 85,
+      "rotation": 74,
+      "trail": 100
+    },
+    "plate": "No",
+    "note": "Protective trail/ultra shoe.",
+    "foam": "EVA",
+    "link": "https://www.google.com/search?q=Scarpa+Spin+Ultra+2+running+shoe",
+    "longevityMiles": "350-550 miles",
+    "longevityScore": 84,
+    "longevityNote": "Trail-shoe longevity depends heavily on terrain, outsole wear, mud, rocks, and how much road use they see."
+  },
+  {
+    "id": 225,
+    "name": "Scarpa Ribelle Run 2",
+    "brand": "Scarpa",
+    "category": "Technical Trail",
+    "price": 179,
+    "widthScore": 78,
+    "width": "Average / try on",
+    "cushion": 76,
+    "speed": 64,
+    "stability": 92,
+    "value": 72,
+    "longrun": 82,
+    "daily": 68,
+    "recovery": 76,
+    "tempo": 50,
+    "race": 12,
+    "intent": {
+      "raceDay": 2,
+      "tempoWorkout": 50,
+      "dailyTrainer": 68,
+      "longRun": 82,
+      "recovery": 76,
+      "stability": 92,
+      "valuePick": 72,
+      "rotation": 69,
+      "trail": 100
+    },
+    "plate": "No",
+    "note": "Technical mountain running shoe.",
+    "foam": "EVA",
+    "link": "https://www.google.com/search?q=Scarpa+Ribelle+Run+2+running+shoe",
+    "longevityMiles": "350-550 miles",
+    "longevityScore": 84,
+    "longevityNote": "Trail-shoe longevity depends heavily on terrain, outsole wear, mud, rocks, and how much road use they see."
+  },
+  {
+    "id": 226,
+    "name": "The North Face VECTIV Enduris 4",
+    "brand": "The North Face",
+    "category": "Trail / Ultra",
+    "price": 149,
+    "widthScore": 82,
+    "width": "Average / try on",
+    "cushion": 84,
+    "speed": 64,
+    "stability": 88,
+    "value": 86,
+    "longrun": 88,
+    "daily": 76,
+    "recovery": 86,
+    "tempo": 54,
+    "race": 15,
+    "intent": {
+      "raceDay": 5,
+      "tempoWorkout": 54,
+      "dailyTrainer": 76,
+      "longRun": 93,
+      "recovery": 86,
+      "stability": 88,
+      "valuePick": 91,
+      "rotation": 76,
+      "trail": 100
+    },
+    "plate": "Plate-like",
+    "note": "Cushioned trail shoe with rocker/plate-like geometry.",
+    "foam": "VECTIV",
+    "link": "https://www.google.com/search?q=The+North+Face+VECTIV+Enduris+4+running+shoe",
+    "longevityMiles": "350-550 miles",
+    "longevityScore": 84,
+    "longevityNote": "Trail-shoe longevity depends heavily on terrain, outsole wear, mud, rocks, and how much road use they see."
+  },
+  {
+    "id": 227,
+    "name": "The North Face VECTIV Infinite 3",
+    "brand": "The North Face",
+    "category": "Trail Daily",
+    "price": 169,
+    "widthScore": 80,
+    "width": "Average / try on",
+    "cushion": 78,
+    "speed": 70,
+    "stability": 88,
+    "value": 78,
+    "longrun": 84,
+    "daily": 74,
+    "recovery": 76,
+    "tempo": 62,
+    "race": 22,
+    "intent": {
+      "raceDay": 12,
+      "tempoWorkout": 62,
+      "dailyTrainer": 74,
+      "longRun": 84,
+      "recovery": 76,
+      "stability": 88,
+      "valuePick": 78,
+      "rotation": 74,
+      "trail": 100
+    },
+    "plate": "Plate-like",
+    "note": "Protective trail shoe for varied terrain.",
+    "foam": "VECTIV",
+    "link": "https://www.google.com/search?q=The+North+Face+VECTIV+Infinite+3+running+shoe",
+    "longevityMiles": "350-550 miles",
+    "longevityScore": 84,
+    "longevityNote": "Trail-shoe longevity depends heavily on terrain, outsole wear, mud, rocks, and how much road use they see."
+  },
+  {
+    "id": 228,
+    "name": "The North Face Summit VECTIV Pro 3",
+    "brand": "The North Face",
+    "category": "Plated Trail Racer",
+    "price": 250,
+    "widthScore": 78,
+    "width": "Average / try on",
+    "cushion": 82,
+    "speed": 88,
+    "stability": 82,
+    "value": 64,
+    "longrun": 86,
+    "daily": 62,
+    "recovery": 58,
+    "tempo": 86,
+    "race": 80,
+    "intent": {
+      "raceDay": 86,
+      "tempoWorkout": 91,
+      "dailyTrainer": 62,
+      "longRun": 86,
+      "recovery": 58,
+      "stability": 82,
+      "valuePick": 59,
+      "rotation": 73,
+      "trail": 100
+    },
+    "plate": "Yes",
+    "note": "Premium plated trail racing shoe.",
+    "foam": "VECTIV + carbon plate",
+    "link": "https://www.google.com/search?q=The+North+Face+Summit+VECTIV+Pro+3+running+shoe",
+    "longevityMiles": "350-550 miles",
+    "longevityScore": 84,
+    "longevityNote": "Trail-shoe longevity depends heavily on terrain, outsole wear, mud, rocks, and how much road use they see."
+  },
+  {
+    "id": 229,
+    "name": "PUMA Voyage Nitro 4",
+    "brand": "PUMA",
+    "category": "Road/Trail Daily",
+    "price": 140,
+    "widthScore": 78,
+    "width": "Average / try on",
+    "cushion": 82,
+    "speed": 68,
+    "stability": 88,
+    "value": 88,
+    "longrun": 86,
+    "daily": 82,
+    "recovery": 84,
+    "tempo": 58,
+    "race": 22,
+    "intent": {
+      "raceDay": 12,
+      "tempoWorkout": 58,
+      "dailyTrainer": 82,
+      "longRun": 86,
+      "recovery": 84,
+      "stability": 88,
+      "valuePick": 93,
+      "rotation": 78,
+      "trail": 100
+    },
+    "plate": "No",
+    "note": "PUMA door-to-trail shoe with strong grip.",
+    "foam": "NitroFoam",
+    "link": "https://www.google.com/search?q=PUMA+Voyage+Nitro+4+running+shoe",
+    "longevityMiles": "350-550 miles",
+    "longevityScore": 84,
+    "longevityNote": "Trail-shoe longevity depends heavily on terrain, outsole wear, mud, rocks, and how much road use they see."
+  },
+  {
+    "id": 230,
+    "name": "PUMA Fast-Trac Nitro 3",
+    "brand": "PUMA",
+    "category": "Trail Daily",
+    "price": 130,
+    "widthScore": 78,
+    "width": "Average / try on",
+    "cushion": 78,
+    "speed": 70,
+    "stability": 84,
+    "value": 90,
+    "longrun": 80,
+    "daily": 82,
+    "recovery": 78,
+    "tempo": 64,
+    "race": 30,
+    "intent": {
+      "raceDay": 20,
+      "tempoWorkout": 64,
+      "dailyTrainer": 82,
+      "longRun": 80,
+      "recovery": 78,
+      "stability": 84,
+      "valuePick": 95,
+      "rotation": 76,
+      "trail": 100
+    },
+    "plate": "No",
+    "note": "Lighter PUMA trail shoe for mixed terrain.",
+    "foam": "NitroFoam",
+    "link": "https://www.google.com/search?q=PUMA+Fast-Trac+Nitro+3+running+shoe",
+    "longevityMiles": "350-550 miles",
+    "longevityScore": 84,
+    "longevityNote": "Trail-shoe longevity depends heavily on terrain, outsole wear, mud, rocks, and how much road use they see."
   }
 ];

@@ -22,6 +22,7 @@ const questions=[
       ['dailyTrainer','Daily trainer','A shoe for most of your weekly mileage.'],
       ['raceDay','Race-day shoe','Carbon racers and fast shoes for PR attempts.'],
       ['tempoWorkout','Tempo / workout shoe','Faster trainers for intervals, tempo, and progression runs.'],
+      ['trail','Trail shoe','Grip, protection, stability, and confidence off-road.'],
       ['longRun','Long-run shoe','Cushioned shoes for longer efforts.'],
       ['recovery','Recovery shoe','Soft, comfortable, easy-day shoes.'],
       ['stability','Stability / support','Supportive shoes for extra guidance.'],
@@ -111,6 +112,7 @@ const intentLabels={
   firstShoe:'First running shoe',
   raceDay:'Race-day shoe',
   tempoWorkout:'Tempo / workout trainer',
+  trail:'Trail shoe',
   dailyTrainer:'Daily trainer',
   longRun:'Long-run shoe',
   recovery:'Recovery / max cushion',
@@ -148,7 +150,7 @@ const els={
   els.category.appendChild(o);
 });
 
-let selected=new Set(JSON.parse(localStorage.getItem('selectedShoesV14')||'[]'));
+let selected=new Set(JSON.parse(localStorage.getItem('selectedShoesV15')||'[]'));
 let activeSearchQuery='';
 
 function mappedIntent(){
@@ -208,6 +210,7 @@ function score(s){
   if(state.intent==='raceDay'&&s.race<70)b-=12;
   if(state.intent==='tempoWorkout'&&s.tempo<78)b-=10;
   if(state.intent==='recovery'&&s.recovery<80)b-=12;
+  if(state.intent==='trail'&&(s.intent?.trail??0)<72)b-=14;
   if(state.intent==='stability'&&s.stability<86)b-=12;
   if(state.intent==='dailyTrainer'&&s.daily<80)b-=8;
 
@@ -273,6 +276,7 @@ function why(s){
   if(s.widthScore>=85)r.push(`Good fit compatibility: ${s.width.toLowerCase()}.`);
   if(state.intent==='raceDay')r.push(`Race score ${s.race}/100 and speed score ${s.speed}/100.`);
   if(state.intent==='tempoWorkout')r.push(`Tempo score ${s.tempo}/100 for faster sessions.`);
+  if(state.intent==='trail')r.push(`Trail score ${s.intent?.trail??0}/100 for grip, protection, stability, and off-road use.`);
   if(state.intent==='dailyTrainer'||state.intent==='firstShoe')r.push(`Daily training score ${s.daily}/100.`);
   if(state.intent==='longRun')r.push(`Long-run score ${s.longrun}/100.`);
   if(state.intent==='recovery')r.push(`Recovery score ${s.recovery}/100 and cushion score ${s.cushion}/100.`);
@@ -289,6 +293,7 @@ function downside(s){
   if((state.intent==='dailyTrainer'||state.intent==='firstShoe')&&s.plate!=='No')d.push('Plated design may be less relaxed for easy daily mileage.');
   if(state.intent==='raceDay'&&s.plate==='No'&&s.race<90)d.push('May not feel as aggressive as a true race-day super shoe.');
   if(state.intent==='recovery'&&s.speed>92)d.push('May feel too performance-oriented for pure recovery days.');
+  if(state.intent==='trail'&&(s.intent?.trail??0)<75)d.push('Not a strong trail-specific option; better for road or light mixed use.');
   if(!d.length)d.push('No major concerns based on your selected purpose.');
   return d;
 }
@@ -297,6 +302,7 @@ function dna(s){
   let tags=[];
   if(s.intent?.raceDay>=86)tags.push('Race day');
   if(s.intent?.tempoWorkout>=88)tags.push('Tempo');
+  if(s.intent?.trail>=85)tags.push('Trail');
   if(s.intent?.dailyTrainer>=88)tags.push('Daily');
   if(s.intent?.longRun>=90)tags.push('Long runs');
   if(s.intent?.recovery>=90)tags.push('Recovery');
@@ -345,6 +351,7 @@ function shoeCard(s,i){
       <span class="pill">Race ${s.intent?.raceDay??s.race}</span>
       <span class="pill">Tempo ${s.intent?.tempoWorkout??s.tempo}</span>
       <span class="pill">Daily ${s.intent?.dailyTrainer??s.daily}</span>
+      <span class="pill">Trail ${s.intent?.trail??0}</span>
       <span class="pill">⏱ ${s.longevityMiles||'300-500 miles'}</span>
     </div>
     <p class="muted">${s.note}</p>
@@ -359,6 +366,7 @@ function shoeCard(s,i){
       <div class="spec"><b>Race day</b>${s.intent?.raceDay??s.race}/100</div>
       <div class="spec"><b>Tempo</b>${s.intent?.tempoWorkout??s.tempo}/100</div>
       <div class="spec"><b>Daily</b>${s.intent?.dailyTrainer??s.daily}/100</div>
+      <div class="spec"><b>Trail</b>${s.intent?.trail??0}/100</div>
       <div class="spec"><b>Long run</b>${s.intent?.longRun??s.longrun}/100</div>
       <div class="spec"><b>Recovery</b>${s.intent?.recovery??s.recovery}/100</div>
       <div class="spec"><b>Stability</b>${s.intent?.stability??s.stability}/100</div>
@@ -411,13 +419,14 @@ function renderLive(){
 
 function renderRotation(){
   const by=(key)=>[...SHOES].sort((a,b)=>(b.intent?.[key]??0)-(a.intent?.[key]??0))[0];
-  const daily=by('dailyTrainer'), workout=by('tempoWorkout'), long=by('longRun'), race=by('raceDay'), recovery=by('recovery');
+  const daily=by('dailyTrainer'), workout=by('tempoWorkout'), long=by('longRun'), race=by('raceDay'), recovery=by('recovery'), trail=by('trail');
   els.rotation.innerHTML=[
     ['Daily Trainer',daily,'dailyTrainer'],
     ['Workout Shoe',workout,'tempoWorkout'],
     ['Long Run Shoe',long,'longRun'],
     ['Race-Day Shoe',race,'raceDay'],
-    ['Recovery Shoe',recovery,'recovery']
+    ['Recovery Shoe',recovery,'recovery'],
+    ['Trail Shoe',trail,'trail']
   ].map(([l,s,k])=>`<div class="rotationCard"><b>${l}</b><br>${s.name}<br><span class="muted">${s.category} • ${s.intent?.[k]??score(s)}/100</span></div>`).join('');
 }
 
@@ -450,7 +459,7 @@ function renderCompare(){
   let p=document.getElementById('comparePanel'),g=document.getElementById('compareGrid');
   let list=SHOES.filter(s=>selected.has(s.id)).sort((a,b)=>score(b)-score(a));
   p.style.display=list.length?'block':'none';
-  g.innerHTML=list.map(s=>`<div class="compareCard"><b>${s.name}</b><br><span class="muted">${s.category} • $${s.price}</span>${bar('Match',score(s))}${bar('Race',s.intent?.raceDay??s.race)}${bar('Tempo',s.intent?.tempoWorkout??s.tempo)}${bar('Daily',s.intent?.dailyTrainer??s.daily)}${bar('Longevity',s.longevityScore||70)}${bar('Fit',s.widthScore)}<button data-remove="${s.id}">Remove</button></div>`).join('');
+  g.innerHTML=list.map(s=>`<div class="compareCard"><b>${s.name}</b><br><span class="muted">${s.category} • $${s.price}</span>${bar('Match',score(s))}${bar('Race',s.intent?.raceDay??s.race)}${bar('Tempo',s.intent?.tempoWorkout??s.tempo)}${bar('Daily',s.intent?.dailyTrainer??s.daily)}${bar('Trail',s.intent?.trail??0)}${bar('Longevity',s.longevityScore||70)}${bar('Fit',s.widthScore)}<button data-remove="${s.id}">Remove</button></div>`).join('');
 }
 
 function renderDatabase(){
@@ -532,14 +541,14 @@ document.addEventListener('click',e=>{
   if(cb){
     let id=Number(cb.dataset.check);
     cb.checked?selected.add(id):selected.delete(id);
-    localStorage.setItem('selectedShoesV14',JSON.stringify([...selected]));
+    localStorage.setItem('selectedShoesV15',JSON.stringify([...selected]));
     renderCompare();
     return;
   }
   let rm=e.target.closest('[data-remove]');
   if(rm){
     selected.delete(Number(rm.dataset.remove));
-    localStorage.setItem('selectedShoesV14',JSON.stringify([...selected]));
+    localStorage.setItem('selectedShoesV15',JSON.stringify([...selected]));
     renderAll(false);
     return;
   }
