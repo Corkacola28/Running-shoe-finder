@@ -150,7 +150,7 @@ const els={
   els.category.appendChild(o);
 });
 
-let selected=new Set(JSON.parse(localStorage.getItem('selectedShoesV15')||'[]'));
+let selected=new Set(JSON.parse(localStorage.getItem('selectedShoesV16')||'[]'));
 let activeSearchQuery='';
 
 function mappedIntent(){
@@ -417,7 +417,153 @@ function renderLive(){
   els.liveReasons.innerHTML=why(b).map(x=>`<div class="reason">${x}</div>`).join('');
 }
 
+
+function pickUnique(candidates, used){
+  return candidates.find(s=>!used.has(s.id)) || candidates[0];
+}
+
+function bestByIntent(intent, used=new Set(), extraFilter=null){
+  let list=[...SHOES];
+  if(extraFilter) list=list.filter(extraFilter);
+  list=list.sort((a,b)=>((b.intent?.[intent]??0)-(a.intent?.[intent]??0)) || (score(b)-score(a)));
+  let pick=pickUnique(list, used);
+  if(pick) used.add(pick.id);
+  return pick;
+}
+
+function buildRotationOptions(){
+  const max=Number(state.budget||999);
+  const available=SHOES.filter(s=>s.price<=max);
+  const sorted=(intent, filter=null)=>available
+    .filter(s=>!filter || filter(s))
+    .sort((a,b)=>((b.intent?.[intent]??0)-(a.intent?.[intent]??0)) || (score(b)-score(a)));
+
+  const dailyList=sorted('dailyTrainer', s=>s.plate==='No' || s.intent?.dailyTrainer>=90);
+  const longList=sorted('longRun');
+  const raceList=sorted('raceDay', s=>s.intent?.raceDay>=72 || s.race>=75);
+  const recoveryList=sorted('recovery');
+  const tempoList=sorted('tempoWorkout');
+
+  const rotations=[
+    {
+      name:'Balanced Road Rotation',
+      note:'Best all-around setup for most runners.',
+      slots:[
+        ['Daily Trainer', dailyList[0]],
+        ['Long Run Shoe', longList[0]],
+        ['Race-Day Shoe', raceList[0]],
+        ['Recovery Shoe', recoveryList[0]]
+      ]
+    },
+    {
+      name:'Performance Rotation',
+      note:'More speed-focused for workouts and race prep.',
+      slots:[
+        ['Daily Trainer', dailyList[1] || dailyList[0]],
+        ['Workout Shoe', tempoList[0]],
+        ['Long Run Shoe', longList[1] || longList[0]],
+        ['Race-Day Shoe', raceList[1] || raceList[0]]
+      ]
+    },
+    {
+      name:'Comfort + Durability Rotation',
+      note:'Prioritizes protection, easy mileage, and longevity.',
+      slots:[
+        ['Daily Trainer', dailyList.find(s=>(s.longevityScore||0)>=80) || dailyList[0]],
+        ['Long Run Shoe', longList.find(s=>(s.cushion||0)>=90) || longList[0]],
+        ['Recovery Shoe', recoveryList[0]],
+        ['Race / Fast Option', raceList.find(s=>s.price<=220) || tempoList[0] || raceList[0]]
+      ]
+    },
+    {
+      name:'Value Rotation',
+      note:'A lower-cost setup that still covers the main use cases.',
+      slots:[
+        ['Daily Trainer', dailyList.find(s=>s.price<=150) || dailyList[0]],
+        ['Workout Shoe', tempoList.find(s=>s.price<=180) || tempoList[0]],
+        ['Long Run Shoe', longList.find(s=>s.price<=180) || longList[0]],
+        ['Recovery Shoe', recoveryList.find(s=>s.price<=180) || recoveryList[0]]
+      ]
+    }
+  ];
+
+  if(state.fit==='wide' || state.fit==='extraWide'){
+    rotations.push({
+      name:'Wide-Foot Friendly Rotation',
+      note:'Prioritizes roomier fits and wide-foot compatibility.',
+      slots:[
+        ['Daily Trainer', dailyList.find(s=>s.widthScore>=88) || dailyList[0]],
+        ['Long Run Shoe', longList.find(s=>s.widthScore>=88) || longList[0]],
+        ['Race / Fast Option', raceList.find(s=>s.widthScore>=80) || tempoList.find(s=>s.widthScore>=80) || raceList[0]],
+        ['Recovery Shoe', recoveryList.find(s=>s.widthScore>=90) || recoveryList[0]]
+      ]
+    });
+  }
+
+  if(state.goal==='ultra' || state.intent==='trail'){
+    const trailList=sorted('trail', s=>(s.intent?.trail??0)>=78);
+    rotations.push({
+      name:'Trail / Ultra Rotation',
+      note:'For runners mixing roads, trails, long runs, and off-road races.',
+      slots:[
+        ['Trail Daily', trailList[0]],
+        ['Trail Long Run', trailList.find(s=>(s.longrun||0)>=90) || trailList[1] || trailList[0]],
+        ['Trail Race / Fast Option', trailList.find(s=>(s.speed||0)>=84) || trailList[2] || trailList[0]],
+        ['Recovery / Road Easy', recoveryList[0]]
+      ]
+    });
+  }
+
+  return rotations.map(rot=>{
+    const used=new Set();
+    rot.slots=rot.slots.map(([label, shoe])=>{
+      if(!shoe) return [label, available[0]];
+      if(used.has(shoe.id)){
+        const intent=label.toLowerCase().includes('race')?'raceDay':
+          label.toLowerCase().includes('workout') || label.toLowerCase().includes('fast')?'tempoWorkout':
+          label.toLowerCase().includes('long')?'longRun':
+          label.toLowerCase().includes('recovery')?'recovery':
+          label.toLowerCase().includes('trail')?'trail':'dailyTrainer';
+        shoe=bestByIntent(intent, used);
+      }else{
+        used.add(shoe.id);
+      }
+      return [label, shoe];
+    });
+    return rot;
+  });
+}
+
+function rotationOptionCard(rotation, index){
+  const total=Math.round(rotation.slots.reduce((sum,[_,s])=>sum+score(s),0)/rotation.slots.length);
+  return `<article class="rotationOption">
+    <div class="rotationOptionHeader">
+      <span class="pill good">Option ${index+1} • ${total}/100</span>
+      <h3>${rotation.name}</h3>
+      <p class="muted">${rotation.note}</p>
+    </div>
+    <div class="rotationSlots">
+      ${rotation.slots.map(([label,s])=>`<div class="rotationSlot">
+        <b>${label}</b>
+        <span>${s.name}</span>
+        <small>${s.brand} • ${s.category} • $${s.price}</small>
+        <div class="pillRow">
+          <span class="pill">Match ${score(s)}</span>
+          <span class="pill">⏱ ${s.longevityMiles||'300-500 miles'}</span>
+          <span class="pill">Fit ${s.widthScore}</span>
+        </div>
+      </div>`).join('')}
+    </div>
+  </article>`;
+}
+
 function renderRotation(){
+  if(state.intent==='rotation'){
+    const rotations=buildRotationOptions();
+    els.rotation.innerHTML=rotations.map(rotationOptionCard).join('');
+    return;
+  }
+
   const by=(key)=>[...SHOES].sort((a,b)=>(b.intent?.[key]??0)-(a.intent?.[key]??0))[0];
   const daily=by('dailyTrainer'), workout=by('tempoWorkout'), long=by('longRun'), race=by('raceDay'), recovery=by('recovery'), trail=by('trail');
   els.rotation.innerHTML=[
@@ -432,6 +578,40 @@ function renderRotation(){
 
 function renderReport(){
   let list=filtered(), best=list[0], intent=mappedIntent();
+  const topHeading=document.getElementById('topShoesHeading');
+  const rotationHeading=document.getElementById('rotationHeading');
+  if(topHeading) topHeading.textContent = state.intent==='rotation' ? 'Best individual shoes by category' : 'Your top shoes for this purpose';
+  if(rotationHeading) rotationHeading.textContent = state.intent==='rotation' ? 'Your full rotation options' : 'Suggested shoe rotation';
+
+  if(state.intent==='rotation'){
+    const rotations=buildRotationOptions();
+    els.reportSummary.textContent=`Purpose: Full rotation • Goal: ${labelFor('goal',state.goal)} • Fit: ${labelFor('fit',state.fit)} • Priority: ${labelFor('focus',state.focus)} • Budget: ${labelFor('budget',state.budget)}`;
+    els.perfectMatch.innerHTML=`<div>
+      <p class="eyebrow">Rotation Match</p>
+      <h2>${rotations[0].name}</h2>
+      <p>${rotations[0].note}</p>
+      <details class="explain" open><summary>Why this rotation works</summary>
+        <ul>
+          <li>It gives you a dedicated daily trainer, long-run shoe, race or fast option, and recovery shoe.</li>
+          <li>This prevents one shoe from trying to do every job.</li>
+          <li>The picks still follow your goal, fit, ride preference, budget, and liked/avoid inputs.</li>
+        </ul>
+      </details>
+    </div><div class="scoreHero">${Math.round(rotations[0].slots.reduce((sum,[_,s])=>sum+score(s),0)/rotations[0].slots.length)}</div>`;
+    els.topFive.innerHTML=rotations[0].slots.map(([label,s],i)=>`<article class="miniCard">
+      <span class="pill intentPill">${label}</span>
+      <h3 class="shoeName">${s.name}</h3>
+      <div class="meta">${s.brand} • ${s.category} • $${s.price}</div>
+      <p>${s.note}</p>
+      ${bar('Match',score(s))}
+      ${bar('Longevity',s.longevityScore||70)}
+      ${bar('Fit',s.widthScore)}
+    </article>`).join('');
+    els.nearMisses.innerHTML=rotations.slice(1,4).map((rot,i)=>`<div class="miniCard"><b>${rot.name}</b><p class="muted">${rot.note}</p><p>${rot.slots.map(([label,s])=>`${label}: ${s.name}`).join('<br>')}</p></div>`).join('');
+    els.avoidList.innerHTML=list.slice(-4).reverse().map(s=>`<div class="miniCard"><b>${s.name}</b><p class="muted">${s.category} • ${score(s)}/100</p><p>Not as strong for your full rotation compared with the rotation picks.</p></div>`).join('');
+    renderRotation();
+    return;
+  }
   els.reportSummary.textContent=`Purpose: ${intentLabel()} • Goal: ${labelFor('goal',state.goal)} • Fit: ${labelFor('fit',state.fit)} • Priority: ${labelFor('focus',state.focus)} • Budget: ${labelFor('budget',state.budget)}`;
   els.perfectMatch.innerHTML=`<div>
     <p class="eyebrow">Perfect Match</p>
@@ -541,14 +721,14 @@ document.addEventListener('click',e=>{
   if(cb){
     let id=Number(cb.dataset.check);
     cb.checked?selected.add(id):selected.delete(id);
-    localStorage.setItem('selectedShoesV15',JSON.stringify([...selected]));
+    localStorage.setItem('selectedShoesV16',JSON.stringify([...selected]));
     renderCompare();
     return;
   }
   let rm=e.target.closest('[data-remove]');
   if(rm){
     selected.delete(Number(rm.dataset.remove));
-    localStorage.setItem('selectedShoesV15',JSON.stringify([...selected]));
+    localStorage.setItem('selectedShoesV16',JSON.stringify([...selected]));
     renderAll(false);
     return;
   }
