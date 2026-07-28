@@ -150,7 +150,7 @@ const els={
   els.category.appendChild(o);
 });
 
-let selected=new Set(JSON.parse(localStorage.getItem('selectedShoesV17')||'[]'));
+let selected=new Set(JSON.parse(localStorage.getItem('selectedShoesV18')||'[]'));
 let activeSearchQuery='';
 
 function mappedIntent(){
@@ -721,14 +721,14 @@ document.addEventListener('click',e=>{
   if(cb){
     let id=Number(cb.dataset.check);
     cb.checked?selected.add(id):selected.delete(id);
-    localStorage.setItem('selectedShoesV17',JSON.stringify([...selected]));
+    localStorage.setItem('selectedShoesV18',JSON.stringify([...selected]));
     renderCompare();
     return;
   }
   let rm=e.target.closest('[data-remove]');
   if(rm){
     selected.delete(Number(rm.dataset.remove));
-    localStorage.setItem('selectedShoesV17',JSON.stringify([...selected]));
+    localStorage.setItem('selectedShoesV18',JSON.stringify([...selected]));
     renderAll(false);
     return;
   }
@@ -922,3 +922,34 @@ renderRotation = function(){
   }
   originalRenderRotationV17();
 };
+
+
+/* V18 neutral profile-based recommendation engine */
+const V18_WEIGHTS={
+ firstShoe:{dailyTrainer:.30,stability:.22,valuePick:.16,recovery:.10,longRun:.08,widthScore:.08,longevityScore:.06},
+ dailyTrainer:{dailyTrainer:.40,longRun:.14,stability:.12,recovery:.10,valuePick:.08,widthScore:.08,longevityScore:.08},
+ raceDay:{raceDay:.52,tempoWorkout:.16,speed:.12,longRun:.08,stability:.05,widthScore:.04,valuePick:.03},
+ tempoWorkout:{tempoWorkout:.48,speed:.18,raceDay:.10,dailyTrainer:.08,stability:.06,widthScore:.05,valuePick:.05},
+ longRun:{longRun:.44,cushion:.16,stability:.12,dailyTrainer:.10,recovery:.07,widthScore:.06,longevityScore:.05},
+ recovery:{recovery:.46,cushion:.22,stability:.12,widthScore:.08,longevityScore:.07,valuePick:.05},
+ stability:{stability:.56,dailyTrainer:.12,recovery:.10,cushion:.08,widthScore:.07,longevityScore:.04,valuePick:.03},
+ valuePick:{valuePick:.46,dailyTrainer:.16,longevityScore:.14,longRun:.08,stability:.06,widthScore:.05,cushion:.05},
+ trail:{trail:.54,stability:.14,longRun:.10,cushion:.07,widthScore:.05,longevityScore:.05,valuePick:.05},
+ rotation:{rotation:.28,dailyTrainer:.16,tempoWorkout:.14,longRun:.14,recovery:.10,raceDay:.08,stability:.05,widthScore:.03,longevityScore:.02},
+ notSure:{rotation:.24,dailyTrainer:.22,longRun:.14,stability:.12,recovery:.10,valuePick:.08,widthScore:.06,longevityScore:.04}
+};
+function v18Metric(s,m){if(m==='widthScore'||m==='longevityScore')return Number(s[m]??70);if(['cushion','speed','stability','value','longrun','daily','recovery','tempo','race'].includes(m))return Number(s[m]??70);return Number(s.intent?.[m]??70)}
+function v18Eligible(s,intent){if(intent==='raceDay')return (s.intent?.raceDay??s.race??0)>=68;if(intent==='tempoWorkout')return (s.intent?.tempoWorkout??s.tempo??0)>=70;if(intent==='recovery')return (s.intent?.recovery??s.recovery??0)>=72;if(intent==='stability')return (s.intent?.stability??s.stability??0)>=78;if(intent==='trail')return (s.intent?.trail??0)>=72;if(intent==='firstShoe')return String(s.plate||'No').toLowerCase()==='no'&&(s.intent?.dailyTrainer??s.daily??0)>=72;return true}
+function v18Goal(s){let g=state.goal,a=0;if(g==='5k')a+=(s.speed-75)*.10+(s.tempo-75)*.08+(s.race-75)*.05;else if(g==='10k')a+=(s.speed-75)*.08+(s.tempo-75)*.08+(s.longrun-75)*.03;else if(g==='10miler')a+=(s.tempo-75)*.06+(s.longrun-75)*.07+(s.cushion-75)*.03;else if(g==='half'||g==='sub2')a+=(s.longrun-75)*.07+(s.tempo-75)*.05+(s.stability-75)*.03;else if(g==='marathon')a+=(s.longrun-75)*.10+(s.cushion-75)*.06+((s.longevityScore||70)-70)*.03;else if(g==='ultra')a+=(s.longrun-75)*.11+(s.stability-75)*.06+((s.longevityScore||70)-70)*.05;else if(g==='daily')a+=(s.daily-75)*.10+(s.value-75)*.04+((s.longevityScore||70)-70)*.04;return a}
+function v18Fit(s){let w=Number(s.widthScore||75);if(state.fit==='extraWide')return (w-80)*.30;if(state.fit==='wide')return (w-78)*.22;if(state.fit==='narrow')return (82-w)*.08;if(state.fit==='standard')return -Math.abs(w-82)*.03;return 0}
+function v18Focus(s){if(state.focus==='cushion')return (s.cushion-75)*.12;if(state.focus==='speed')return (s.speed-75)*.12;if(state.focus==='stable')return (s.stability-75)*.12;if(state.focus==='value')return (s.value-75)*.14;if(state.focus==='race')return (s.race-75)*.12;if(state.focus==='nonplate')return String(s.plate||'No').toLowerCase()==='no'?5:-8;return 0}
+function v18Prefs(s){let a=0,b=JSON.stringify(s).toLowerCase();likedTerms().forEach(t=>{if(t&&b.includes(t))a+=3});avoidTerms().forEach(t=>{if(!t)return;if(b.includes(t))a-=9;if(t==='narrow'&&s.widthScore<75)a-=10;if(t==='plated'&&String(s.plate||'No').toLowerCase()!=='no')a-=10;if(t==='firm'&&s.cushion<78)a-=7});return a}
+function v18NeutralScore(s){let intent=mappedIntent();if(!v18Eligible(s,intent))return 0;let w=V18_WEIGHTS[state.intent]||V18_WEIGHTS[intent]||V18_WEIGHTS.notSure,t=0,wt=0;Object.entries(w).forEach(([m,x])=>{t+=v18Metric(s,m)*x;wt+=x});let r=t/wt+v18Goal(s)+v18Fit(s)+v18Focus(s)+v18Prefs(s);if(s.price>Number(state.budget||999))r-=100;return Math.round(Math.max(0,Math.min(100,r)))}
+score=v18NeutralScore;
+function v18Diverse(list,n=5){let out=[],brands={},cats={};for(let s of list){let b=s.brand||'Other',c=s.category||'Other';if((brands[b]||0)>=2)continue;if((cats[c]||0)>=2&&out.length<n-1)continue;out.push(s);brands[b]=(brands[b]||0)+1;cats[c]=(cats[c]||0)+1;if(out.length>=n)break}for(let s of list){if(out.length>=n)break;if(!out.some(x=>x.id===s.id))out.push(s)}return out}
+const v18OldFiltered=filtered;
+filtered=function(){let max=Number(state.budget||999),q=((typeof activeSearchQuery!=='undefined'?activeSearchQuery:'')||(els.q?.value||'')).trim(),list=SHOES.filter(s=>s.price<=max);if(q&&typeof searchRelevance==='function'){return list.map(s=>({...s,_searchRelevance:searchRelevance(s,q)})).filter(s=>s._searchRelevance>0).sort((a,b)=>(b._searchRelevance-a._searchRelevance)||(score(b)-score(a)))}if(els.category?.value)list=list.filter(s=>s.category===els.category.value);if(els.intentFilter?.value)list=list.filter(s=>(s.intent?.[els.intentFilter.value]??0)>=72);return list.filter(s=>v18Eligible(s,mappedIntent())).sort((a,b)=>score(b)-score(a)||String(a.name).localeCompare(String(b.name)))};
+const v18OldRenderReport=renderReport;
+renderReport=function(){if(state.intent==='rotation'){v18OldRenderReport();return}let ranked=filtered(),top=v18Diverse(ranked,5),best=top[0]||ranked[0];if(!best){v18OldRenderReport();return}els.reportSummary.textContent=`Purpose: ${intentLabel()} • Goal: ${labelFor('goal',state.goal)} • Fit: ${labelFor('fit',state.fit)} • Priority: ${labelFor('focus',state.focus)} • Budget: ${labelFor('budget',state.budget)}`;els.perfectMatch.innerHTML=`<div><p class="eyebrow">Best Profile Match</p><h2>${best.name}</h2><p>${best.note}</p><div class="pillRow">${dna(best).map(x=>`<span class="pill">${x}</span>`).join('')}</div><details class="explain" open><summary>Why this ranked first</summary><ul>${why(best).map(x=>`<li>${x}</li>`).join('')}<li>No brand or shoe receives a preferred bonus.</li></ul><b>Expected longevity</b><ul><li>${best.longevityMiles||'300-500 miles'} — ${best.longevityNote||'Mileage varies by runner, surface, and rotation.'}</li></ul><b>Possible downsides</b><ul>${downside(best).map(x=>`<li>${x}</li>`).join('')}</ul></details></div><div class="scoreHero">${score(best)}</div>`;els.topFive.innerHTML=top.map((s,i)=>resultCard(s,i+1,true)).join('');let ids=new Set(top.map(s=>s.id)),near=ranked.filter(s=>!ids.has(s.id)).slice(0,4);els.nearMisses.innerHTML=near.map(s=>`<div class="miniCard"><b>${s.name}</b><p class="muted">${s.category} • ${score(s)}/100</p><p>It scored closely, but the Top 5 offered a better profile match or more category variety.</p></div>`).join('');let bad=[...SHOES].filter(s=>s.price>Number(state.budget||999)||score(s)<55||!v18Eligible(s,mappedIntent())).sort((a,b)=>score(a)-score(b)).slice(0,4);els.avoidList.innerHTML=bad.map(s=>`<div class="miniCard"><b>${s.name}</b><p class="muted">${s.category} • ${score(s)}/100</p><p>${s.price>Number(state.budget||999)?'Outside your selected budget.':`Not a strong match for ${intentLabel().toLowerCase()}.`}</p></div>`).join('');renderRotation()};
+const v18OldRenderLive=renderLive;
+renderLive=function(){let list=filtered(),best=list[0];if(!best){v18OldRenderLive();return}els.liveTitle.textContent=`${best.name} is currently leading.`;els.liveSummary.textContent=`Neutral match score: ${score(best)}/100 for ${intentLabel()}, ${labelFor('goal',state.goal)}, ${labelFor('fit',state.fit)}, and ${labelFor('budget',state.budget)}.`;els.liveReasons.innerHTML=why(best).map(x=>`<div class="reason">${x}</div>`).join('')};
