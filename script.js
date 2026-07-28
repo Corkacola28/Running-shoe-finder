@@ -1,9 +1,22 @@
 const state={
   intent:'dailyTrainer',
+  experience:'intermediate',
+  mileage:'10to20',
   goal:'half',
-  fit:'wide',
+  surface:'road',
+  terrain:'mixed',
+  fit:'standard',
+  pronation:'unknown',
+  footStrike:'unknown',
+  cushionFeel:'balanced',
+  rideEnergy:'balanced',
+  geometry:'either',
   focus:'balanced',
-  budget:'999',
+  concern:'none',
+  idealBudget:'180',
+  budget:'220',
+  saleModel:'yes',
+  rotationSize:'3',
   liked:'',
   avoid:''
 };
@@ -14,97 +27,268 @@ let selectedChoice=null;
 const questions=[
   {
     key:'intent',
-    title:'What are you looking for today?',
-    sub:'This is the most important question. It tells ShoeAI whether to prioritize racing, workouts, daily miles, recovery, stability, value, or a rotation.',
-    assistant:'What kind of shoe are you shopping for?',
+    title:'What are you shopping for?',
+    sub:'This establishes the job the shoe needs to perform.',
+    assistant:'First, what role should this shoe fill?',
     options:[
-      ['firstShoe','My first running shoe','Simple, safe, beginner-friendly picks.'],
-      ['dailyTrainer','Daily trainer','A shoe for most of your weekly mileage.'],
-      ['raceDay','Race-day shoe','Carbon racers and fast shoes for PR attempts.'],
-      ['tempoWorkout','Tempo / workout shoe','Faster trainers for intervals, tempo, and progression runs.'],
-      ['trail','Trail shoe','Grip, protection, stability, and confidence off-road.'],
-      ['longRun','Long-run shoe','Cushioned shoes for longer efforts.'],
-      ['recovery','Recovery shoe','Soft, comfortable, easy-day shoes.'],
-      ['stability','Stability / support','Supportive shoes for extra guidance.'],
-      ['valuePick','Best value','Strong shoes without overspending.'],
-      ['rotation','Build me a rotation','Daily, workout, long-run, race, and recovery options.'],
-      ['notSure','I’m not sure','Let ShoeAI choose based on your answers.']
+      ['firstShoe','My first running shoe','Beginner-friendly and versatile.'],
+      ['dailyTrainer','Daily trainer','Most weekly mileage.'],
+      ['raceDay','Race-day shoe','A fast option for PR attempts.'],
+      ['tempoWorkout','Workout shoe','Intervals, tempo, and progression runs.'],
+      ['trail','Trail shoe','Grip and protection away from pavement.'],
+      ['longRun','Long-run shoe','Comfort for longer efforts.'],
+      ['recovery','Recovery shoe','Easy-paced comfort.'],
+      ['stability','Stability / support','A more guided, secure platform.'],
+      ['valuePick','Best value','Strong performance for the money.'],
+      ['rotation','Build a rotation','Multiple shoes with different jobs.'],
+      ['notSure','Help me decide','Let the full profile determine the category.']
+    ]
+  },
+  {
+    key:'experience',
+    title:'How experienced are you as a runner?',
+    sub:'Experience changes how aggressive or specialized a recommendation should be.',
+    assistant:'How would you describe your running experience?',
+    options:[
+      ['new','Brand new','I am just getting started.'],
+      ['casual','Casual','I run occasionally for fitness.'],
+      ['intermediate','Intermediate','I run consistently and know some preferences.'],
+      ['experienced','Experienced','I train regularly and understand shoe differences.'],
+      ['competitive','Competitive','Performance and race results are major priorities.']
+    ]
+  },
+  {
+    key:'mileage',
+    title:'How many miles do you run per week?',
+    sub:'Weekly volume affects durability, cushioning, stability, and whether a rotation makes sense.',
+    assistant:'What is your typical weekly mileage?',
+    options:[
+      ['under10','Under 10 miles','Lower-volume or occasional running.'],
+      ['10to20','10–20 miles','A consistent recreational routine.'],
+      ['20to35','20–35 miles','Moderate training volume.'],
+      ['35to50','35–50 miles','Higher-volume training.'],
+      ['50plus','More than 50 miles','Durability and rotation planning matter greatly.']
     ]
   },
   {
     key:'goal',
-    title:'What are you training for?',
-    sub:'This helps adjust the ranking toward short-race speed, long-run comfort, marathon durability, or everyday mileage.',
-    assistant:'What distance or goal matters most right now?',
+    title:'What is your main running goal?',
+    sub:'The same shoe will not suit easy fitness running and a marathon PR equally well.',
+    assistant:'What are you working toward right now?',
     options:[
-      ['5k','5K','Speed, pop, and quick turnover.'],
-      ['10k','10K','Fast but still cushioned enough.'],
-      ['10miler','10 miler','A blend of tempo and long-run comfort.'],
-      ['half','Half marathon','Balanced comfort, speed, and durability.'],
-      ['sub2','Sub-2 half','More emphasis on tempo and efficiency.'],
-      ['marathon','Full marathon','Long-run comfort and race-specific durability.'],
-      ['ultra','Ultra / very long runs','Durability, cushion, and protection.'],
-      ['daily','General fitness','Reliable daily mileage and comfort.']
+      ['daily','General fitness','Comfortable, reliable running.'],
+      ['first5k','First race or first 5K','Confidence and versatility.'],
+      ['5k','Faster 5K','Quick turnover and responsiveness.'],
+      ['10k','10K training or racing','Speed with enough protection.'],
+      ['half','Half marathon','Balanced comfort, efficiency, and durability.'],
+      ['sub2','Sub-2-hour half marathon','More emphasis on tempo efficiency.'],
+      ['marathon','Marathon','Long-run protection and race durability.'],
+      ['ultra','Ultra or very long runs','Protection, stability, and longevity.'],
+      ['return','Returning to consistent running','Comfort and predictable handling.']
+    ]
+  },
+  {
+    key:'surface',
+    title:'Where will you run most often?',
+    sub:'Surface affects traction, protection, outsole construction, and ride feel.',
+    assistant:'Choose your primary running surface.',
+    options:[
+      ['road','Road or sidewalk','Mostly paved running.'],
+      ['treadmill','Treadmill','Indoor running and controlled surfaces.'],
+      ['track','Track','Smooth surface and faster sessions.'],
+      ['gravel','Gravel or packed paths','Light off-road use.'],
+      ['trail','Trail','Dirt, rocks, roots, or technical terrain.'],
+      ['mixed','Mixed surfaces','A combination of road and light trail.']
+    ]
+  },
+  {
+    key:'terrain',
+    title:'What terrain do you encounter?',
+    sub:'Hills and uneven ground place more value on stability and grip.',
+    assistant:'What best describes your usual routes?',
+    options:[
+      ['flat','Mostly flat','Few elevation changes.'],
+      ['rolling','Rolling hills','Regular but manageable elevation.'],
+      ['hilly','Steep or frequent hills','Climbing and descending are common.'],
+      ['uneven','Uneven or technical','Foot placement and security matter.'],
+      ['mixed','A little of everything','Keep the recommendation balanced.']
     ]
   },
   {
     key:'fit',
     title:'How does your foot usually fit?',
-    sub:'Wide-foot compatibility can completely change what ShoeAI recommends.',
-    assistant:'How would you describe your foot fit?',
+    sub:'A high-scoring shoe is not useful if its shape does not fit your foot.',
+    assistant:'How would you describe your foot width or toe-box needs?',
     options:[
-      ['narrow','Narrow','You can tolerate performance fits.'],
-      ['standard','Standard','Most shoes usually work.'],
-      ['wide','Wide','You need a more accommodating fit.'],
-      ['extraWide','Extra-wide / toe box','Prioritize roomy forefoot shapes.'],
-      ['unknown','Not sure','Keep recommendations balanced.']
+      ['narrow','Narrow','Performance fits usually work.'],
+      ['standard','Standard','Most standard-width shoes fit.'],
+      ['wide','Wide','I need extra room.'],
+      ['extraWide','Extra-wide or roomy toe box','Forefoot space is essential.'],
+      ['unknown','Not sure','Avoid extreme shapes.']
+    ]
+  },
+  {
+    key:'pronation',
+    title:'Do you know your stability needs?',
+    sub:'This is preference guidance, not a medical diagnosis.',
+    assistant:'Which option sounds closest?',
+    options:[
+      ['neutral','Neutral','I usually do well in neutral shoes.'],
+      ['mildOver','Mild overpronation','A little guidance feels helpful.'],
+      ['strongOver','Strong overpronation','I prefer noticeably supportive shoes.'],
+      ['supination','Supination or outer-edge wear','I tend to prefer cushioning and flexibility.'],
+      ['unknown','I do not know','Use a stable-neutral baseline.']
+    ]
+  },
+  {
+    key:'footStrike',
+    title:'Do you know your foot strike?',
+    sub:'Foot strike can modestly influence cushioning and platform preferences.',
+    assistant:'Where do you usually land?',
+    options:[
+      ['heel','Heel','I tend to land toward the heel.'],
+      ['midfoot','Midfoot','I land near the middle.'],
+      ['forefoot','Forefoot','I land toward the front.'],
+      ['varied','It varies','It changes with pace or fatigue.'],
+      ['unknown','Not sure','Do not heavily weight this answer.']
+    ]
+  },
+  {
+    key:'cushionFeel',
+    title:'How should the cushioning feel?',
+    sub:'This separates soft recovery shoes from firmer, more controlled rides.',
+    assistant:'Choose the feel you enjoy most.',
+    options:[
+      ['verySoft','Very soft and plush','Comfort and softness first.'],
+      ['soft','Soft','Protective without being extreme.'],
+      ['balanced','Balanced','Neither especially soft nor firm.'],
+      ['firm','Firm and controlled','More structure and ground feedback.'],
+      ['unknown','Not sure','Keep this influence small.']
+    ]
+  },
+  {
+    key:'rideEnergy',
+    title:'How energetic should the ride feel?',
+    sub:'Some runners prefer smooth predictability; others want bounce and propulsion.',
+    assistant:'What kind of response sounds best?',
+    options:[
+      ['smooth','Smooth and predictable','A calm, natural transition.'],
+      ['balanced','Balanced','Some responsiveness without aggression.'],
+      ['bouncy','Bouncy','Noticeable energy return.'],
+      ['fast','Fast and aggressive','Performance comes before versatility.'],
+      ['unknown','Not sure','Let the intended use decide.']
+    ]
+  },
+  {
+    key:'geometry',
+    title:'What type of shoe geometry do you prefer?',
+    sub:'Plates and strong rockers can feel efficient but are not ideal for everyone.',
+    assistant:'Which construction sounds best?',
+    options:[
+      ['natural','Flexible and natural','No strong plate or rocker sensation.'],
+      ['rockered','Rockered','A rolling transition through toe-off.'],
+      ['plated','Plated','A structured, propulsive feel.'],
+      ['either','No preference','Choose whichever best fits the job.'],
+      ['unsure','I have never compared them','Avoid over-weighting geometry.']
     ]
   },
   {
     key:'focus',
-    title:'What matters most in the ride?',
-    sub:'This tunes the recommendation toward cushion, speed, stability, value, or a natural non-plated feel.',
-    assistant:'What do you want the shoe to feel like?',
+    title:'What is your single biggest priority?',
+    sub:'This breaks close ties between otherwise similar shoes.',
+    assistant:'What matters most when everything else is equal?',
     options:[
-      ['balanced','Balanced','A little bit of everything.'],
-      ['cushion','Soft / max cushion','Comfort first.'],
-      ['speed','Fast + bouncy','Energy return and quick turnover.'],
-      ['stable','Stable / supportive','More secure underfoot.'],
-      ['value','Best value','Performance for the money.'],
-      ['nonplate','No plate','Natural daily feel.'],
-      ['race','Aggressive race feel','Fast, sharp, and performance-first.']
+      ['balanced','Versatility','A balanced overall match.'],
+      ['cushion','Comfort','More cushioning and protection.'],
+      ['speed','Speed','Lower effort at faster paces.'],
+      ['stable','Stability','A secure, predictable platform.'],
+      ['value','Value','Performance relative to cost.'],
+      ['durability','Durability','A shoe that handles more mileage.'],
+      ['fit','Fit security','Foot shape and lockdown first.']
+    ]
+  },
+  {
+    key:'concern',
+    title:'Is there a recurring comfort concern?',
+    sub:'This only adjusts comfort preferences and does not replace professional medical advice.',
+    assistant:'Choose the main issue you account for when buying shoes.',
+    options:[
+      ['none','None','No recurring concern.'],
+      ['plantar','Plantar or arch discomfort','Prioritize stable cushioning and fit.'],
+      ['shin','Shin discomfort','Favor predictable cushioning.'],
+      ['achilles','Achilles or calf sensitivity','Avoid overly aggressive recommendations.'],
+      ['knee','Knee discomfort','Favor stable, protective options.'],
+      ['ankle','Ankle instability','Platform security matters.'],
+      ['other','Something else','Use a conservative, balanced profile.']
+    ]
+  },
+  {
+    key:'idealBudget',
+    title:'What would you ideally like to spend?',
+    sub:'This helps distinguish the best value from the absolute maximum you could spend.',
+    assistant:'What price would feel comfortable?',
+    options:[
+      ['120','$120 or less','Strong sale and budget options.'],
+      ['150','$150 or less','Value-oriented trainers.'],
+      ['180','$180 or less','Most standard trainers.'],
+      ['220','$220 or less','Premium trainers included.'],
+      ['300','$300 or less','Most premium racers included.'],
+      ['999','No ideal target','Price is not a major preference.']
     ]
   },
   {
     key:'budget',
-    title:'What budget feels right?',
-    sub:'Race shoes can be expensive, so ShoeAI lets you choose anything from value picks to no limit.',
-    assistant:'How much do you want to spend?',
+    title:'What is your absolute maximum?',
+    sub:'Shoes above this amount will be eliminated before ranking.',
+    assistant:'What is the most you would actually pay?',
     options:[
-      ['150','Under $150','Value-first picks.'],
-      ['180','Under $180','Most trainers included.'],
-      ['220','Under $220','Most super trainers included.'],
-      ['300','Under $300','Most racers included.'],
-      ['400','Under $400','Premium shoes included.'],
-      ['500','Under $500','Ultra-premium racers included.'],
-      ['999','No limit','Show the best match regardless of price.']
+      ['150','$150','Keep everything at or below $150.'],
+      ['180','$180','Include most traditional trainers.'],
+      ['220','$220','Include most premium trainers.'],
+      ['300','$300','Include most race shoes.'],
+      ['400','$400','Include ultra-premium options.'],
+      ['500','$500','Very few price restrictions.'],
+      ['999','No maximum','Do not eliminate shoes by price.']
+    ]
+  },
+  {
+    key:'saleModel',
+    title:'Would you consider an older model?',
+    sub:'Previous versions can be excellent values when the fit and ride remain appropriate.',
+    assistant:'Should discounted prior-year models stay eligible?',
+    options:[
+      ['yes','Yes','Recommend older models when they are a strong value.'],
+      ['maybe','Maybe','Include them as alternatives.'],
+      ['no','No','Prioritize the newest available models.']
+    ]
+  },
+  {
+    key:'rotationSize',
+    title:'How many shoes do you want in your setup?',
+    sub:'ShoeAI can recommend one versatile shoe or divide jobs across a rotation.',
+    assistant:'How large should your recommended rotation be?',
+    options:[
+      ['1','One shoe','One versatile option for nearly everything.'],
+      ['2','Two shoes','Usually daily plus workout or race.'],
+      ['3','Three shoes','Daily, workout, and long-run or race.'],
+      ['4','Four shoes','A specialized full rotation.']
     ]
   },
   {
     key:'liked',
-    title:'Any shoes you already liked?',
-    sub:'Optional, but very useful. Past shoes are one of the best clues for future recommendations.',
-    assistant:'Type any shoes or brands that worked well for you.',
+    title:'Which shoes have worked well for you?',
+    sub:'Past success is one of the strongest clues about fit and ride preference.',
+    assistant:'List shoes or brands you enjoyed, separated by commas.',
     input:true,
-    placeholder:'Example: Novablast, Pegasus, Ghost, Clifton, Superblast...'
+    placeholder:'Example: Novablast 4, Ghost, Endorphin Speed 4...'
   },
   {
     key:'avoid',
-    title:'Anything you want to avoid?',
-    sub:'Optional. This can include brands, narrow fits, plated shoes, firm rides, or models you disliked.',
-    assistant:'Type anything you want ShoeAI to avoid.',
+    title:'What have you disliked or want to avoid?',
+    sub:'Include shoe names, brands, or problems such as narrow, firm, heavy, unstable, heel slip, or plated.',
+    assistant:'List disliked shoes or traits, separated by commas.',
     input:true,
-    placeholder:'Example: narrow, plated, firm, adidas, HOKA...'
+    placeholder:'Example: too narrow, heel slip, firm, Clifton 9, plated...'
   }
 ];
 
@@ -150,7 +334,7 @@ const els={
   els.category.appendChild(o);
 });
 
-let selected=new Set(JSON.parse(localStorage.getItem('selectedShoesV19')||'[]'));
+let selected=new Set(JSON.parse(localStorage.getItem('selectedShoesV20')||'[]'));
 let activeSearchQuery='';
 
 function mappedIntent(){
@@ -721,14 +905,14 @@ document.addEventListener('click',e=>{
   if(cb){
     let id=Number(cb.dataset.check);
     cb.checked?selected.add(id):selected.delete(id);
-    localStorage.setItem('selectedShoesV19',JSON.stringify([...selected]));
+    localStorage.setItem('selectedShoesV20',JSON.stringify([...selected]));
     renderCompare();
     return;
   }
   let rm=e.target.closest('[data-remove]');
   if(rm){
     selected.delete(Number(rm.dataset.remove));
-    localStorage.setItem('selectedShoesV19',JSON.stringify([...selected]));
+    localStorage.setItem('selectedShoesV20',JSON.stringify([...selected]));
     renderAll(false);
     return;
   }
@@ -1144,4 +1328,202 @@ renderLive=function(){
   els.liveTitle.textContent=`${best.name} is currently leading.`;
   els.liveSummary.textContent=`${v19MatchTier(score(best))}: ${score(best)}/100. ${confidence.label}.`;
   els.liveReasons.innerHTML=why(best).slice(0,4).map(x=>`<div class="reason">${x}</div>`).join('');
+};
+
+
+/* =========================================================
+   SHOEAI 2.0 PREVIEW — ADVANCED RUNNER PROFILE
+   Final override: adds experience, mileage, surface, terrain,
+   biomechanics preferences, ride feel, comfort concerns,
+   ideal budget, sale preference, and requested rotation size.
+   ========================================================= */
+
+function v20Blob(s){
+  return `${s.name} ${s.brand} ${s.category} ${s.foam} ${s.note}`.toLowerCase();
+}
+
+function v20AdvancedAdjustment(s){
+  let a=0;
+  const i=s.intent||{};
+  const blob=v20Blob(s);
+  const category=String(s.category||'').toLowerCase();
+  const plate=String(s.plate||'No').toLowerCase()!=='no';
+
+  // Experience
+  if(state.experience==='new'){
+    a+=(i.dailyTrainer||s.daily)*0.055+(s.stability-75)*0.10+(s.value-75)*0.05;
+    if(plate) a-=5;
+  }else if(state.experience==='casual'){
+    a+=(s.daily-75)*0.05+(s.value-75)*0.04;
+  }else if(state.experience==='experienced'){
+    a+=(s.tempo-75)*0.035+(s.longrun-75)*0.03;
+  }else if(state.experience==='competitive'){
+    a+=(s.speed-75)*0.08+(s.tempo-75)*0.07+(s.race-70)*0.05;
+  }
+
+  // Weekly mileage
+  if(state.mileage==='under10'){
+    a+=(s.value-75)*0.06+(s.daily-75)*0.04;
+  }else if(state.mileage==='20to35'){
+    a+=(s.longevityScore-70)*0.05+(s.longrun-75)*0.04;
+  }else if(state.mileage==='35to50'){
+    a+=(s.longevityScore-70)*0.09+(s.longrun-75)*0.07+(s.stability-75)*0.04;
+  }else if(state.mileage==='50plus'){
+    a+=(s.longevityScore-70)*0.13+(s.longrun-75)*0.09+(s.stability-75)*0.06;
+  }
+
+  // Surface
+  const trail=i.trail||0;
+  if(state.surface==='trail') a+=(trail-65)*0.24;
+  if(state.surface==='gravel') a+=(trail-55)*0.10+(s.stability-75)*0.05;
+  if(state.surface==='mixed') a+=(trail-50)*0.07+(s.daily-75)*0.04;
+  if(state.surface==='track') a+=(s.speed-75)*0.08+(s.tempo-75)*0.07;
+  if(state.surface==='treadmill') a+=(s.cushion-75)*0.05+(s.speed-75)*0.025;
+  if(state.surface==='road' && trail>82 && category.includes('trail')) a-=8;
+
+  // Terrain
+  if(state.terrain==='rolling') a+=(s.stability-75)*0.035+(s.speed-75)*0.025;
+  if(state.terrain==='hilly') a+=(s.stability-75)*0.08+(s.speed-75)*0.05;
+  if(state.terrain==='uneven') a+=(s.stability-75)*0.11+(trail-60)*0.10;
+
+  // Pronation / stability preference
+  if(state.pronation==='mildOver') a+=(s.stability-75)*0.14;
+  if(state.pronation==='strongOver') a+=(s.stability-75)*0.24;
+  if(state.pronation==='supination') a+=(s.cushion-75)*0.10-(s.stability>92?2:0);
+  if(state.pronation==='unknown') a+=(s.stability-75)*0.04;
+
+  // Foot strike — intentionally modest
+  if(state.footStrike==='heel') a+=(s.cushion-75)*0.07+(s.stability-75)*0.04;
+  if(state.footStrike==='midfoot') a+=(s.daily-75)*0.035+(s.tempo-75)*0.025;
+  if(state.footStrike==='forefoot') a+=(s.speed-75)*0.055+(s.tempo-75)*0.04;
+
+  // Cushion preference
+  if(state.cushionFeel==='verySoft') a+=(s.cushion-75)*0.18+(s.recovery-70)*0.06;
+  if(state.cushionFeel==='soft') a+=(s.cushion-75)*0.11;
+  if(state.cushionFeel==='firm') a-=(s.cushion-80)*0.09, a+=(s.stability-75)*0.04;
+
+  // Energy preference
+  if(state.rideEnergy==='smooth') a+=(s.daily-75)*0.06+(s.stability-75)*0.045;
+  if(state.rideEnergy==='bouncy') a+=(s.speed-75)*0.10+(s.tempo-75)*0.06;
+  if(state.rideEnergy==='fast') a+=(s.speed-75)*0.15+(s.race-70)*0.09;
+
+  // Geometry
+  if(state.geometry==='natural') a+=plate?-8:5;
+  if(state.geometry==='plated') a+=plate?7:-4;
+  if(state.geometry==='rockered'){
+    if(/rocker|rockered|geometry|speedroll|guidesole/.test(blob)) a+=6;
+    else a+=(s.longrun-75)*0.025;
+  }
+
+  // Priority
+  if(state.focus==='durability') a+=(s.longevityScore-70)*0.17;
+  if(state.focus==='fit') a+=(s.widthScore-75)*0.13;
+
+  // Comfort concerns: conservative preference adjustments only.
+  if(state.concern==='plantar') a+=(s.stability-75)*0.09+(s.cushion-75)*0.05;
+  if(state.concern==='shin') a+=(s.cushion-75)*0.08+(s.stability-75)*0.05;
+  if(state.concern==='achilles'){
+    a+=(s.stability-75)*0.04;
+    if(state.geometry==='plated' || state.rideEnergy==='fast') a-=3;
+  }
+  if(state.concern==='knee') a+=(s.cushion-75)*0.08+(s.stability-75)*0.07;
+  if(state.concern==='ankle') a+=(s.stability-75)*0.15;
+  if(state.concern==='other') a+=(s.stability-75)*0.04+(s.daily-75)*0.03;
+
+  // Ideal budget softly rewards value; absolute budget remains the hard filter.
+  const ideal=Number(state.idealBudget||999);
+  if(ideal<999){
+    if(s.price<=ideal) a+=Math.min(5,(ideal-s.price)/18+2);
+    else a-=Math.min(7,(s.price-ideal)/18);
+  }
+
+  // Prior model preference. Data does not contain release year, so model-number
+  // hints are used only as a light tie-breaker rather than a hard fact.
+  const modelNumber=(String(s.name).match(/\b(\d+)\b/g)||[]).map(Number).pop();
+  if(state.saleModel==='yes' && modelNumber && modelNumber<=4) a+=1.5;
+  if(state.saleModel==='no' && modelNumber && modelNumber<=3) a-=1.5;
+
+  return a;
+}
+
+const v20PreviousScore=score;
+score=function(s){
+  const base=v20PreviousScore(s);
+  return Math.round(Math.max(0,Math.min(100,base+v20AdvancedAdjustment(s))));
+};
+
+function v20ProfileSummary(){
+  return [
+    `${labelFor('experience',state.experience)} runner`,
+    `${labelFor('mileage',state.mileage)} weekly`,
+    labelFor('surface',state.surface),
+    labelFor('terrain',state.terrain),
+    labelFor('fit',state.fit),
+    labelFor('cushionFeel',state.cushionFeel),
+    labelFor('rideEnergy',state.rideEnergy)
+  ].join(' • ');
+}
+
+const v20PreviousReport=renderReport;
+renderReport=function(){
+  v20PreviousReport();
+
+  if(els.perfectMatch && !els.perfectMatch.querySelector('.runnerProfileCard')){
+    const card=document.createElement('div');
+    card.className='runnerProfileCard';
+    card.innerHTML=`<p class="eyebrow">Your Runner Profile</p>
+      <p>${v20ProfileSummary()}</p>
+      <p class="muted">Comfort-concern answers guide conservative shoe preferences only and are not medical advice.</p>`;
+    els.perfectMatch.prepend(card);
+  }
+
+  if(els.reportSummary){
+    els.reportSummary.textContent += ` • Requested setup: ${labelFor('rotationSize',state.rotationSize)}`;
+  }
+};
+
+function v20RotationSlots(){
+  const count=Number(state.rotationSize||1);
+  if(count===1) return [['Versatile Primary Shoe','dailyTrainer']];
+  if(count===2) return [
+    ['Daily Trainer','dailyTrainer'],
+    [state.intent==='raceDay'?'Race-Day Shoe':'Workout / Race Shoe', state.intent==='raceDay'?'raceDay':'tempoWorkout']
+  ];
+  if(count===3) return [
+    ['Daily Trainer','dailyTrainer'],
+    ['Workout Shoe','tempoWorkout'],
+    [state.goal==='marathon'||state.goal==='ultra'?'Long-Run Shoe':'Race-Day Shoe',state.goal==='marathon'||state.goal==='ultra'?'longRun':'raceDay']
+  ];
+  return [
+    ['Daily Trainer','dailyTrainer'],
+    ['Workout Shoe','tempoWorkout'],
+    ['Long-Run / Recovery Shoe',state.concern==='none'?'longRun':'recovery'],
+    ['Race-Day Shoe','raceDay']
+  ];
+}
+
+const v20PreviousRotation=renderRotation;
+renderRotation=function(){
+  const slots=v20RotationSlots();
+  const used=new Set();
+  const cards=slots.map(([label,intent])=>{
+    const candidates=[...SHOES]
+      .filter(s=>s.price<=Number(state.budget||999))
+      .sort((a,b)=>((b.intent?.[intent]||0)-(a.intent?.[intent]||0)) || score(b)-score(a));
+    const shoe=candidates.find(s=>!used.has(s.id))||candidates[0];
+    if(shoe) used.add(shoe.id);
+    return shoe?`<div class="rotationCard">
+      <b>${label}</b><br>${shoe.name}<br>
+      <span class="muted">${shoe.category} • ${score(shoe)}/100 profile match</span>
+    </div>`:'';
+  }).join('');
+  els.rotation.innerHTML=cards;
+};
+
+const v20PreviousLive=renderLive;
+renderLive=function(){
+  v20PreviousLive();
+  if(els.liveSummary){
+    els.liveSummary.textContent += ` Profile depth: ${Math.min(questionIndex+1,questions.length)}/${questions.length} answers reviewed.`;
+  }
 };
