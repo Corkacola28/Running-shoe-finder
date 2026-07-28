@@ -255,3 +255,13 @@ main{max-width:1180px;margin:auto;padding:0 24px 72px}.advisorShell{display:grid
 @media(max-width:700px){
   #topFive .rotationOption{grid-column:span 1;}
 }
+
+/* V19 calibrated recommendation labels */
+.scoreHero small{
+  display:block;
+  max-width:110px;
+  margin:5px auto 0;
+  font-size:11px;
+  line-height:1.2;
+  opacity:.72;
+}

@@ -150,7 +150,7 @@ const els={
   els.category.appendChild(o);
 });
 
-let selected=new Set(JSON.parse(localStorage.getItem('selectedShoesV18')||'[]'));
+let selected=new Set(JSON.parse(localStorage.getItem('selectedShoesV19')||'[]'));
 let activeSearchQuery='';
 
 function mappedIntent(){
@@ -721,14 +721,14 @@ document.addEventListener('click',e=>{
   if(cb){
     let id=Number(cb.dataset.check);
     cb.checked?selected.add(id):selected.delete(id);
-    localStorage.setItem('selectedShoesV18',JSON.stringify([...selected]));
+    localStorage.setItem('selectedShoesV19',JSON.stringify([...selected]));
     renderCompare();
     return;
   }
   let rm=e.target.closest('[data-remove]');
   if(rm){
     selected.delete(Number(rm.dataset.remove));
-    localStorage.setItem('selectedShoesV18',JSON.stringify([...selected]));
+    localStorage.setItem('selectedShoesV19',JSON.stringify([...selected]));
     renderAll(false);
     return;
   }
@@ -953,3 +953,195 @@ const v18OldRenderReport=renderReport;
 renderReport=function(){if(state.intent==='rotation'){v18OldRenderReport();return}let ranked=filtered(),top=v18Diverse(ranked,5),best=top[0]||ranked[0];if(!best){v18OldRenderReport();return}els.reportSummary.textContent=`Purpose: ${intentLabel()} • Goal: ${labelFor('goal',state.goal)} • Fit: ${labelFor('fit',state.fit)} • Priority: ${labelFor('focus',state.focus)} • Budget: ${labelFor('budget',state.budget)}`;els.perfectMatch.innerHTML=`<div><p class="eyebrow">Best Profile Match</p><h2>${best.name}</h2><p>${best.note}</p><div class="pillRow">${dna(best).map(x=>`<span class="pill">${x}</span>`).join('')}</div><details class="explain" open><summary>Why this ranked first</summary><ul>${why(best).map(x=>`<li>${x}</li>`).join('')}<li>No brand or shoe receives a preferred bonus.</li></ul><b>Expected longevity</b><ul><li>${best.longevityMiles||'300-500 miles'} — ${best.longevityNote||'Mileage varies by runner, surface, and rotation.'}</li></ul><b>Possible downsides</b><ul>${downside(best).map(x=>`<li>${x}</li>`).join('')}</ul></details></div><div class="scoreHero">${score(best)}</div>`;els.topFive.innerHTML=top.map((s,i)=>resultCard(s,i+1,true)).join('');let ids=new Set(top.map(s=>s.id)),near=ranked.filter(s=>!ids.has(s.id)).slice(0,4);els.nearMisses.innerHTML=near.map(s=>`<div class="miniCard"><b>${s.name}</b><p class="muted">${s.category} • ${score(s)}/100</p><p>It scored closely, but the Top 5 offered a better profile match or more category variety.</p></div>`).join('');let bad=[...SHOES].filter(s=>s.price>Number(state.budget||999)||score(s)<55||!v18Eligible(s,mappedIntent())).sort((a,b)=>score(a)-score(b)).slice(0,4);els.avoidList.innerHTML=bad.map(s=>`<div class="miniCard"><b>${s.name}</b><p class="muted">${s.category} • ${score(s)}/100</p><p>${s.price>Number(state.budget||999)?'Outside your selected budget.':`Not a strong match for ${intentLabel().toLowerCase()}.`}</p></div>`).join('');renderRotation()};
 const v18OldRenderLive=renderLive;
 renderLive=function(){let list=filtered(),best=list[0];if(!best){v18OldRenderLive();return}els.liveTitle.textContent=`${best.name} is currently leading.`;els.liveSummary.textContent=`Neutral match score: ${score(best)}/100 for ${intentLabel()}, ${labelFor('goal',state.goal)}, ${labelFor('fit',state.fit)}, and ${labelFor('budget',state.budget)}.`;els.liveReasons.innerHTML=why(best).map(x=>`<div class="reason">${x}</div>`).join('')};
+
+
+/* =========================================================
+   V19 CALIBRATED & DIVERSIFIED MATCH ENGINE
+   Ratings are pre-calibrated across the entire database.
+   No brand, model, or editor's pick receives a bonus.
+   ========================================================= */
+
+function v19FamilyName(shoe){
+  return String(shoe.name || '')
+    .toLowerCase()
+    .replace(/\b(v|version)\s*\d+(\.\d+)?\b/g,'')
+    .replace(/\b\d+(\.\d+)?\b/g,'')
+    .replace(/\b(men'?s|women'?s)\b/g,'')
+    .replace(/\s+/g,' ')
+    .trim();
+}
+
+function v19MatchTier(value){
+  if(value >= 90) return 'Excellent match';
+  if(value >= 84) return 'Strong match';
+  if(value >= 77) return 'Good alternative';
+  if(value >= 68) return 'Specialized option';
+  return 'Limited match';
+}
+
+function v19Confidence(ranked){
+  if(!ranked.length) return {label:'Low confidence',gap:0,tied:[]};
+  const best=score(ranked[0]);
+  const tied=ranked.filter(s=>best-score(s)<=2).slice(0,5);
+  const gap=ranked[1] ? best-score(ranked[1]) : 10;
+  const label=tied.length>=3?'Several shoes are essentially tied':
+    gap<=2?'Close decision — two shoes are nearly equal':
+    gap<=5?'Moderate confidence':'High confidence';
+  return {label,gap,tied};
+}
+
+/* One shoe from each model family in the visible Top 5.
+   One brand may appear twice only when the match is clearly competitive. */
+function v19DiversifiedTop(ranked, count=5){
+  const out=[];
+  const families=new Set();
+  const brandCounts={};
+
+  for(const s of ranked){
+    const family=v19FamilyName(s);
+    const brand=s.brand || 'Other';
+    if(families.has(family)) continue;
+    if((brandCounts[brand]||0)>=2) continue;
+    out.push(s);
+    families.add(family);
+    brandCounts[brand]=(brandCounts[brand]||0)+1;
+    if(out.length===count) return out;
+  }
+
+  for(const s of ranked){
+    if(out.some(x=>x.id===s.id)) continue;
+    const family=v19FamilyName(s);
+    if(families.has(family)) continue;
+    out.push(s);
+    families.add(family);
+    if(out.length===count) break;
+  }
+  return out;
+}
+
+/* Soft category eligibility: a shoe can still appear as a specialized option,
+   but inappropriate categories cannot dominate the primary recommendations. */
+function v19UseCaseEligible(s,intent){
+  const i=s.intent||{};
+  if(intent==='raceDay') return (i.raceDay||0)>=66;
+  if(intent==='tempoWorkout') return (i.tempoWorkout||0)>=69;
+  if(intent==='recovery') return (i.recovery||0)>=69;
+  if(intent==='stability') return (i.stability||0)>=74;
+  if(intent==='trail') return (i.trail||0)>=70;
+  if(intent==='firstShoe') return (i.dailyTrainer||0)>=70 && String(s.plate||'No').toLowerCase()==='no';
+  return true;
+}
+
+const v19PreviousFiltered=filtered;
+filtered=function(){
+  const max=Number(state.budget||999);
+  const q=((typeof activeSearchQuery!=='undefined'?activeSearchQuery:'')||(els.q?.value||'')).trim();
+  let list=SHOES.filter(s=>s.price<=max);
+
+  if(q && typeof searchRelevance==='function'){
+    return list.map(s=>({...s,_searchRelevance:searchRelevance(s,q)}))
+      .filter(s=>s._searchRelevance>0)
+      .sort((a,b)=>(b._searchRelevance-a._searchRelevance)||score(b)-score(a)||a.name.localeCompare(b.name));
+  }
+
+  if(els.category?.value) list=list.filter(s=>s.category===els.category.value);
+  if(els.intentFilter?.value) list=list.filter(s=>(s.intent?.[els.intentFilter.value]??0)>=68);
+
+  return list
+    .filter(s=>v19UseCaseEligible(s,mappedIntent()))
+    .sort((a,b)=>score(b)-score(a)||a.name.localeCompare(b.name));
+};
+
+const v19PreviousReport=renderReport;
+renderReport=function(){
+  if(state.intent==='rotation'){
+    v19PreviousReport();
+    return;
+  }
+
+  const ranked=filtered();
+  if(!ranked.length){
+    v19PreviousReport();
+    return;
+  }
+
+  const top=v19DiversifiedTop(ranked,5);
+  const best=top[0];
+  const confidence=v19Confidence(ranked);
+  const tiedNames=confidence.tied.map(s=>s.name).join(', ');
+
+  els.reportSummary.textContent=`Purpose: ${intentLabel()} • Goal: ${labelFor('goal',state.goal)} • Fit: ${labelFor('fit',state.fit)} • Priority: ${labelFor('focus',state.focus)} • Budget: ${labelFor('budget',state.budget)}`;
+
+  els.perfectMatch.innerHTML=`<div>
+    <p class="eyebrow">Best Profile Match</p>
+    <h2>${best.name}</h2>
+    <div class="pillRow">
+      <span class="pill good">${v19MatchTier(score(best))}</span>
+      <span class="pill">${confidence.label}</span>
+    </div>
+    <p>${best.note}</p>
+    ${confidence.tied.length>1?`<p class="muted"><b>Near-tie:</b> ${tiedNames}. These are within two points and should be treated as similarly strong choices.</p>`:''}
+    <details class="explain" open>
+      <summary>Why this ranked here</summary>
+      <ul>
+        ${why(best).map(x=>`<li>${x}</li>`).join('')}
+        <li>Ratings were recalibrated on the same category-based scale across all ${SHOES.length} shoes.</li>
+        <li>No brand, model family, editor's pick, or shoe popularity bonus is used.</li>
+      </ul>
+      <b>Possible downsides</b>
+      <ul>${downside(best).map(x=>`<li>${x}</li>`).join('')}</ul>
+    </details>
+  </div>
+  <div class="scoreHero">
+    <span>${score(best)}</span>
+    <small>${v19MatchTier(score(best))}</small>
+  </div>`;
+
+  els.topFive.innerHTML=top.map((s,i)=>`
+    <article class="miniCard">
+      <div class="pillRow">
+        <span class="pill intentPill">#${i+1}</span>
+        <span class="pill">${v19MatchTier(score(s))}</span>
+      </div>
+      <h3 class="shoeName">${s.name}</h3>
+      <div class="meta">${s.brand} • ${s.category} • $${s.price}</div>
+      <p>${s.note}</p>
+      ${bar('Profile match',score(s))}
+      ${bar(intentLabel(),s.intent?.[mappedIntent()]??score(s))}
+      ${bar('Fit',s.widthScore)}
+    </article>`).join('');
+
+  const ids=new Set(top.map(s=>s.id));
+  const near=ranked.filter(s=>!ids.has(s.id)).slice(0,4);
+  els.nearMisses.innerHTML=near.map(s=>`<div class="miniCard">
+    <b>${s.name}</b>
+    <p class="muted">${v19MatchTier(score(s))} • ${score(s)}/100</p>
+    <p>Close on profile fit, but excluded from the Top 5 by score, model-family duplication, or category diversity.</p>
+  </div>`).join('');
+
+  const avoid=[...SHOES]
+    .filter(s=>s.price>Number(state.budget||999)||!v19UseCaseEligible(s,mappedIntent())||score(s)<58)
+    .sort((a,b)=>score(a)-score(b))
+    .slice(0,4);
+  els.avoidList.innerHTML=avoid.map(s=>`<div class="miniCard">
+    <b>${s.name}</b>
+    <p class="muted">${s.category} • ${score(s)}/100</p>
+    <p>${s.price>Number(state.budget||999)?'Outside your selected budget.':`Its use-case profile does not align well with ${intentLabel().toLowerCase()}.`}</p>
+  </div>`).join('');
+
+  renderRotation();
+};
+
+const v19PreviousLive=renderLive;
+renderLive=function(){
+  const ranked=filtered();
+  const best=ranked[0];
+  if(!best){
+    v19PreviousLive();
+    return;
+  }
+  const confidence=v19Confidence(ranked);
+  els.liveTitle.textContent=`${best.name} is currently leading.`;
+  els.liveSummary.textContent=`${v19MatchTier(score(best))}: ${score(best)}/100. ${confidence.label}.`;
+  els.liveReasons.innerHTML=why(best).slice(0,4).map(x=>`<div class="reason">${x}</div>`).join('');
+};
